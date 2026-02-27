@@ -86,7 +86,7 @@ Saiba como transformar sua apresentação em um pitch de 3 minutos (o mais diret
 - Preserve as margens e use espaços vazios para dar respiro
 
 #### Cores
-- Use <font color="red">cores</font> pra enfatizar oq quer que o leitor foque
+- Use cores pra enfatizar oq quer que o leitor foque
 - Se de todos os objetos plotados, só 1 for destacado (ex: sua empresa comparado com outras 5), pinte só a sua e deixe todas as outras com a mesma cor, pois o importante ñ é o valor das demais, é o valor da sua comparada com a deles)
 
 #### Legenda
@@ -101,10 +101,10 @@ Saiba como transformar sua apresentação em um pitch de 3 minutos (o mais diret
 ## FOQUE A ATENÇÃO NO QUE DESEJA
 
 Alguns atributos são percebidos pelo cérebro antes dele entender oq tá sendo mostrado
-- <font color="red">Cor</font>
+- Cor
 - **Negrito**
-- <font face="monospace">Forma</font>
-- <font size="6">Tamanho</font>
+- Forma
+- Tamanho
 - `Contorno`
 - <ins>Sublinhar</ins>
 - Posição na Página
@@ -115,7 +115,7 @@ Use com moderação, senão vira um carnaval e o leitor não sabe pra onde olhar
 No máximo **10% deve ser destacado**
 
 #### Hierarquia da atenção
-- **Maior atenção**: <font color="red">Cor</font>, <font size="6">Tamanho</font>, <font face="monospace">Forma</font> e **Negrito**
+- **Maior atenção**: Cor, Tamanho, Forma e **Negrito**
 - Média atenção: `Contorno` e Espaçamento
 - Menos atenção: <ins>Sublinhado</ins> e _Itálico_
 - Mínima atenção: normal
@@ -257,4 +257,4 @@ Resumo: Na introdução diga o que abordará, no meio detalhe e no final revise.
 - Montar um gráfico todo cinza sem focar em nada inicialmente e ir realçando só oq vc quer mostrar naquele momento
 - Os mesmos dados podem contar histórias diferentes a depender de onde vc foca
 ![](images/storytelling/story05.jpg)
-- Quando a atenção é fortemente atraída para um fato destacado é mais difícil do público tirar outras conclusões (como mentir com estatística: esconder outras verdades)
+- Quando a atenção é fortemente atraída para um fato destacado é mais difícil do público tirar outras conclusões (**como mentir com estatística: esconder outras verdades**)
