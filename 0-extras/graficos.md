@@ -79,6 +79,7 @@ Quando não usar:
 - Boxplot (serve pra ambos os tipos de quantitativo)
 - Gráfico de dispersão
 - Funil
+- Gráfico de inclinação
 
 #### Gráfico de Barras
 - Mostra a frequência para valores **agrupados** (de 0 a 18, de 18 a 25, 25 a 34...)
@@ -147,27 +148,80 @@ OBS: alguns softwares consideram a mediana como parte dos subconjuntos pra calcu
 - Gráfico de funil serve para mostrar dados que passam por uma sequência de passos
 ![](images/graficos/funil.png)
 
+#### Gráfico de Inclinação
+- Usado em eleições para intenções de voto
+- Objetivo é mostrar o quanto algo subiu ou caiu e qual está acima de outro
+- O valor final importa mais que os intermediários
+- Dados são em relação ao tempo
+- É uma variação do gráfico de barras duplo
+![](images/graficos/eleicao1.png)
+
+Regras:
+- Eixo X sempre deve ser o tempo
+- Deve ser usado quando não há muitos cruzamentos, do contrário fica confuso
+- Evitar deixar os pontos iniciais ou finais de 2 linhas muito colados (expandir o zoom se preciso)
+- Pode ser pintado os que mais caíram e os que mais subiram (com cores diferentes) para destacar
+
 
 ## Para dados QUANTITATIVOS CONTÍNUOS
 - Gráfico de linha
 - Gráfico de área
-- Gráfico de inclinação
 - Boxplot (serve pra ambos os tipos de quantitativo)
 
-use LINHA pra algo q variam ao longo do tempo OU uma var que depende de outra
-Linha NÃO precisa começar do 0 no eixo y
-a distância entre os marcadores no mesmo eixo não pode muder (ex: começar marcando décadas 1970-1980... e no meio mudar pra anual 1981-1982...) -> mudar é outra forma de mentir com estatistica
-Linha tbm é bom para mostrar um intervalo, usando 2 linhas e pintando entre eles (quem sabe plotando a média dentro dele). Isso é especialmente bom pra intervalo de confiança (figura 2.9)
-ler o site
+#### Gráfico de Linha
+- **Não** precisa começar do 0 no eixo y
+- Cada eixo pode estar numa unidade e magnitude diferente
+- A distância entre os marcadores no mesmo eixo não pode mudar
+    - Ex: começar marcando décadas 1970-1980... e no meio mudar pra anual 1981-1982...)
+    - `Mudar é outra forma de mentir com estatistica`
 
-user ÁREA com cores bem diferentes E com poucos valores
-Área fica confuso e difícil de ler com muitas linhas
-NÃO USE Área se os valores forem muito próximos, vai ser dificil ver onde cada um começa e termina
-ler o site
+Quando usar:
+- Mostrar como algo varia ao longo do tempo
+    - **Pensou "ao longo do tempo", considere este gráfico**
+- Mostrar como uma variável que depende de outra
+- Mostrar um intervalo, usando 2 linhas e pintando entre eles (quem sabe plotando a média dentro dele). 
+    - Isso é especialmente bom pra intervalo de confiança (figura 2.9)
 
-Gráfico de Inclinação é o gráfico usado em eleições pra intenções de voto
-Gráfico de Inclinação deve ser usado quando não há muitos cruzamentos, do contrário fica confuso
-Gráfico de Inclinação pode ser pintado os que mais caíram e os que mais subiram (com cores diferentes) para destacar
-ler o site
+Quando **não** usar:
+- Tiver dados espaçados
+- Dados forem categóricos
+- Precisar mostrar quantidades de coisas
+- Quando os dados (eixos) não tem qualquer relação significativa
 
+Como usar:
+- Use linhas contínuas e pontilhadas para passar mensagens diferentes
+- Nem sempre os números serão o mais importante, as vezes add textos e passar a mensagem vale mais
+![](images/graficos/linha1.png)
 
+- Cada linha deve ter uma cor
+- Nem todo ponto deve ter seu valor mostrado. Considere o contexto e mostre os principais
+![](images/graficos/linha2.png)
+
+- **Use no máximo 4 ou 5 linhas**, mais que isso fica poluído
+- Mude a cor ou a espessura das linhas caso precise usar mais ou queira enfatizar alguma
+![](images/graficos/linha3.png)
+
+- Cuidado com valores muito acima do resto, que quebram a escala. Os demais dados podem desaparecer por conta dele
+- O espaço entre o maior e o menor valor do gráfico deve ocupar por volta de 80% dele, com o restante como respiro
+![](images/graficos/linha4.png)
+
+#### Gráfico de Área
+- Serve para mostrar a **mudança relativa** de um dado com outros ao longo do tempo
+- Transmite a noção de grandeza e de diferença muito melhor que o gráfico de linha
+- **São o gráfico de barras ao longo do tempo**
+
+Regras:
+- **Precisa começar no 0**
+- Eixo X sempre deve ser o tempo
+- Pinte cada área cores bem diferentes
+- Use com poucas linhas (Fica confuso e difícil de ler com mais)
+- **Não use** se os valores forem muito próximos, vai ser dificil ver onde cada um começa e termina
+- Não funciona se as diferenças entre as áreas forem pequenas
+- Coloque um pouco de transparência para ver como os gráficos atrás estão variando
+![](images/graficos/area1.png)
+
+Quando usar:
+- Tiver poucos dados a mostrar
+- Quer mostrar a ascensão e queda de várias séries de dados ao longo do tempo
+- Enfatizar uma relação parte-todo ao longo do tempo quando uma parte é muito grande **ou** muda drasticamente
+- Diferenças são significativas
