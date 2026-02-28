@@ -85,6 +85,8 @@ $$media = \sqrt{\frac{\sum_{i=1}^n{x_i^2}}{n}}$$
 
 $mediaQuad >= médiaArit >= mediaGeom >= mediaHarm$
 
+![](images/medias_comparadas.png)
+
 ---
 
 Ex1: dados: 6, 6 e 6

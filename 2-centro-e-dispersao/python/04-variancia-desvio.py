@@ -2,6 +2,7 @@ import pandas as pd
 import statistics
 import numpy as np
 from math import sqrt
+import matplotlib.pyplot as plt
 
 print("-------------- calculating variance using statistics package")
 lista = [1,2,3,4]
@@ -50,13 +51,13 @@ print("the sample std is ", desvio_amostral)
 
 ############ COEFICIENTE DE VARIAÇÃO
 print("-------------- calculating variation coeficient")
-heights = [161, 163, 163, 164, 164, 164, 166, 167, 169, 169, 170, 172, 172, 173, 174, 174, 174, 177, 178, 178, 180, 180, 180, 181, 181, 181, 182, 183, 183, 185, 185, 188, 190, 194]
-weights = [55, 57, 58, 58, 49, 60, 61, 61, 62, 62, 63, 66, 66, 69, 71, 73, 76, 77, 77, 78]
+heights = [158, 159, 161, 162, 163, 164, 164, 166, 167, 168, 168, 169, 170, 171, 171, 172, 172, 173, 173, 173, 174, 175, 175, 176, 177, 177, 177, 178, 180, 181, 182, 183, 185, 185, 186, 190, 193]
+weights = [62,  63,  64,  65,  66,  67,  68,  68,  69,  70,  71,  72,  72,  73,  73,  74,  74,  75,  75,  75,  76,  76,  77,  78,  78,  79,  79,  80,  80,  81,  81,  83,  84,  85,  85,  87,  88]
 heigth_std = np.std(heights)
 weight_std = np.std(weights)
 
 heigth_cv = heigth_std/np.mean(heights)
 weigth_cv = weight_std/np.mean(weights)
 
-print("heigth: std: ", heigth_std, "variation coeficient: ", heigth_cv)
-print("weight: std: ", weight_std, "variation coeficient: ", weigth_cv)
+print("heigth: mean:", round(np.mean(heights)) ," std: ", round(heigth_std, 2), "variation coeficient: ", round(heigth_cv, 4))
+print("weight: mean:", round(np.mean(weights)) ," std: ", round(weight_std), "variation coeficient: ", round(weigth_cv, 4))
