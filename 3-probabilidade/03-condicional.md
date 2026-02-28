@@ -4,7 +4,11 @@
 ```
 P(A|B) = probabilidade de A acontecer dado que B já aconteceu
 ```
+
+**PARA VARS DEPENDENTES**
+
 $$P(A|B) = P(A∩B)/P(B)$$ 
+
 Explicação:
 - P(A∩B) é porque ambos precisam acontecer, por isso a intercessão
 - Divide por P(B) pois como B já aconteceu, eu diluo sua probabilidade do total
