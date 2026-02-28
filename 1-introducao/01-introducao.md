@@ -1,19 +1,31 @@
 # Diferença entre Probabilidade e Estatística
  
 Probabilidade: estudo das chances de algo acontecer.
+
 Estatística: estudo de como coletar, tratar e interpretar dados
 
+---
 
 Probabilidade: estudo da aleatoriedade
+
 Estatística: análise e modelos (não tem nada de aleatório)
 
+---
+
 Probabilidade: futuro. Chance de algo vir a acontecer
+
 Estatística: passado. Entender algo que já aconteceu
 
+---
+
 Probabilidade: Conheço a **população** toda. O que acontece quando pego uma amostra?
+
 Estatística: Conheço uma **amostra**. O que acontece no todo? (estatística inferencial)
 
+---
+
 Probabilidade é muito usado para classificação em IA e data science
+
 Estatística é muito usado para análise de dados. Precisa de probabilidade também
 
 **Probabilidade acaba sendo a base de tudo, inclusive da própria estatística.**

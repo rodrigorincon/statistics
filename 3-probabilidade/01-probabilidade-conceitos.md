@@ -51,8 +51,10 @@ A e B são independentes SE `P(A|B) = P(A) ou P(B|A) = P(B)` (basta 1 deles ser 
 - Espaço amostral define o conjunto de valores que pode ter
 - É o `X maiúsculo`
 
+---
 
 Quando é **discreto**, o espaço amostral é sempre **finito** 
+
 Quando é **contínuo**, o espaço amostral é sempre **infinito**
 - Ex: numero de caras em 3 lançamentos de moedas (espaço amostral é 0,1,2 e 3)
 - Ex2: números reais (espaço amostral de -infinito a infinito)

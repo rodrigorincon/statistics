@@ -42,10 +42,15 @@ O QUE
 Dê **SUGESTÕES**, não ordens! e deixe claro pq essa sugestão é uma ótima ideia
 
 **Se vc pudesse falar só 1 frase pro seu público, qual seria?**
+
 Saiba como transformar sua apresentação em um pitch de 3 minutos (o mais direto e conciso possível)
 
+--- 
+
 **Saiba identificar quem toma as decisões e oq importa pra ele**
+
 **Saiba exatamente oq vc quer que seu público saiba, pense ou faça ao ver a apresentação**
+
 **Tenha um resultado desejado claro com sua apresentação/gráfico**
 
 ## APRESENTAÇÃO ADEQUADA
@@ -110,9 +115,9 @@ Alguns atributos são percebidos pelo cérebro antes dele entender oq tá sendo 
 - Posição na Página
 
 Use esses atributos pra guiar o olhar do leitor
-Eles tbm são ótimos pra criar hierarquia visuais
-Use com moderação, senão vira um carnaval e o leitor não sabe pra onde olhar
-No máximo **10% deve ser destacado**
+- Eles tbm são ótimos pra criar hierarquia visuais
+- Use com moderação, senão vira um carnaval e o leitor não sabe pra onde olhar
+- No máximo **10% deve ser destacado**
 
 #### Hierarquia da atenção
 - **Maior atenção**: Cor, Tamanho, Forma e **Negrito**

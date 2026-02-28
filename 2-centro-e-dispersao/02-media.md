@@ -85,7 +85,10 @@ $$media = \sqrt{\frac{\sum_{i=1}^n{x_i^2}}{n}}$$
 
 $mediaQuad >= médiaArit >= mediaGeom >= mediaHarm$
 
+---
+
 Ex1: dados: 6, 6 e 6
+
 $mediaQuad = \sqrt{ \frac{6^2 + 6^2+ 6^2}3 } = \sqrt{\frac{3*36}{3}} = \sqrt36 = 6$
 
 $mediaArit = \frac{6+6+6}{3} = \frac{18}{3} = 6$
@@ -94,7 +97,10 @@ $mediaGeom =  \sqrt[3]{6*6*6} = \sqrt[3]{6^3} = 6$
 
 $mediaHarm = \frac{3}{ \frac{1}{6} + \frac{1}{6} +\frac{1}{6} } = \frac{3}{\frac{3}{6}} = 3 * \frac{6}{3} = 6$
 
+---
+
 Ex2: dados: 6, 8 e 12
+
 $mediaQuad = \sqrt{ \frac{6^2 + 8^2+ 12^2}3 } = \sqrt{\frac{244}{3}} = \sqrt{81,333} = 9$
 
 $mediaArit = \frac{6+8+12}{3} = \frac{26}{3} = 8,66$
@@ -113,20 +119,29 @@ $$variancia = \frac{\sum_{i=1}^n {(log(x_i) - mediaDosLogs)^2 }}{n}$$
 
 **Lembrando**: **população** divide por N e **amostra** divide por N-1
 
+---
+
 Ex: 6, 8 e 12
+
 $mediaDosLogs = \frac{log(6) + log(8) + log(12)}{3} = 0,92$
+
 $variancia = \frac{(log(6)-0,92)^2 + (log(8)-0,92)^2 + (log(12)-0,92)^2}{3} = 0,01$
 
 ## Harmônica
 - Variância é o mesmo cálculo, porém usando os inversos dos valores e o inverso da media harmonica
 
 MH = média harmonica
+
 $$variancia = \frac{\sum_{i=1}^n{ (\frac{1}{x_i} - \frac{1}{MH})^2 }}{n}$$
 
 **Lembrando**: **população** divide por N e **amostra** divide por N-1
 
+---
+
 Ex: 6, 8 e 12
+
 $MH = \frac{3}{ \frac{1}{6} + \frac{1}{8} + \frac{1}{12} } = 8$
+
 $variancia = \frac{ ( \frac{1}{6} - \frac{1}{8})^2 + (\frac{1}{8} - \frac{1}{8})^2 + (\frac{1}{12} - \frac{1}{8})^2 }{3} = 0,0012$
 
 ## Quadrática

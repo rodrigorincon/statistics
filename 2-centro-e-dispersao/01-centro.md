@@ -37,6 +37,7 @@ Média ponderada de todos possíveis resultados vezes sua respectiva probabilida
 $$E(x) = \sum_{x=1}^n x_i p(x_i) $$
 
 Se for uma distribuição contínua
+
 $$E(x) =\int_{-\infty}^{\infty} xf(x) \,dx$$
 
 	Onde f(x) é a equação da distribuição

@@ -122,6 +122,7 @@ Algumas análises não são afetadas por outliers, podendo ser usadas sem retir�
 - Bootstrap 
 
 É possível passar os dados por uma transformação (ex: transformação logaritmica) para remover a influência dos outliers
+
 OQ SÃO ESSAS TRANSFORMAÇÕES E COMO ELAS REMOVEM A INFLUENCIA???
 
 ## CONCEITO: POPULAÇÃO
@@ -204,6 +205,7 @@ Média ponderada de todos possíveis resultados vezes sua respectiva probabilida
 $$E(x) = \sum_{x=1}^n x_i p(x_i) $$
 
 Se for uma distribuição contínua
+
 $$E(x) =\int_{-\infty}^{\infty} xf(x) \,dx$$
 
 	Onde f(x) é a equação da distribuição

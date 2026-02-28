@@ -36,7 +36,9 @@ Como construir um boxplot:
 1. Ordenar os dados
 2. Achar a mediana
 3. Q1 e Q3 são as medianas de cada metade
+
 OBS: caso o conjunto tenha nº par, a mediana é a média dos 2 valores do meio
+
 4. Calcula o Intervalo Inter Quartil (IIQ ou IQR em ingles) IIQ = Q3 - Q1
 5. Calcula os limites aceitáveis min = Q1 - 1,5*IIQ  max = Q3 + 1,5*IIQ
 
@@ -60,19 +62,30 @@ Se for a variância da **população** divide por N e se for da **amostra** divi
 Como eleva ao quadrado (pra eliminar o sinais) ele também acaba elevando demais o resultado final, ficando distorcido dos dados e `altera a unidade de medida`.
 - Ex: se estou medindo a altura das pessoas na sala, a unidade final da variância é cm ao quadrado, não cm como o esperado
 
+---
+
 **Não pode** ser usado com mediana ou médias diferentes da aritimétca. Para mediana user o IQR (do boxplot). Para as outras médias usar tecnicas proprias listadas na sessão de médias.
+
+---
 
 Como é a dispersão em volta da média e média é a esperança, variância tbm pode ser calculado como:
 
 $$variancia = E(x^2) - E(x)^2 = \sum_{i=1}^n { (x_i - esperanca)^2 * p(x_i) }$$
+
 `esperanca = média`
+
+---
 
 Uma 3ª forma de calcular a variância é:
 
 $$variancia = mediaQuad^2 - media^2 = \frac{\sum_{i=1}^n{x_i^2}}{n} - media^2$$
+
 `Se resolver a formula principal da variância chegamos nessa`
 
+---
+
 Prova:
+
 $mediaQuad = \sqrt{\frac{\sum_{i=1}^n x_i^2}{N}} = \sqrt{\frac{x_1^2 + x_2^2...+x_n^2}{N}}$
 
 $\frac{\sum_{i=1}^n (x_i - media)^2}{N} = \frac{(x_1 - media)^2 + (x_2 - media)^2 ... (x_n - media)^2}{N}$
@@ -96,13 +109,19 @@ Se for o desvio da **população** divide por N e se for da **amostra** divide p
 
 **Não pode** ser usado com mediana ou médias diferentes da aritimétca. Para mediana user o IQR (do boxplot). Para as outras médias usar tecnicas proprias listadas na sessão de médias.
 
+---
+
 Explicação do porque o desvio padrão é a média quadrática dos desvios:
 
 $desvio = \sqrt{variancia} = \sqrt{\frac{\sum_{i=1}^n (x_i - media)^2}{N}}$
+
 $X_i - media = desvio_i$
+
 $desvio = \sqrt{\frac{\sum_{i=1}^n desvio_i^2}{N}} /  mediaQuad = \sqrt{\frac{\sum_{i=1}^n x_i^2}{N}}$
 
 Mesma equação, só trocando Xi por desvio.
+
+---
 
 `Não posso comparar 2 desvios diretamente. As vezes um conjunto é menos esparso mesmo tendo desvio maior (devido a contexto ou unidade de medida). Para comparar usa-se o coeficiente de variação.`
 
@@ -118,6 +137,7 @@ Se for o coeficiente da **população** divide por N e se for da **amostra** div
 	- 1cm é muito pouco, mas 1kg é muita coisa, então msm o desvio da altura sendo maior (15 > 10) quem tem maior dispersão (cv) é o peso pq cada unidade é mais significativo
 
 $cv(altura) = \frac{15}{170} = 0,09$
+
 $cv(peso) = \frac{10}{75} = 0,13$
 
 **6. COEFICIENTE DE CORRELAÇÃO**
