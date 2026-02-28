@@ -50,6 +50,8 @@ $P(B|A) \neq P(B)  => 1 \neq \frac{1}{2}$
 
 Portanto os eventos são **dependentes**
 
+---
+
 **Ex2: Tire uma carta. os eventos "tirar um rei" e "ser de copas" são independentes?**
 A = "tirar um rei" B = "tirar uma carta de copas"
 
@@ -58,6 +60,8 @@ $P(A|B) = P(rei|copas) = 1/13$ tem 1 rei entre as 13 cartas de copas
 $P(A) = P(rei) = 1/13$ no baralho todo essa é a proporção de reis
 
 Sim, tirar um rei e tirar uma carta de copas são **independentes**
+
+---
 
 **Ex3: Tire uma carta. Os eventos "tirar um rei" e "tirar um J, Q ou K" são independentes?**
 A = "tirar um rei" B = "tirar um J, Q ou K"
@@ -77,6 +81,8 @@ $P(A|B) \neq P(A)  => \frac{1}{3} \neq \frac{1}{13}$
 $P(B|A) \neq P(B)  => 1 \neq \frac{3}{13}$
 
 Portanto os eventos são **dependentes**
+
+---
 
 **Ex4: total é `{1,2,3,4,5,6}`. A = `{1,2,3}` e B = `{2,3,4}`. A e B são dependentes?**
 P(A|B) = P(`{1,2,3}` | `{2,3,4}`) = probabilidade de sair 1, 2 ou 3 dado que saiu ou 2, ou 3 ou 4 
