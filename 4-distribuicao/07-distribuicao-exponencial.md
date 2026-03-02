@@ -15,19 +15,19 @@ A distribuição tem uma taxa erro quando calculamos em cima de amostra. Como ca
 
 Para um valor específico.
 
-$$P(X=x) = taxa*e^{-taxa*x} = \frac{taxa}{e^{taxa*x}}$$
+$$P(X=x) = taxa * e^{-taxa * x} = \frac{taxa}{e^{taxa * x}}$$
 
 Para todos os valores abaixo de x
 
-$$P(X<x) = 1 - e^{-taxa*x} = 1 - \frac{1}{e^{taxa*x}}$$ 
+$$P(X<x) = 1 - e^{-taxa * x} = 1 - \frac{1}{e^{taxa * x}}$$ 
 
 Essa é a integral da 1ª equação.
 
 ### Prova
 
-$\int taxa*e^{-taxa*x} \,dx = taxa*\int e^{-taxa*x} \,dx = taxa * \frac{-1}{taxa} * e^{-taxa*x} = \frac{-taxa}{taxa} * e^{-taxa*x} = -1 + e^{-taxa*x} = 1 - e^{-taxa*x}$
+$\int taxa * e^{-taxa * x} \,dx = taxa * \int e^{-taxa * x} \,dx = taxa * \frac{-1}{taxa} * e^{-taxa * x} = \frac{-taxa}{taxa} * e^{-taxa * x} = -1 + e^{-taxa * x} = 1 - e^{-taxa * x}$
 
-$\frac{1}{e^{taxa*x}}$ é a chance do evento acontecer acima do x
+$\frac{1}{e^{taxa * x}}$ é a chance do evento acontecer acima do x
 
 Por isso que a equação é 1 - chance
 
