@@ -19,7 +19,7 @@ $$P(X=x) = taxa * e^{-taxa * x} = \frac{taxa}{e^{taxa * x}}$$
 
 Para todos os valores abaixo de x
 
-$$P(X<x) = 1 - e^{-taxa * x} = 1 - \frac{1}{e^{taxa * x}}$$ 
+$$P(X < x) = 1 - e^{-taxa * x} = 1 - \frac{1}{e^{taxa * x}}$$ 
 
 Essa é a integral da 1ª equação.
 
