@@ -1,4 +1,4 @@
-## DISTRIBUIÇÃO BINOMIAL
+# DISTRIBUIÇÃO BINOMIAL
 
 - É o caso genérico da Bernoulli, para n medidas
 - Mede o nº de sucessos (ou falhas) em n medições binárias

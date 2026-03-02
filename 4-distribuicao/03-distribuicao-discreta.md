@@ -50,6 +50,8 @@ $P(X=3) = \frac{1}{6}$
 - Variância = $\frac{(6-1)^2}{12} = \frac{5^2}{12} = 2,08$
 - Desvio Padrão = $\frac{6-1}{\sqrt{12}} =  \frac{5}{\sqrt{12}} = 1,44$
 
+---
+
 ### Exercícios
 
 Uma loja vende de 800 a 1800 peças por dia com distribuição uniforme. Qual a probabilidade: 
