@@ -14,7 +14,7 @@ $$f(x) = \frac{e^{-\frac{1}{2}(\frac{x-media}{desvio})^2}}{desvio\sqrt{2\pi}}$$
 
 Para todos os valores abaixo de x ou entre x e y
 
-$$P(X<x) = \frac{1}{desvio\sqrt{2\pi}} * \int e^{-\frac{1}{2}(\frac{x-media}{desvio})^2} \,dx$$ 
+$$P(X < x) = \frac{1}{desvio\sqrt{2\pi}} * \int e^{-\frac{1}{2}(\frac{x-media}{desvio})^2} \,dx$$ 
 
 Essa é a integral da 1ª equação. Como essa integral não tem solução analítica, então é preciso simplifcar a equação (padronizar) e usar de tabelas (z-score) pra calcular.
 

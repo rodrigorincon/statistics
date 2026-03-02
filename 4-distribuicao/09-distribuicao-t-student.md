@@ -10,7 +10,7 @@
 
 ## Equação
 
-$$f(x) = (1+\frac{x^2}{n-1})^{-n/2}*\frac{gama(\frac{n}{2})}{gama(\frac{n-1}{2})\sqrt{\pi*(n-1)}}$$
+$$f(x) = (1+\frac{x^2}{n-1})^{-n/2} * \frac{gama(\frac{n}{2})}{gama(\frac{n-1}{2})\sqrt{\pi * (n-1)}}$$
 
 Aonde gama é o fatorial que serve para todos os números reais e complexos.
 
