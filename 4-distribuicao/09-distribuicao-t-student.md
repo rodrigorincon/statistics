@@ -7,6 +7,7 @@
 - Conforme sua amostra cresce, ela se aproxima da normal **padrão** (com média 0 e desvio 1)
 - É simétrica em forma de sino
 - **Perfeita para quando não sabe o desvio padrão da população** (só tem o da amostra)
+![](images/diference-normal-t.png)
 
 ## Equação
 
