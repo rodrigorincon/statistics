@@ -55,7 +55,7 @@ OBS: caso o conjunto tenha nº par, a mediana é a média dos 2 valores do meio
 
 $$variancia = \frac{\sum_{i=1}^n (x_i - media)^2}{N}$$
 
-Se for a variância da **população** divide por N e se for da **amostra** divide por N-1
+Se for a variância da **população** divide por N e se for da **amostra** divide por N-1 (devido ao viés estatístico).
 
 `OBS: para amostrar enormes, N ou N-1 se torna insignificante`
 
@@ -125,6 +125,8 @@ Mesma equação, só trocando Xi por desvio.
 
 `Não posso comparar 2 desvios diretamente. As vezes um conjunto é menos esparso mesmo tendo desvio maior (devido a contexto ou unidade de medida). Para comparar usa-se o coeficiente de variação.`
 
+OBS: posso ter um desvio maior que a média (ex: média de 15 e desvio de 20). Apesar de parecer absurdo matematicamente dá. Isso significa que temos uma variância absurda ou outliers pesados e o gráfico vai ter caudas longas.
+
 **5. COEFICIENTE DE VARIAÇÃO**
 - É o desvio padrão dividido pela média
 - Serve pra comparar 2 desvios padrões com unidades de medidas diferentes (cm e kg)
@@ -152,7 +154,25 @@ $cv(peso) = \frac{10}{75} = 0,13$
 
 Tem 4 formas de calcular, que serão mostradas na sessão "coeficiente-de-correlação"
 
+## Viés Estatístico
+
+`Não tem a ver com dispersão, mas pela falta de lugar para colocar e como é citado na variância, to colocando aqui.`
+
+Alguns cálculos mudam quando usam amostras ou população (ex: variância e desvio padrão), pois a amostra traz um grau de incerteza que precisa ser corrigido
+
+A amostra tende a subestimar a dispersão real, diminuindo o resultado. Isso é **viés estatístico**
+
+O vies diz que a cada info que vc tira da amostra (dados incompletos), mais **graus de incerteza** vc adiciona. 
+- Ao tirar a média tem grau 0 de incerteza
+- Ao tirar a variância (que usa a média, q pode estar errada por vir de dados incompletos), tem grau 1 (por isso N-1). 
+- Ao tirar o coeficiente de variação (que usa a variância que usa a média que vem de dados incompletos), tem grau 2 (por isso N-2)
+
+OBS: se você tirar outra info que não dependa de outra info anterior já tirada, será grau 0 (N). Ex: média e amplitude são ambos grau 0, posso tirar os 2 sem usar N-1.
+
+Isso é muito usado no cálculo da variância, na distribuição T e na distribuição Qui-Quadrado.
+
 # Resumo
+
 - Encontrar outliers: **desvio padrão e boxplot**
 - Avaliar dispersão de dados: **desvio padrão e boxplot** (e gráfico)
 - Comparar dispersões: **coeficiente de variação** (e gráfico)

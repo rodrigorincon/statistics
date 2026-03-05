@@ -20,10 +20,11 @@
 	- Variância
 	- Desvio Padrão
 	- Coeficiente de variação
+- Inferência
 	- Erro padrão
+	- Intervalo de Confiança
 - Outros
 	- Curva Normal
-	- Intervalo de Confiança
 
 # ########## Conceitos Gerais
 
@@ -132,7 +133,6 @@ OQ SÃO ESSAS TRANSFORMAÇÕES E COMO ELAS REMOVEM A INFLUENCIA???
 	- Ex: registros no banco de dados
 - Geralmente não se tem a população toda, aí é preciso trabalhar só com a amostra que se tem e fazer inferências
 
-
 ## CONCEITO: AMOSTRA
 
 - Uma parcela da população/grupo/objeto estudado
@@ -147,20 +147,6 @@ OQ SÃO ESSAS TRANSFORMAÇÕES E COMO ELAS REMOVEM A INFLUENCIA???
 - Quando sua população é muito pequena e vc consegue perguntar/medir todo mundo (ex: uma sala de aula) e quer medir algo passado ou atual
 	
 `Mesmo se tiver toda a população mas quer medir um comportamento futuro, pode ser (a depender do contexto) melhor usar uma amostra` (ex: o facebook quer testar uma feature nossa e só libera pra um pequeno grupo pra estimar quantos vão aderir).
-
-### Viés Estatístico
-Alguns cálculos mudam quando usam amostras ou população (ex: variância e desvio padrão), pois a amostra traz um grau de incerteza que precisa ser corrigido
-
-A amostra tende a subestimar a dispersão real, diminuindo o resultado. Isso é **viés estatístico**
-
-O vies diz que a cada info que vc tira da amostra (dados incompletos), mais **graus de incerteza** vc adiciona. 
-- Ao tirar a média tem grau 0 de incerteza
-- Ao tirar a variância (que usa a média, q pode estar errada por vir de dados incompletos), tem grau 1 (por isso N-1). 
-- Ao tirar o coeficiente de variação (que usa a variância que usa a média que vem de dados incompletos), tem grau 2 (por isso N-2)
-
-OBS: se você tirar outra info que não dependa de outra info anterior já tirada, será grau 0 (N). Ex: média e amplitude são ambos grau 0, posso tirar os 2 sem usar N-1.
-
-`Para amostras enormes, essa diferença se torna insignificante.`
 
 # ########## Medidas de Centro
 
@@ -304,8 +290,26 @@ $$cv = \frac{desvio}{media}$$
 
 Se for a variância da **população** divide por N e se for da **amostra** divide por N-1
 
+# ########## Inferência
+
 ## CONCEITO: ERRO PADRÃO
-usado quando trabalhamos com inferência estatística
+
+- É o desvio padrão da distribuição amostral
+- Diz a **precisão da média** e da inferência de uma amostra
+	- Diz também o quanto a **média** de diferentes amostras podem variar entre si
+- Está ligado ao grau de confiança/precisão que eu busco
+- É usado para calcular a margem de erro
+- Usado quando trabalhamos com inferência estatística
+- Quando se está avaliando uma amostra e vários itens de uma vez, usa-se o erro padrão no lugar do desvio nos cálculos probabilísticos.
+
+$$EP(media) = \frac{desvio}{\sqrt{n}}$$
+
+## CONCEITO: INTERVALO DE CONFIANÇA
+
+- Dá uma faixa aonde o valor está presente
+	- $valor \pm margemErro$
+- Todo intervalo de confiança depende da margem de erro
+- A margem de erro é calculada a partir do erro padrão.
 
 # ########## Outros
 
@@ -317,12 +321,9 @@ usado quando trabalhamos com inferência estatística
 - Também chamadade curva Gaussiana
 - Média mediana e moda são iguais (simétrica)
 
-## CONCEITO: INTERVALO DE CONFIANÇA
 
 Erros do Tipo I/II
 medidas separatrizes, 
-medidas de dispersão
-medidas de assimetria
 Testes de aderência de distribuições teóricas a dados empíricos (Chi-quadrado e kolmogorov-Smirnov)
 Teoria da Confiabilidade Estrutural
 OQ É UMA Variável Aleatória: Bidimensional???

@@ -62,16 +62,21 @@ Quando P(z) > 3 (quando tiver + de 3 desvios padrão) é certeza de ser **outlie
 
 Quando P(z) > 2 (quando tiver + de 2 desvios padrão) pode ou não ser **outlier**, tem de analisar o seu contexto. Chance de 4,55% de acontecer.
 
-### Intervalo de Confiança
+### Nível de Confiança
 
-- Intervalo de confiança diz quantos % de certeza eu tenho que a média **populacional** está em um intervalo
-- Só me informa a **média** verdadeira, não consigo estimar outros valores.
+- Nível de confiança diz quantos % de certeza eu tenho que a média **populacional** está em um intervalo
+- Só me informa a chance para a **média** verdadeira, não consigo estimar outros valores.
 - Faço isso a partir de uma amostra (da qual tenho média e desvio)
-- Quanto maior a amostra, maior o intervalo de confiança (maior minha certeza)
+- Quanto maior a amostra, maior o nível de confiança (maior minha certeza)
+- O nível de confiança te um **intervalo de confiança** ( $media \pm margemErro$ )
+	- O intervalo sempre tem uma média e uma margem (que cria a faixa onde o valor pode tá)
+	- O nível nos diz com quanta certeza tenho que o valor está nessa faixa
 
 $$intervalo = mediaAmostra \pm Z * \frac{desvioAmostra}{\sqrt{n}}$$
 
 `Z vem da tabela z-score (não é o z da equação)!`
+
+OBS: $\frac{desvioAmostra}{\sqrt{n}}$ é o erro padrão. Ele será melhor abordado no tópico de inferência estatística.
 
 ---
 

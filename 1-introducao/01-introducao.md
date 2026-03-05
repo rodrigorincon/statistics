@@ -40,6 +40,9 @@ Estatística se divide em DESCRITIVA, INFERENCIAL e BAYESIANA
 
 `Veremos a descritiva e a inferencial aqui neste projeto.`
 
+Módulos 1 a 4: Descritiva
+Módulos 5 em diante: Inferencial
+
 # ESTATISTICA DESCRITIVA
 
 - Descreve um objeto ou evento de forma crua
