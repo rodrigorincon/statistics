@@ -20,6 +20,7 @@ Aonde $z = \frac{x - media}{desvio}$ e t = valor na tabela t-score
 - **Z é o da equação, não o valor encontrado no meio da tabela**
 - Ou seja z é quantos desvios padrões você está distante da média
 	- Em outras palavras, margem de erro é **distanciaDesvio * erroPadrão**
+- O intervalo para outras medidas exigem técnicas mais avançadas (como simulações ou bootstrap) não abordadas aqui
 
 ---
 

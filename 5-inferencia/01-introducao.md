@@ -3,20 +3,30 @@
 - Tipo de estatística que usa amostras para criar modelos 
 - Tenta prever o comportamento do todo
 - A palavra chave aqui é **amostra**
-- Objetivo é previsão, inferir como o todo é a partir duma parte
-- Envolve `margem de erro, intervalo de confiança`
+- Objetivo é **previsão**, inferir como o todo é a partir duma parte
+- Envolve `intervalo de confiança e testes de hipótese`
 
 Até então estudamos a descritiva, que descrevia os dados da população/amostra. Agora entraremos em outro tipo com outros objetivos. Apesar dela usar as ferramentas da descritiva, aqui o objetivo é outro e traz muita coisa nova.
 
 ## INFERÊNCIA
 
 - Processos de inferir infos da **população** a partir da **amostra**
-- Intervalo de Confiança dá o grau de certeza do seu valor
-- O Teste de Hipótese diz como inferir e qual deve ser a distribuição da sua população
+- Os conceitos mais importantes são o **intervalo de confiança** e o **teste de hipótese**
+	- Intervalo de Confiança dá a faixa que o seu valor está na população
+		- Vai da amostra para a população
+		- Dá uma faixa para um valor
+	- O Teste de Hipótese começa com uma suposição sobre a população e usa uma amostra para validá-la
+		- Vai da população para a amostra
+		- Dá uma resposta de sim ou não se um valor tem certa característica
+
+## Pressupostos
+
 - A amostra deve ser aleatória (para evitar viés) e representativa (não pode ser muito pequena)
 	- Ex: se eu faço o senso só no meu bairro não vai refletir o país todo
 	- Ex: eu faço uma pesquisa de gosto com meus amigos e assumo que o mundo todo é assim
 	- Ex: faço senso pegando pessoas aleatórias, mas entrevisto só 10 pessoas
+- A amostra precisa maior que 30 (teorema do limite central)
+- Todos os conceitos de inferência partem desse pressuposto. Se ele não for verdadeiro tudo cai por terra
 
 - se eu quero comparar 2 grupos, normalmente a melhor escolha é que na amostra os grupos tenham tamanhos iguais (mesmo que na população não)
 	ex: tenho 30% de seniors e 70% de juniors, mas na amostra são 50-50
@@ -32,6 +42,8 @@ só devo usar grupos de tamanho diferente se as variâncias forem muito diferent
 ![](images/tabela-simbolos.png)
 
 # CONCEITOS
+
+## GERAIS
 
 ### População
 
@@ -52,12 +64,15 @@ só devo usar grupos de tamanho diferente se as variâncias forem muito diferent
 
 `Mesmo se tiver toda a população mas quer medir um comportamento futuro, pode ser (a depender do contexto) melhor usar uma amostra` (ex: o facebook quer testar uma feature nossa e só libera pra um pequeno grupo pra estimar quantos vão aderir).
 
+## LIGADOS AO INTERVALO DE CONFIANÇA
+
 ### Distribuição Amostral
 
 - Ao tirar várias amostras, vemos que elas são diferentes entre si
 - Cada amostra tem uma média e desvio padrão diferente, as vezes até distribuições diferentes
 - Distribuição Amostral diz **como a média pode variar entre as amostras**
 - É a média das médias
+- Usado no erro padrão
 
 ### Erro Padrão
 
@@ -66,17 +81,13 @@ só devo usar grupos de tamanho diferente se as variâncias forem muito diferent
 - Diz também a **precisão da média** de uma amostra
 - **Só vale para um grupo (amostra)**
 - Podemos tirar o erro padrão de uma proporção também
+- Usado na margem de erro
 
 ### Teorema Central do Limite
 
 - Diz que se as amostras forem grandes o suficiente (> 30) a distribuição amostral das médias aproxima-se de uma curva normal
 - Se tirar muitas amostras de tamanho 30 ou mais, as médias dessas amostras formarão uma distribuição normal
 - Nos permite assumir certas coisas que facilitará nas inferências
-
-### Nível de Confiança
-
-- É o grau de certeza do seu valor
-- Quantos % de certeza tenho que o valor real (média ou proporção), estão numa certa faixa
 
 ### Margem de Erro
 
@@ -87,3 +98,12 @@ só devo usar grupos de tamanho diferente se as variâncias forem muito diferent
 
 - É a união da média com a margem de erro
 - $valor \pm margem$
+
+### Nível de Confiança
+
+- É o grau de certeza do seu valor
+- Quantos % de certeza tenho que o valor real (média ou proporção), estão numa certa faixa
+
+## LIGADOS AO TESTE DE HIPÓTESE
+
+###

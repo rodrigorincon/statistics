@@ -13,6 +13,7 @@ print("PMF: ", round(value_for_5, 4), " CDF: ", round(value_from_0_to_5, 4))
 # para dist CONTINUAS
 # PDF = prob para um valor P(X=x)
 # CDF = prob acumulada P(X<=x)
+# CF = oposto do CDF P(X>x)
 
 value_for_mean = norm.pdf(0)
 value_from_minus_inf_to_mean = norm.cdf(0)

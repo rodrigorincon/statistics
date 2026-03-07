@@ -23,6 +23,7 @@
 - Inferência
 	- Erro padrão
 	- Intervalo de Confiança
+	- Teste de Hipótese
 - Outros
 	- Curva Normal
 
@@ -310,6 +311,13 @@ $$EP(media) = \frac{desvio}{\sqrt{n}}$$
 	- $valor \pm margemErro$
 - Todo intervalo de confiança depende da margem de erro
 - A margem de erro é calculada a partir do erro padrão.
+- É o principal conceito da inferência junto com o teste de hipótese
+
+## CONCEITO: TESTE DE HIPÓTESE
+
+- Define uma suposição sobre a população e usa uma amostra para validá-la
+- Busca responder se uma afirmação sobre a população é verdadeira ou não a partir de uma amostra
+- É o principal conceito da inferência junto com o intervalo de confiança
 
 # ########## Outros
 

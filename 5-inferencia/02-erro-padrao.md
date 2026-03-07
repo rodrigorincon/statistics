@@ -32,6 +32,7 @@ Sua principal medida é o erro padrão.
 	- Desvio = dispersão dentro daquela amostra
 	- Erro padrão = precisão da média amostral
 - Está ligado ao grau de confiança/precisão que eu busco
+- Mostraremos como calcular o erro da média e da proporção. Outras medidas exigem técnicas mais avançadas (como simulações ou bootstrap) não abordadas aqui
 
 `Se eu quero alta precisão, vou buscar uma amostra cujo erro padrão seja baixo, pois sei que os valores dessa amostra estão próximos do real.`
 
