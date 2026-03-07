@@ -28,6 +28,9 @@
 - Valores mais usados: 0,01 (1%), 0,05 (5%) e 0,1 (10%)
 	- Mesmos valores do nível de confiança mais comuns
 - Também são retirados da tabela Z ou T (a depender do teste usado)
+- Se minha **amostra é muito grande e a variância é baixa, posso usar um alfa mais baixo**
+
+alfa = P(rejeitar Ho | Ho é verdadeiro)
 
 ---
 
@@ -54,6 +57,7 @@ Um alfa menor traz 3 problemas:
 
 - Quanto menor alfa, maior beta
 - Por isso é importante saber qual erro é pior para seu contexto, para escolher qual erro minimizar
+	- Apesar que seu alfa quase sempre será menor que o beta
 
 ---
 
@@ -83,13 +87,42 @@ Como adulterar sua pesquisa:
 - **Não precisamos definir**, ele é calculado no meio do teste
 - **Representa a chance de não detectar um efeito ou diferença que existe**
 
+beta = P(não rejeitar Ho | Ho é falso)
+
 **No erro tipo 2, H1 é o correto.**
+
+---
 
 ### Equação
 
-$$beta = 1 - poder$$
+Cada teste pode calcular beta de formas diferentes, mas a fórmula geral é:
 
-- É calculado a partir do poder do teste
+- Definir o limite crítico (ponto no eixo x aonde a área alfa começa)
+	- É o que faz beta aumentar quando alfa diminui e vice-versa
+- Calcular a distribuição de Ha
+- Calcular a área da distribuição Ha até o limite crítico
+- Todos esses passos tem cálculos diferentes para cada teste
+
+A título de exemplo, para teste t o cálculo é
+
+$beta = P( 0 \le t(alfa, n-1) - \frac{delta \sqrt{n}}{desvioAmostra} )$
+
+Aonde
+
+- t(alfa, n-1) é aonde a área de alfa começa (a linha vertical que delimita alfa)
+	- Encontrada na tabela t ou z, a depender do teste
+	- É o que faz beta aumentar quando alfa diminui e vice-versa
+- delta é a diferença mínima considerada significativa para a pesquisa
+	- diferença entre as médias das curvas H1 e Ho
+	- Ex: a pizzaria diz que a média do tempo de entrega é 30 minutos, 31 é aceitável? Quanto de atraso é aceitável?
+	- Melhor explicado abaixo
+
+---
+
+### Sobre o Valor de Beta
+
+- Costuma ficar abaixo de 0,2
+	- Geralmente é consideravelmente maior que alfa
 - Podemos diminuir beta das seguintes formas:
 	- Aumentando a amostra
 	- Aumentando alfa (quanto menor a chance de erro tipo 1, maior o erro tipo 2)
@@ -99,14 +132,46 @@ $$beta = 1 - poder$$
 		- Ignorando/eliminando outras vars que influenciem o resultado (simplificando sua hipótese)
 	- Usando o teste de hipótese mais adequado
 
+## Delta
+
+- É a diferença mínima considerada significativa para a pesquisa
+- O que é considerado grande para o experimento
+- Quanto maior delta, menor beta
+	- Delta maior é mais fácil de detectar mudanças significativas, menos chances de errar, pois mais coisa é aceito
+	- Delta menor significa uma mudança sutil, portanto mais difícil de detectar e mais fácil de errar
+- Pode ser definido previamente ou calculado
+- A forma de definir delta depende do teste usado
+- **delta = mediaH1 - mediaHo**
+	- Porém como não temos as médias das curvas, delta é definido de outros modos
+	- Delta será positivo em unicaudal a direita (curva H1 está a direita da curva Ho) e negativo à esquerda
+	- No bicaudal ele representa o limiar de interesse em ambas as caudas
+
+### Formas de definir delta
+
+- Em comparativos, é a diferença entre as médias dos 2 grupos (mediaA - mediaB)
+	- Ou a diferença entre o que esperamos (para validar H1) e o valor conhecido atual (Ho)
+	- Que casa com a equação delta = mediaH1 - mediaHo
+- Pode ser definida com pesquisas anteriores
+- Pode ser definida com a diferença que quer alcançar
+	- Ex: uma feature nova tem de aumentar as vendas e 2% para se pagar, então delta = 0,02
+	- Ex2: um novo layout precisa gerar pelo menos 3% a mais de cliques no botão
+	- Ex3: um novo layout precisa gerar pelo menos 5% a mais de conversão
+	- Todas essas diferenças também representam a distância entre as 2 distribuições
+- Pode ser padronizado
+	- Cohen's d: usado para comparar grupos. Dá 3 tamanhos do efeito: pequeno (>= 0,2), médio (>= 0,5) ou grande (>= 0,8)
+	- Pearson's r: usado em correlações e teste Anova
+	- Hedge's g: igual ao Cohen, mas para N pequeno
+	- Odds Ratio: usado em testes clínicos
+
 # Poder to Teste
 
 - Também chamado de potência estatística ou Statistical Power
 - Probabilidade de rejeitar Ho quando quando ela é falsa (acertar)
 - É a sua probabilidade de fazer uma hipótese correta
-	- poder = 1 - beta
+- Como N e o desvio fazem parte do cálculo do beta, eles também afetam o poder
+- P(rejeitar Ho | Ho é falso)
 
-EXPLICAR COMO CALCULA ISSO E COMO N E VARIANCIA AFETAM ESSE VALOR????
+$poder = 1 - beta$
 
 # Resumo
 

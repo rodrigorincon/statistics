@@ -121,4 +121,5 @@ só devo usar grupos de tamanho diferente se as variâncias forem muito diferent
 ### Erro tipo 2
 
 - Outra margem de erro no teste de hipótese
+- Chance de negar uma hipótese verdadeira
 - Falso negativo

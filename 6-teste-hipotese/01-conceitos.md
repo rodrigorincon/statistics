@@ -52,6 +52,7 @@ Exitem centenas de testes. Eles se dividem em 2 grupos: paramétricos e não par
 - Define as hipóteses nula e alternativa (Ho e H1)
 - Comece definindo a hipótese alternativa para depois formular a nula
 - Definir o que significa rejeitar e não rejeitar Ho
+- Definir delta (caso seja definido previamente)
 
 2. Escolher o nível de significância
 

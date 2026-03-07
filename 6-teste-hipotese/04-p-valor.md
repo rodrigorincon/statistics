@@ -13,6 +13,12 @@
 - **P-valor é a chance para todos os valores que provam Ho**.
 	- Lembrando que Ho representa o cenário atual
 
+Posso descrever p-valor como:
+
+- P(dados serem iguais ou mais extremos que os que fazem Ho ser verdade | Ho)
+- Probabilidade dos dados dizerem algo **dado que** Ho é verdadeiro
+- Como assume que Ho é verdadeiro, p-valor é sempre uma prob condicional
+
 ### Sobre o cálculo
 
 - A fórmula de calcular o p-valor varia com cada teste
@@ -20,6 +26,7 @@
 - O cálculo precisa considerar o tipo de cauda (unicaudal a esquerda, direita ou bicaudal)
 	- O tipo de cauda influencia na forma do cálculo
 - Alfa não é usado no cálculo do p-valor, só na tomada de decisão final
+- O valor de p-value não é a probabilidade de alguma hipótese ser verdadeira
 
 ---
 
@@ -39,7 +46,7 @@ Significado da frase `"É a probabilidade de observar os resultados atuais (ou m
 # TOMADA DE DECISÃO
 
 - Se **p-valor < alfa** = Rejeite Ho (**H1 é verdadeiro**)
-- Se **p-valor >= alfa** = Não Rejeite Ho (**H0 é verdadeiro**)
+- Se **p-valor >= alfa** = Não Rejeite Ho (**inconclusivo**)
 
 ### Significado
 
@@ -54,6 +61,8 @@ E podemos descrever a regra `p-valor > alfa = Não Rejeite Ho` como:
 
 - **Não sabemos se essa amostra representa a população ou se foi um caso isolado porque nossa taxa de erro é muito grande**
 - O resultado é muito provável de ter ocorrido ao acaso, mesmo que Ho seja verdade. Portanto não há evidências suficientes para rejeitar Ho.
+
+Não podemos afimar que Ho é verdade porque testamos P(dados | Ho), não P(Ho | dados).
 
 ---
 
