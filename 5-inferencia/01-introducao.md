@@ -106,4 +106,19 @@ só devo usar grupos de tamanho diferente se as variâncias forem muito diferent
 
 ## LIGADOS AO TESTE DE HIPÓTESE
 
-###
+### Teste de Hipótese
+
+- Suposição sobre a população que irei confirmar ou não através da amostra
+- Posso confirmar ou ser inconclusivo
+
+### Erro tipo 1
+
+- Margem de erro no teste de hipótese
+- Dizem quão criterioso é o teste
+- É o grau de certeza que tenho da minha conclusão
+- Falso positivo
+
+### Erro tipo 2
+
+- Outra margem de erro no teste de hipótese
+- Falso negativo
