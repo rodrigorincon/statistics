@@ -1,0 +1,9 @@
+---------------------------- Testes de normalidade
+Jarque-Bera
+Shapiro-Wilk (mais robusto)
+Kolmogorov-Smirnov 
+Q-Q plot
+Curtose
+
+---------------------------- Teste T
+Teste A/B é um teste T

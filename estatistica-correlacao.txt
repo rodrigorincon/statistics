@@ -1,0 +1,60 @@
+--- coeficiente de correlação (r)
+valor entre -1 e 1
+diz a direção (positivo se são diretamente proporcionais e negativo se são inversamente prop) e a intensidade do quanto elas tão relacionadas (mais proximo do 1 mais intenso é)
+se for 0 = não possui nenhuma correlação entre as vars
+
+correlação forte: os pontos tão menos dispersos (mais próximos da reta média (regressão)) - aula 7 mod 2 min 5:34
+posso comparar 2 medidas de correlação tranquilamente
+INDEPENDE da unidade usada (ver como ele elimina a unidade???)
+figuras de ex: aula 8 mod 2 min 1:27
+
+tem 3 formas de calcular
+1: Pearson (mais comum e default das ferramentas)
+
+2: Spearman (ñ paramétrico e útil para vars discretas)
+
+3: Kendall
+
+4: Bisserial (para vars binárias)
+combina com regressão logística???
+
+
+--- coeficiente de determinação (r2)
+só faz sentido quando estamos fazendo uma regressão
+usado para avaliar se a regressão tá bem ajustada
+
+--- covariância
+informa só se 2 vars são proporcionais ou não (sobem juntas ou inversas)
+	grau de interdependência entre elas
+positivo cresce junto, negativo são inversamente propocionais e 0 ñ possuem relação
+
+varia de - infinito a + infinito
+NÃO DIZ se é fraco ou forte (como vai até o infinito vc ñ sabe se 300 a relação é forte ou fraca)
+é FORTEMENTE AFETADA pela unidade de medida (o valor pode ser 15 ou 150 a depender da unidade usada)
+	por isso que o valor em si ñ é significativo, só seu sinal
+isso tbm torna mais complicado comparar 2 covariâncias
+
+usado só em poucos contextos específicos
+
+pode ser calculada de 2 maneiras
+
+1: média do produto dos desvios
+desvio_xi = (xi - media_x) * (yi - media_y) => multiplicação de um ponto com o ponto médio (ñ é a distância, distância seria se somasse os eixos x e y)
+covariancia = sum(desvio_xi)/n
+
+2: diferença entre a média do produto e o produto das médias
+covariancia = media_x_y - media_x * media_y
+media_x_y = sum(xi*yi)/n
+			 __            _            _
+media_x_y =  xy  media_x = x  media_y = y
+
+OS 2 METODOS DÃO O MSM VALOR
+
+
+--- como saber se uma correlação é causalidade
+1: Experimentos controlados randomizados
+2: Diferenças em diferenças
+3: Variáveis instrumentais (IV)
+4: Pareamento de pontuação de propensão (Propensity score matching - PSM)
+
+livro sobre: https://github.com/rdemarqui/python-causality-handbook-ptbr/blob/master/causal-inference-for-the-brave-and-true/00-Summary.ipynb

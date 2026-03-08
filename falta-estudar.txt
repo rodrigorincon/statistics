@@ -1,0 +1,19 @@
+beta (erro tipo 2)
+testes
+	teste F e qui-quadrado
+regressões (correlação de Pearson e covariancia)
+transformações
+series temporais
+Ajustamento de uma função real a uma série temporal
+estimação população matriz. Censo e amostragem Amostra aleatória. 
+
+
+ver como calcula correlção de pearson
+ver quando usar as outras correlações e como calcula cada uma
+
+ver exercicios de correlação e de covariancia (fazer os mesmos exercicios mudando as unidades)
+ver exercicios de correlação de diversos tipos
+
+
+------------------ EXERCICIOS
+https://projetomedicina.com.br/site/attachments/article/538/matematica_exercicios_resolucao_estatistica.pdf

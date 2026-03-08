@@ -1,0 +1,32 @@
+1-introdução
+	02-dicionario
+		CONCEITO: OUTLIER
+			OQ SÃO ESSAS TRANSFORMAÇÕES E COMO ELAS REMOVEM A INFLUENCIA???
+		CONCEITO: CORRELAÇÃO
+			estudar método Market Basket usado para venda casada????
+2-centro-e-dispersao
+	03-media-movel
+		escrever ainda
+		fazer exercicios de python
+	05-coeficiente-de-correlacao
+		escrever ainda
+		no python, fazer coef. de correlação discreto e continuo e plotar os graficos
+		fazer exemplo do modulo 1 onde plota grafico de dispersão de todos as vars com todas
+		ver como ele elimina a unidade??? -> pra permitir comparar 2 valores quaisquer
+		combina com regressão logística???
+4-distribuicao
+	06-distribuicao-continua
+		pra saber se uma distribuição é normal tem que passar no teste de hipótese XXXXXXX
+5-inferencia
+	05-tamanho-amostral
+		TAMANHO MÁXIMO
+6-teste-hipotese
+	05-quando-usar-cada-um
+		QUANDO USAR
+
+estudar oq é tamanho do efeito e como ele se mistura com p-valor
+	Se N é baixo: O teu foco está no P-valor. Precisas de saber se a diferença que vês é real ou apenas sorte. (Exemplo dos 80 visitantes). 
+	Se N é alto: O teu foco muda para o Tamanho do Efeito (delta) e o Intervalo de Confiança. O P-valor será quase sempre baixo. A tua pergunta passa a ser: "Esta diferença real é grande o suficiente para importar?"
+	Quando o N é pequeno, há muita incerteza e o foco não deve ser apenas no p-valor, pois ele pode falhar em detectar efeitos reais. Porém, podemos também observar o tamanho do efeito e o intervalo de confiança, que indicarão a magnitude e a precisão da estimativa. Já quando N é grande, mesmo diferenças pequenas podem gerar p-valores muito baixos, tornando a significância estatística quase garantida. Nesse caso, o foco deve mudar para a relevância prática dos resultados. Ou seja, o p-valor indica se há evidência de um efeito, mas o tamanho do efeito e o intervalo de confiança mostram se esse efeito é importante e confiável.
+
+https://www-sixsigma--institute-org.translate.goog/Six_Sigma_DMAIC_Process_Analyze_Phase_Hypothesis_Testing.php?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=sge
