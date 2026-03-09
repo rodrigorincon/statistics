@@ -13,6 +13,15 @@
 - Os dados devem ser independentes
 - **Variância da população precisa ser conhecido**
 
+---
+
+**OBSERVAÇÃO**
+
+- Caso os dados não sejam normais, posso tentar transforma-los para base logaritma
+- Assim as discrepâncias são amenizadas e os dados ficam mais agrupados (menor amplitude)
+- Porém preciso testar a normalidade nos dados transformados para ver se agora eles são normais
+- A partir daí, tudo deve ser transformado igual (as outras amostras, os valores de comparação...)
+
 # Teste para 1 proporção
 
 - Compara a propoção da amostra com um valor específico

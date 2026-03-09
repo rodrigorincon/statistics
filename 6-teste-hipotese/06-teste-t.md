@@ -14,6 +14,16 @@
 - Os dados devem ser contínuos (não funciona com dados discretos)
 - Não deve ter outliers (ou os mesmos devem ter sido tratados ou avaliados)
 
+---
+
+**OBSERVAÇÃO**
+
+- Caso os dados não sejam normais, posso tentar transforma-los para base logaritma
+- Assim as discrepâncias são amenizadas e os dados ficam mais agrupados (menor amplitude)
+- Porém preciso testar a normalidade nos dados transformados para ver se agora eles são normais
+- A partir daí, tudo deve ser transformado igual (as outras amostras, os valores de comparação...)
+
+
 # Equação para 1 média
 
 $$t = \frac{mediaAmostra - valorComparacao}{ \frac{desvioAmostra}{\sqrt{n}} }$$
