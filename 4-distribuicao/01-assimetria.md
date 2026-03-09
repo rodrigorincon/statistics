@@ -2,6 +2,7 @@
 
 - Analisar a assimetria pode trazer alguns insights sobre os dados
 - Os insights precisam ser confirmados por cálculos de inferência e de distribuição, mas pode servir como pontapé do que e onde olhar
+- Podemos calcular a assimetria a partir do momento estatístico (vemos como no próximo arquivo)
 
 ### Cauda e Curtose
 - Histograma, gráfico de linhas e de dispersão são bons pra ver o formato geral da distribuição

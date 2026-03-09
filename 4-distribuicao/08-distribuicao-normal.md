@@ -4,7 +4,11 @@
 - Pode ser usado com valores discretos quando ele tem valores muito próximos
 - Quanto maior o desvio padrão, mais aberto é o gráfico da normal (mais espaçado estão os valores)
 - Precisa pegar a média e o desvio padrão pra calcular
-- pra saber se uma distribuição é normal tem que passar no teste de hipótese XXXXXXX
+- Para saber se uma distribuição é normal tem que passar em um desses testes
+	- Teste de hipótese Shapiro-Wilk (para amostras pequenas)
+	- Teste de hipótese Kolmogorov-Smirnov (para amostras grandes)
+	- Assimetria (skewness) = 0
+	- Curtose = 0
 
 ## Equação
 

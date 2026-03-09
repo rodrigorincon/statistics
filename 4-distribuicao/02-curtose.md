@@ -18,6 +18,19 @@ $\frac{\sum_{i=1}^n{(x_i-media)^4}}{n}$
 - Elevar os desvios a 4 faz com que outliers crescam exponencialmente. Enquanto nºs proximos da média vão crescer muito pouco, outliers vão explodir ao elevar a 4
 - Isso faz com que se tiver outliers, o 4º momento será imenso
 
+# CÁLCULO DA ASSIMETRIA
+
+- Nível de assimetria também é chamado de skewness
+- Nos diz o quão simétrico é uma distribuição e para que lado ele é assimétrico
+	- Simétrico = 0
+	- Assimetria a direita > 0 (valores concentrados a esquerda)
+		- Média > Moda
+	- Assimetria a esquerda < 0 (valores concentrados a direita)
+		- Média < Moda
+- Quanto maior o valor, mais assimétrico é
+
+$$skewness = \frac{3ºMomento}{desvio^3} = \frac{ \frac{\sum_{i=1}^n{(x_i-media)^3}}{n} }{desvio^3}$$
+
 # CONCEITO: CURTOSE
 
 - Grau de achatamento da distribuição/gráfico
