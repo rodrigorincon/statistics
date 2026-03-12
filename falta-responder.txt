@@ -29,11 +29,12 @@ estudar oq é tamanho do efeito e como ele se mistura com p-valor
 https://www-sixsigma--institute-org.translate.goog/Six_Sigma_DMAIC_Process_Analyze_Phase_Hypothesis_Testing.php?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=sge
 
 ------------
-
-distribuição qui-quadrado e Gama
-teste t, plotando as curvas ho e h1
-como calcular beta no teste T e Z
 estudar teste de levene, Shapiro-Wilk e Kolmogorov-Smirnov
+
+como calcular beta no teste T e Z
+distribuição qui-quadrado 
+distribuição Gama
+
 
 ideias de projetos
 - analise exploratoria dos salarios dos servidores publicos do pais todo (quanto ganham, quanto ganha a maioria, tem estado aonde se ganha melhor, ganham mais que o mercado privado, comparar os 3 poderes e 3 niveis)
