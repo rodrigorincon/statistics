@@ -28,7 +28,7 @@
 - proporcaoAmostra é representado por p
 - valorComparacao é representado por p0
 
-$$z = \frac{proporcaoAmostra - valorComparacao}{ \sqrt{ \frac{valorComparacao(1-valorComparacao)}{n}} }$$
+$$z = \frac{proporcaoAmostra - valorComparacao}{ \sqrt{ \frac{valorComparacao(1-valorComparacao)}{n}} } = \frac{proporcaoAmostra - valorComparacao}{erroPadrao}$$
 
 É a mesma equação do teste T para 1 média, trocando a variância pelo p(1-p). p é a proporção com a qual queremos comparar.
 
@@ -37,6 +37,8 @@ $$z = \frac{proporcaoAmostra - valorComparacao}{ \sqrt{ \frac{valorComparacao(1-
 - O z calculado acima é o valor no meio da tabela
 - Temos de fazer o caminho inverso para, a partir do valor final, chegar no valor z0 (nas laterais da tabela).
 - Para bicaudal, p-valor será o resultado final * 2
+
+OBS: Algumas funções do python ao invés de usar o erro padrão no denominador usam a proporção amostral, precisando ser especificado a fórmula ao executar.
 
 ### Exemplo
 

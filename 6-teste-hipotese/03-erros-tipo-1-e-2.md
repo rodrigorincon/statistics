@@ -131,6 +131,7 @@ Aonde
 		- Fazendo coleta nas mesmas condições e horas
 		- Ignorando/eliminando outras vars que influenciem o resultado (simplificando sua hipótese)
 	- Usando o teste de hipótese mais adequado
+	- Aumentar a distância entre as médias de Ho e H1
 
 ## Delta
 
