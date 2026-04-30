@@ -20,6 +20,10 @@
 6-teste-hipotese
 	05-quando-usar-cada-um
 		QUANDO USAR
+	08-teste-anova
+		??pq não usar o teste post-hoc direto?? PERGUNTA NA AULA python(1via) do MOD 9
+		escrever sobre tamanho do efeito
+
 
 estudar oq é tamanho do efeito e como ele se mistura com p-valor
 	Se N é baixo: O teu foco está no P-valor. Precisas de saber se a diferença que vês é real ou apenas sorte. (Exemplo dos 80 visitantes). 

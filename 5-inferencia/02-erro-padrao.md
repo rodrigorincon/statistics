@@ -62,7 +62,7 @@ Lembrando que essa troca é **só para amostra** e só quando quer medir a **pro
 
 ---
 
-Ex: Uma garrafa de cerveja costuma ter em médoa 330ml com desvio padrão de 4ml. A variação é normal.
+Ex: Uma garrafa de cerveja costuma ter em média 330ml com desvio padrão de 4ml. A variação é normal.
 
 **1. Qual a chance de 1 garrafa aleatória ter menos de 325ml?**
 

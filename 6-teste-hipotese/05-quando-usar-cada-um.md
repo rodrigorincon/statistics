@@ -17,6 +17,8 @@ Existem vários, mas aqui listarei os mais comuns:
 - Fisher
 - McNemar
 - Shapiro-Wilk / Kolmogorov-Smirnov
+- Bonferroni
+- HSD de Tukey
 
 # QUANDO USAR
 
@@ -34,3 +36,6 @@ Existem vários, mas aqui listarei os mais comuns:
 	- Amostra pequena: **Shapiro-Wilk**
 	- Amostras grandes: **Kolmogorov-Smirnov**
 - Checar se uma amostra tem alguma distribuição diferente da normal: **Kolmogorov-Smirnov**
+- Encontrar amostra que se difere das outras
+	- Poucos grupos: **Bonferroni**
+	- Muitos grupos: **HSD de Tukey**

@@ -190,7 +190,7 @@ $$alfa = 1 - confianca$$
 - É o total da área coberta da curva normal
 - **Só posso usar esse método caso a distribuição amostral for normal**
 
-Assim como a faxia coberta pelo desvio padrão da normal também vem do z-score, então dizer que tenho 95% de confiança significa que 95% da área da curva normal está coberta. O que significa que cobri até X desvios padrões que dão esse valor.
+Assim como a faixa coberta pelo desvio padrão da normal também vem do z-score, então dizer que tenho 95% de confiança significa que 95% da área da curva normal está coberta. O que significa que cobri até X desvios padrões que dão esse valor.
 
 **Exemplo:**
 - 2 desvio padrões é 0,9544, logo 2 desvios padrões cobertos dá 95,44% de nível de confiança
