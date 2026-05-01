@@ -105,3 +105,13 @@ print("--------------------------")
 if(levene_p_value >= 0.05 and shap_p_value >= 0.05):
   anova_table = sm.stats.anova_lm(modelo, typ=2)
   print(anova_table, '\n--------------')
+  p_values = anova_table['PR(>F)'].dropna().tolist()
+  if(p_values[0] < 0.05): # SEGUE A ORDEM USADA NO smf.ols
+    print("Há diferenças entre os grupos de Area")
+  else:
+    print("Os grupos de Area são similares")
+  
+  if(p_values[1] < 0.05):
+    print("Há diferenças entre os grupos de Formacao")
+  else:
+    print("Os grupos de Formação são similares")
