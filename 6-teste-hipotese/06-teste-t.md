@@ -285,3 +285,13 @@ Olhando na tabela t por t=5,78 e gl=6, vemos que alfa é ligeiramente maior que 
 **Solução 2**
 
 Olhando na tabela o valor de t para alfa e n-1, achamos t_tabela = 3,143. Como t_final é menor que -t_tabela (-5,78 < -3,1143) está dentro da área alfa. Portanto `rejeitamos Ho`.
+
+# Tamanho do Efeito
+
+Só porque um p-valor é menor que outro não significa que ele tem mais peso/relevância que outro. Para tanto é preciso medir o tamanho do efeito.
+
+O p-valor maior não significa que aqueles grupos são mais similares, o p-valor não dá esse tipo de informação. Quem informa isso é o tamanho do efeito.
+
+O tamano do efeito usado paro T (tanto independente como o dependente) é o `D de Cohen`.
+
+A forma de calcular o tamanho do efeito será definido no módulo 9.

@@ -1,4 +1,3 @@
-escrever sobre tamanho do efeito
 distribuição F e teste F 
 teste tukey e Bonferroni (e oq muda de 1 pro outro)
 teste levene
@@ -13,6 +12,11 @@ series temporais
 Ajustamento de uma função real a uma série temporal
 estimação população matriz. Censo e amostragem Amostra aleatória. 
 
+tamano do efeito
+- D de Cohen
+- eta-quadrado
+- R de Pearson
+- R de Cohen
 
 ver como calcula correlção de pearson
 ver quando usar as outras correlações e como calcula cada uma

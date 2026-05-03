@@ -50,7 +50,7 @@ Exitem centenas de testes. Eles se dividem em 2 grupos: paramétricos e não par
 1. Definir as hipóteses
 
 - Define as hipóteses nula e alternativa (Ho e H1)
-- Comece definindo a hipótese alternativa para depois formular a nula
+	- Comece definindo a hipótese alternativa para depois formular a nula
 - Definir o que significa rejeitar e não rejeitar Ho
 - Definir delta (caso seja definido previamente)
 
@@ -65,6 +65,7 @@ Exitem centenas de testes. Eles se dividem em 2 grupos: paramétricos e não par
 - Escolher o teste que melhor se encaixa no seu contexto
 - Calcular o p-valor
 - Calcula beta
+- Calcula tamanho do efeito
 - Cada teste calcula de um jeito diferente
 
 4. Interpretar o resultado

@@ -59,7 +59,7 @@ Aonde
 - k é o nº de grupos
 - n é a quantidade de amostras em cada grupo (tamanho do grupo)
 - $media_i$ é a média do grupo
-- media_t é a média total
+- $media_t$ é a média total
 
 ### Passo 3: calcular a variância dentro dos grupos
 
@@ -73,7 +73,7 @@ Aonde
   - Essas diferenças precisam formar uma distribuição normal!
 
 
-$QMD = \frac{ \sum{i=1}^k {(n_i-1)vari_i} }{N-k}$
+$QMD = \frac{ \sum_{i=1}^k {(n_i-1)vari_i} }{N-k}$
 
 Aonde
 
@@ -143,11 +143,11 @@ Ou seja:
 
 ### Cálculo da 3ª Anova
 
-$QMAB = {\sum{i=1}^N {(x_i - media)^2} }{(gruposA-1)(gruposB-1)}$
+$QMAB = {\sum_{i=1}^N {(x_i - media)^2} }{(gruposA-1)(gruposB-1)}$
 
 Soma de todas variâncias dividido pela multiplicação do nº de grupos de cada categoria.
 
-$QMD = \frac{ \sum{i=1}^k {(n_i-1)vari_i} }{N-(grupoA * grupoB)}$
+$QMD = \frac{ \sum_{i=1}^k {(n_i-1)vari_i} }{N-(grupoA * grupoB)}$
 
 Soma das variâncias dentro de cada grupo (unindo os 2 fatores)
 
@@ -157,6 +157,8 @@ $$F = \frac{QMAB}{QMD}$$
 
 Só porque um p-valor é menor que outro não significa que ele tem mais peso/relevância que outro. Para tanto é preciso medir o tamanho do efeito.
 
-ver eta-quadrado (normal e parcial) e omega-quadrado
+O p-valor maior não significa que aqueles grupos são mais similares, o p-valor não dá esse tipo de informação. Quem informa isso é o tamanho do efeito.
 
-https://fernandafperes.com.br/blog/tamanho-de-efeito/
+O tamano do efeito usado para Anova é o `eta-quadrado`.
+
+A forma de calcular o tamanho do efeito será definido no módulo 9.

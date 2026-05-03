@@ -106,3 +106,9 @@ $t = \frac{32 - 30}{ \frac{8}{\sqrt{30}} } = 1,37$
 Como p-valor > alfa, então então **não devemos rejeitar Ho**
 
 Portanto,a resposta final é "Não tenho evidências para concluir que o tempo médio de entrega é maior que 30 minutos".
+
+# Extras
+
+[Um exemplo simples e visual do que é o p-valor e o alfa.](https://fernandafperes.com.br/blog/doutora-toma-cha/)
+
+[Erros comuns sobre como interpretar o p-valor.](https://fernandafperes.com.br/blog/falacias-valor-de-p/)
