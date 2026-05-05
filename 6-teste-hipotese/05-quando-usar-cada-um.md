@@ -17,8 +17,7 @@ Existem vários, mas aqui listarei os mais comuns:
 - Fisher
 - McNemar
 - Shapiro-Wilk / Kolmogorov-Smirnov
-- Bonferroni
-- HSD de Tukey
+- HSD de Tukey / Games-Howell / Bonferroni
 
 # QUANDO USAR
 
@@ -39,3 +38,4 @@ Existem vários, mas aqui listarei os mais comuns:
 - Encontrar amostra que se difere das outras
 	- Poucos grupos: **Bonferroni**
 	- Muitos grupos: **HSD de Tukey**
+	- grupos não tem variâncias homogêneas: **Games-Howell**

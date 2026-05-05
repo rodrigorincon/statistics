@@ -1,6 +1,3 @@
-distribuição F e teste F 
-teste tukey e Bonferroni (e oq muda de 1 pro outro)
-teste levene
 teste Shapiro-Wilk e Kolmogorov-Smirnov (e oq muda de 1 pro outro)
 
 beta (erro tipo 2)

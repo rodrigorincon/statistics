@@ -14,6 +14,9 @@
 		fazer exemplo do modulo 1 onde plota grafico de dispersão de todos as vars com todas
 		ver como ele elimina a unidade??? -> pra permitir comparar 2 valores quaisquer
 		combina com regressão logística???
+04-distribuicao
+	10-distribuicao-f
+		escrever a relação entre distribuicao F e qui-quadrado
 5-inferencia
 	05-tamanho-amostral
 		TAMANHO MÁXIMO

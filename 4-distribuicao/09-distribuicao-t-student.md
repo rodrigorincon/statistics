@@ -22,6 +22,7 @@ Porém a equação quase nunca é usada, ao invés disso é usado uma tabela (ta
 - Ou seja, **toda medida do T-student envovle um grau de erro** (devido trabalhar com amostras pequenas)
 - O alfa considera os 2 lados do gráfico, com alfa/2 pra cada lado
 - Então, ao buscar a prob que cubra 15% do gráfico de cada lado o alfa é 30%
+
 ![](images/distribuicao-t-alfa.png)
 
 OBS: tem tabelas bi-caudal (que faz desse modo) e uni-caudal (aonde todo alfa está em um único lado) e os valores mudam de um pro outro. Atenção pra usar a tabela certa

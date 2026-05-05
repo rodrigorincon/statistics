@@ -12,6 +12,7 @@
 - Os dados devem ter distribuição normal ou próxima (passar no teorema do limite central)
 - Os dados devem ser independentes
 - Os dados devem ser contínuos (não funciona com dados discretos)
+- Os dados devem ter variâncias similares (passar no teste de Levene)
 - Não deve ter outliers (ou os mesmos devem ter sido tratados ou avaliados)
 
 ---
