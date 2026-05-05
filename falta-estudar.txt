@@ -1,4 +1,4 @@
-teste Shapiro-Wilk e Kolmogorov-Smirnov (e oq muda de 1 pro outro)
+teste Kolmogorov-Smirnov
 
 beta (erro tipo 2)
 testes

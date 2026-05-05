@@ -25,6 +25,9 @@
 		QUANDO USAR
 	08-teste-anova
 		??pq não usar o teste post-hoc direto?? PERGUNTA NA AULA python(1via) do MOD 9
+7-outros-testes	
+	04-Shapiro
+		como funciona e exemplo do teste Kolmogorov
 
 
 estudar oq é tamanho do efeito e como ele se mistura com p-valor

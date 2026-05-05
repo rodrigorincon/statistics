@@ -38,4 +38,4 @@ Existem vários, mas aqui listarei os mais comuns:
 - Encontrar amostra que se difere das outras
 	- Poucos grupos: **Bonferroni**
 	- Muitos grupos: **HSD de Tukey**
-	- grupos não tem variâncias homogêneas: **Games-Howell**
+	- Grupos não tem variâncias homogêneas: **Games-Howell**
