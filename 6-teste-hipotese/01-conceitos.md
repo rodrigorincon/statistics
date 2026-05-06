@@ -22,28 +22,41 @@ OBS: mostraremos como fazer testes para a média e a proporção. Outras medidas
 
 Exitem centenas de testes. Eles se dividem em 2 grupos: paramétricos e não paramétricos.
 
-- Testes Paramétricos:
-	- Assumem que os dados seguem uma distribuição específica (geralmente normal)
-	- Bons para amostras grandes e dados contínuos
-	- São mais precisos, porém exigem amostras maiores
-	- Por serem mais robustos, tem menos chances de erro tipo 2
-	- São mais sensíveis a outliers
-	- Exemplos:
-		- Teste z
-		- Teste t
-		- Anova
-		- Pearson
-- Testes Não Paramétricos:
-	- Não assumem que os dados sigam alguma distribuição
-	- Bons para dados categóricos ou discretos e para amostras pequenas
-	- São resistentes a outliers
-	- São mais flexíveis, porém com menor poder estatístico.
-	- `Adequado quando as premissas do paramétrico são quebradas`
-	- Exemplo:
-		- Qui Quadrado
-		- Wilcoxon
-		- Spearman
-- Alguns testes tem seu equivalente no outro grupo
+**Testes Paramétricos**:
+- Assumem que os dados seguem uma distribuição específica (geralmente normal)
+- Bons para `amostras grandes`
+- Bons para `dados contínuos`
+- São mais precisos, porém exigem amostras maiores
+- Por serem mais robustos, tem `menos chances de erro tipo 2`
+- São mais sensíveis a outliers
+- Exemplos:
+	- Teste z
+	- Teste t
+	- Anova
+	- Pearson
+
+Apesar de não ser obrigatório todos, a maioria dos testes paramétricos exigem essas condições para serem usados:
+	- Dados seguirem distribuição normal
+	- A variância ser homogênea (quando avalia mais de 1 amostra)
+	- Variável numérica
+	- Os dados da amostra serem independentes
+	- Medida de centralidade ser a média
+
+**Testes Não Paramétricos**:
+- Não assumem que os dados sigam alguma distribuição
+	- Ou não conhecemos a distribuição
+- Bons para `dados categóricos ou discretos`
+- Bons para `amostras pequenas`
+- São resistentes a outliers
+- São mais flexíveis, porém com menor poder estatístico.
+- `Adequado quando as premissas do paramétrico são quebradas`
+- Exemplo:
+	- Qui Quadrado
+	- Wilcoxon
+	- Spearman
+
+OBS: Alguns testes tem seu equivalente no outro grupo. Com isso usamos sua versão não paramétrica quando viola alguma de suas premissas.
+
 
 ## Passos de um teste
 

@@ -1,10 +1,17 @@
-teste Kolmogorov-Smirnov
-
+distribuição qui-quadrado
 beta (erro tipo 2)
 testes
 	teste qui-quadrado
+	Wilcoxon
+  Spearman
+  Mann-Whitney
+  Kruskal-Wallis
+  McNemar
+	teste do sinal
+	Kolmogorov-Smirnov
+	pearson
 regressões (correlação de Pearson e covariancia)
-transformações
+transformações (padronização z-score, normalização mini-max, transformações logaritmicas (existe mais de 1??) e raiz quadrada e cubica)
 series temporais
 Ajustamento de uma função real a uma série temporal
 estimação população matriz. Censo e amostragem Amostra aleatória. 

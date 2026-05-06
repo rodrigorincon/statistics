@@ -52,6 +52,8 @@ $$W = \frac{b^2}{SS}$$
 
 Dividimos o encaixe do nossos dados na normal pela dispersão dos dados. Isso nos dá o resultado final do quão bem o encaixe ficou. Como a dispersão usada é a variância (que eleva ao quadrado), elevamos B também para ficar na mesma magnitude.
 
+**W é o tamanho do efeito** do teste. Não precisamos fazer mais cálculos para encontrá-lo. Ele também costuma ser retornado pelo python.
+
 ### Passo 5: Determinar p-valor
 
 Usamos a tabela do p-valor de Shapiro-Wilk para procurar o valor tabelado. Shapiro-Wilk tem 2 tabelas, uma para os coeficientes A e outra para determinar o p-valor.
