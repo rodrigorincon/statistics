@@ -44,7 +44,7 @@ A equação da distribuição F é muito próxima a da distribuição Qui-Quadra
 
 $$F = \frac{ \frac{Q1}{g1} }{ \frac{Q2}{g2} }$$
 
-Aonde Q1 e Q2 são os valores da distribuição Qui-Quadrado e g1 e g2 seus respectivos graus de liberdade.
+Aonde Q1 e Q2 são variáveis que seguem a distribuição Qui-Quadrado e g1 e g2 seus respectivos graus de liberdade.
 
 $MEDIA = \frac{den}{den-2}$ dado que den > 2
 
@@ -73,6 +73,10 @@ $F_{1-alfa} = \frac{1}{F(alfa, den, num)}$
 ## RELAÇÃO COM OUTRAS DISTRIBUIÇÕES
 
 ### QUI-QUADRADO
+
+A distribuição F é a divisão de 2 variáveis com distribuição Qui-quadrado divididas pelos seus graus de liberdade.
+
+As duas tem formato parecido. Lembram a exponencial  para k, num e den = 1 e formato de sino assimétrica a direita no geral.
 
 ### T de Student
 

@@ -16,7 +16,7 @@ H0: As variâncias de todos os grupos são similares.
 
 H1: Pelo menos uma variância é diferente.
 
-# COMO CALCULAR
+## COMO CALCULAR
 
 O cálculo é exatamente o mesmo da Anova de 1 via (até o passo 3). Porém aonde tem média dos grupos e média geral pode trocar por mediana caso esteja calculando a versão com mediana (versão para dados não normalizados).
 

@@ -5,6 +5,7 @@
 - A quantidade de variáveis somadas (N) é o grau de liberdade
   - **Grau de liberdade = N**
   - OBS: em alguns testes muda para N-1
+- Chi-Square no inglês
 
 ## FORMATO DA CURVA
 

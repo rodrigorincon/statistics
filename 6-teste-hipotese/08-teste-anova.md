@@ -18,11 +18,20 @@
   - Anova só diz que algum grupo ali destoa dos demais, mas não qual
   - O teste post-hoc diz qual deles é o que destoa
     - 2 opções de testes são **Bonferroni** e **Tukey**
+  - **Só faço o teste post-hoc se rejeitar H0**
 - Internamente usa o teste F para determinar se há destoamento
 
 $Ho: media1 \approx media2 \approx media3 ... \approx media_n$ (todas as médias são **próxima o suficiente**)
 
 $H1: uma ou mais médias são diferentes o suficiente das demais$
+
+### IMPORTÂNCIA DE NÃO PULAR OS TESTES
+
+O teste post hoc faz diversos testes para saber qual par de grupos variam entre si. Ele testa todas as combinações de pares e traz um resultado para cada um, assim ele encontra qual grupo é o variante.
+
+**NÃO posso pular a anova** e ir direto para o teste post-hoc pois, ao fazer vários testes separados com o mesmo alfa, você aumenta a probabilidade de erro tipo I no conjunto das comparações (erro familiar), enquanto a anova controla esse erro global ao testar tudo de uma vez. 
+
+Ou seja, a **Anova garante o erro tipo I baixo** para a resposta "tem ou não tem variação". Mesmo usando o mesmo alfa em todos os testes (anova e nas repetições do post-hoc), as várias comparações do post-hoc faz acumular os erros para essa resposta, pois apesar de garantir o erro baixo para cada uma, eu somo os erros para a certeza de que nenhum (ou só aquele) tem diferença. `O post-hoc tem alto erro para avaliação geral e baixo para avaliação pontual`.
 
 ## PREMISSAS
 

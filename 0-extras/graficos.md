@@ -52,6 +52,13 @@ Possui um problema com relação as cores usadas:
 - Evite botar todas as parciais, já que não dá pra comparar todos os parciais, deixe só o q vc quer comparar e a soma de todos os demais. Mais divisões irá tirar a atenção do leitor e o confundir
 ![](images/graficos/grafico04.jpg)
 
+#### Gráfico Mosaico
+- É um gráfico de barras empilhadas, aonde cada grupo empilhado está de uma cor
+- Quando temos 2 variáveis qualitativas e queremos mostrar todas as combinações
+- Todas os valores/barras da mesma categoria devem ter a mesma cor
+
+![](images/graficos/grafico-mosaico.png)
+
 #### Gráfico de Pizza
 - O foco são nas porcentagens (frequência relativa)
     - É o oposto dos gráficos de barras

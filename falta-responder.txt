@@ -14,17 +14,12 @@
 		fazer exemplo do modulo 1 onde plota grafico de dispersão de todos as vars com todas
 		ver como ele elimina a unidade??? -> pra permitir comparar 2 valores quaisquer
 		combina com regressão logística???
-04-distribuicao
-	10-distribuicao-f
-		escrever a relação entre distribuicao F e qui-quadrado
 5-inferencia
 	05-tamanho-amostral
 		TAMANHO MÁXIMO
 6-teste-hipotese
 	05-quando-usar-cada-um
 		QUANDO USAR
-	08-teste-anova
-		??pq não usar o teste post-hoc direto?? PERGUNTA NA AULA python(1via) do MOD 9
 7-outros-testes	
 	04-Shapiro
 		como funciona e exemplo do teste Kolmogorov
