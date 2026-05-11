@@ -7,6 +7,9 @@ Existem vários, mas aqui listarei os mais comuns:
 - Teste F / Levene (prefira usar o de Levene)
 - Anova
 - Qui-Quadrado
+- Fisher
+- Shapiro-Wilk / Kolmogorov-Smirnov
+- HSD de Tukey / Games-Howell / Bonferroni
 - Pearson
 - Correlação
 - Análise de Regressão
@@ -14,10 +17,7 @@ Existem vários, mas aqui listarei os mais comuns:
 - Spearman
 - Binomial
 - Poisson
-- Fisher
 - McNemar
-- Shapiro-Wilk / Kolmogorov-Smirnov
-- HSD de Tukey / Games-Howell / Bonferroni
 
 # QUANDO USAR
 
@@ -29,12 +29,21 @@ Existem vários, mas aqui listarei os mais comuns:
 	- 3 ou mais: **Qui-Quadrado**
 - Comparar variâncias: **Levene**
 - Comparar vars categórias (ex: antes e depois): **McNemar**
-- Relação entre vars categóricas: **Qui-Quadrado**
+- Relação entre vars categóricas: 
+	- Amostras grandes: **Qui-Quadrado** 
+	- Amostras pequenas ou não cumpre as premissas: **Fisher**
 - Relação entre vars numéricas: **Correlação ou Análise de Regressão**
 - Checar se uma amostra tem distribuição normal
 	- Amostra pequena: **Shapiro-Wilk**
 	- Amostras grandes: **Kolmogorov-Smirnov**
-- Checar se uma amostra tem alguma distribuição diferente da normal: **Kolmogorov-Smirnov**
+	- Dados categóricos: 
+		- Amostras grandes: **Qui-Quadrado** 
+		- Amostras pequenas ou não cumpre as premissas: **Fisher**
+- Checar se uma amostra tem alguma distribuição diferente da normal: 
+	- Dados numéricos: **Kolmogorov-Smirnov** 
+	- Dados categóricos:
+		- Amostras grandes: **Qui-Quadrado** 
+		- Amostras pequenas ou não cumpre as premissas: **Fisher**
 - Encontrar amostra que se difere das outras
 	- Poucos grupos: **Bonferroni**
 	- Muitos grupos: **HSD de Tukey**

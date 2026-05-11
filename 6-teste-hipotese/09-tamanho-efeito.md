@@ -21,3 +21,4 @@ Cada tipo de teste exige um cálculo diferente do seu tamanho do efeito.
 - Correlação e Regressão: R de Pearson
 - Mann-Whitney ou Wilcoxon: R de Cohen
 - Kruskal-Wallis: eta-quadrado
+- Qui-Quadrado: V de Cramér ou Coeficiente phi

@@ -1,7 +1,5 @@
-distribuição qui-quadrado
 beta (erro tipo 2)
 testes
-	teste qui-quadrado
 	Wilcoxon
   Spearman
   Mann-Whitney
@@ -21,6 +19,8 @@ tamano do efeito
 - eta-quadrado
 - R de Pearson
 - R de Cohen
+- V de Cramér 
+- Coeficiente phi
 
 ver como calcula correlção de pearson
 ver quando usar as outras correlações e como calcula cada uma
