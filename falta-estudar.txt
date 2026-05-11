@@ -1,3 +1,7 @@
+codigo de qui-quadrado pra independencia e aderencia
+calcular residuo no qui quadrado
+codigo de fisher
+
 beta (erro tipo 2)
 testes
 	Wilcoxon

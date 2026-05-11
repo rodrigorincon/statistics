@@ -53,6 +53,10 @@ A tabela é a soma de todas as probabilidades iguais ou maiores (mais extremas) 
 
 **Caso a probabilidade da minha combinação seja maior que alfa, rejeito H0**. Ou seja, se P calculado > P tabelado, rejeito H0.
 
+## RESÍDUOS
+
+Caso rejeitemos H0, significa que alguma combinação destoa das demais. Para encontrar fazemos a análise dos resíduos da **mesma forma que o qui-quadrado**.
+
 ## EXEMPLO
 
 Quero saber se a opinião sobre aborto é igual entre homens e mulheres. Uma das minhas vars é gênero (homem e mulher) e a outra é a opinião (a favor ou contra). Fiz a pesquisa tive essa tabela de valores observador.
