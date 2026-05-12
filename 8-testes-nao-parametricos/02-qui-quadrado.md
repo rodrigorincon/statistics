@@ -159,18 +159,49 @@ Olhando na tabela Qui-Quadrado na linha 4 pra 5% de alfa, temos 9,488. Como Q Ta
 
 #### Valor Esperado
 
-O cálculo do valor esperado depende da distribuição que se quer comparar. Caso a distribuição seja uniforme (ver se todas as categorias tem a mesma chance de acontecer), o valor esperado é o total de médidas dividido pelas categorias.
+O cálculo do valor esperado depende da distribuição que se quer comparar. Caso a distribuição seja uniforme (ver se todas as categorias tem a mesma chance de acontecer), o valor esperado é o total de medidas dividido pelo número de categorias.
 
 Para as demais distribuições o processo é: 
 
-- Definir os parâmetros da distribuição a comparar (você deve definir de acordo com o que está querendo saber dos dados)
-- Calcular a probabilidade de cada valor nessa distribuição vezes o tamanho da amostra (quantas chances tem de cair nesse intervalo)
+**Passo 1: definir distribuição e parâmetros**
 
-$E_i = N * P(x_i)$
+Além de definir a distribuição, é preciso definir os parâmetros que a formam. Você deve definir de acordo com **o que está querendo saber** dos dados e **seu conhecimento dos dados**.
+
+Exemplo: na distribuição normal tem de definir a média e o desvio. O teste vai dizer se os dados batem com uma distribuição com esses valores apenas. Talvez batam com outras combinações de média e desvio.
+
+Para evitar concluir que os dados não seguem a distribuição por escolher os parâmetros errados, é bom **conhecer os dados e a origem deles** para ajudar a escolher melhor. Para ter uma análise mais robusta, você pode testar com **diversas combinações de parâmetros**, a partir de um chute baseado no seu conhecimento deles.
+
+**Passo 2: Definir as categorias**
+
+Nem sempre os dados já vem estruturados. As vezes você precisa definir quais são as categorias e dividir os valores observados dentro delas. Caso os dados já estejam agrupados, pode passar para o próximo passo.
+
+Se seus dados não estiverem separados em categorias, **crie categorias de acordo com o que quer saber** deles e divida os valores observados dentro delas. 
+
+Exemplo: Dividir os dados em faixas de valores (até 1 saláro mínimo, de 1 a 3 salários mínimos...)
+
+Caso não possua categorias bem definidas, pode dividir os valores em faixas de mesmo tamanho via técnica do histograma.
+
+Ao fazer isso **seus dados se tornarão categóricos**, só então podendo ser usados no teste qui-quadrado.
+
+**Importante**: seus dados de observação serão esses categorizados, não mais os originais.
+
+**Passo 3: Calcular o valor esperado em cada categoria**
+
+Uma vez que você definiu as categorias, **cada categoria deve representar uma faixa da distribuição a ser analisada**. Cada categoria deve ser um intervalo de valores, assim podendo calcular a área da distribuição dentro desse intervalo.
+
+Exemplo: categoria "de 300 a 500", categoria "acima de 500".
+
+O valor esperado da categoria é a probabilidade desse intervalo vezes o tamanho da amostra (probabilidade de encontrar um valor naquela faixa * número de tentativas).
+
+$E_i = N * P(min_i \le x \ge max_i)$
 
 Podemos chamar essa probabilidade de $p_i$ e reescrever a equação do teste da seguinte forma, que dá no mesmo.
 
 $q = \sum_{i=i}^k N * \frac{(O_i/N - p_i)^2}{p_i}$
+
+**Passo 4: Checar premissas**
+
+Esse passo vale para os dois tipos de teste. Após ter definido seus valores esperados deve checar se eles são maiores que 5 para então continuar com o teste ou tomar outra decisão (como mudar para o teste de Fisher ou agrupar algumas categorias).
 
 #### Graus de Liberdade
 
@@ -195,39 +226,45 @@ A seguir listo o número de parâmetros das distribuições mais comuns:
 
 #### Exemplo
 
-Quero analisar a frequência das cores dos carros. Vejo que há muitos brancos, alguns cinzas e pretos, um pouco menos de vermelho e quase nada dos demais. Será que as cores dos carros seguem uma distribuição normal? Verifiquei as seguintes quantidades:
+Quero analisar se as notas dos alunos no Enem segue a normal. Verifiquei os seguintes valores:
 
-- Branco: 15
-- Preto: 13
-- Cinza: 13
-- Vermelho: 11
-- Outros: 0
+- De 0 a 300: 180
+- De 300 a 500: 122
+- De 500 a 700: 121
+- De 700 a 900: 177
+- Acima de 900: 0
 
-Temos total categorias (k) = 5 e N = 53
+Temos total categorias (k) = 5 e N = 600
 
-Primeiro temos de definir uma média de um desvio para nossa distribuição normal. Definiremos média 15 e desvio 2 arbitrariamente.
+Primeiro temos de definir uma média de um desvio para nossa distribuição normal. Definiremos média 500 e desvio 100 por já termos conhecimento que costuma ser essa a média e desvio historicamente.
 
 Depois calculamos a probabilidade de cada valor na distribuição normal.
 
-- P(15): 0,2
-- P(13): 0,12
-- p(3): 0,03
-- p(1): 0,0
+- P(0 < x < 300): 0,02
+- P(300 < x < 500): 0,47
+- P(500 < x < 700): 0,47
+- P(700 < x < 900): 0,02
+- P(900 < x < 1000): 0,00005
 
 Então calculamos os valores esperados para cada um.
 
-- E(15): 0,2  * 53 = 10,6
-- E(13): 0,12 * 53 = 6,36
-- E(11): 0,03 * 53 = 1,59
-- E(1):  0    * 53 = 0
+- E1: 0,02  * 600 = 14
+- E2: 0,47 * 600 = 286
+- E3: 0,47 * 600 = 286
+- E4: 0,02 * 600 = 14
+- E5: 0,00005 * 600 = 0,03
+
+Com isso vemos que precisamos eliminar a última categoria por ser menor que 5. A decisão então foi agrupá-la com a anterior, formando a categoria "Acima de 700".
+
+Os valores desse novo grupo permanecem o mesmo, sua probabilidade foi para 0,02005 e seu valor esperado continuou 14.
 
 Jogando na equação do teste
 
-$q = (15 - 10,6)^2/10,6 + (13 - 6,36)^2/6,36 + (13 - 6,36)^2/6,36 + (11 - 1,59)^2/1,59 = 71,38$
+$q = (108 - 14)^2/14 + (122 - 286)^2/286 + (121 - 286)^2/286 + (177 - 14)^2/14 = 4055$
 
-Como temos 5 categorias mas tivemos de gastar 2 graus de liberdade para definir uma curva normal, sobra 3 graus para o teste. Olhando na tabela na linha 3 e alfa 5%, encontramo 7,815. 
+Como temos 4 categorias mas tivemos de gastar 2 graus de liberdade para definir uma curva normal, sobra 1 grau para o teste. Olhando na tabela na linha 1 e alfa 5%, encontramos 3,841. 
 
-Como Q calculado (71,38) > Q tabelado (7,81) então rejeitamos H0, os dados não são normais.
+Como Q calculado (4055) > Q tabelado (3,841) então rejeitamos H0, os dados não são normais.
 
 ## RESÍDUOS
 
