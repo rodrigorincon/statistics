@@ -11,8 +11,6 @@ Existem vários, mas aqui listarei os mais comuns:
 - HSD de Tukey / Games-Howell / Bonferroni
 - Correlação (Pearson, Spearman, Kendall, Bisserial)
 
-- Análise de Regressão
-
 - Wilcoxon
 - McNemar
 - Mann-Whitney
@@ -35,7 +33,7 @@ Existem vários, mas aqui listarei os mais comuns:
 - Relação entre vars categóricas: 
 	- Amostras grandes: **Qui-Quadrado** 
 	- Amostras pequenas ou não cumpre as premissas: **Fisher**
-- Relação entre vars numéricas: **Correlação ou Análise de Regressão**
+- Correlação entre vars (independente do tipo): **Correlação**
 - Checar se uma amostra tem distribuição normal
 	- Amostra pequena: **Shapiro-Wilk**
 	- Amostras grandes: **Kolmogorov-Smirnov**

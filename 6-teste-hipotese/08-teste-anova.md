@@ -45,6 +45,22 @@ Ou seja, a **Anova garante o erro tipo I baixo** para a resposta "tem ou não te
 - Não deve ter outliers 
   - Checar via boxplot
 
+### RESÍDUOS
+
+Resíduos são a **diferença entre os valores observados reais e os valores previstos por um modelo** (como uma reta de regressão). Eles **representam o "erro" de previsão** para cada ponto de dado, indicando o quão longe o modelo está da realidade.
+
+No caso da anova, ele é a diferença entre os dados reais e a média de cada grupo. A média é o valor esperado/previsto, assim o resíduo represente a **diferença entre o real e o esperado**.
+
+Resíduos são essenciais na anova e em regressões, pois dizem o quanto nosso modelo ou análise se aproxima da realidade. É através dele que vemos se o modelo descreve bem os dados reais ou não.
+
+Os resíduos/modelo são bons quando:
+
+- Tem média zero
+- Variância constante (homoscedasticidade) 
+- Distribuição normal
+
+![](images/residuos.jpg)
+
 ## Equação Anova de 1 via
 
 ### Passo 1: médias e variâncias de cada grupo

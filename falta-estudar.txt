@@ -1,16 +1,12 @@
-como fazer um teste a partir das correlações (fazer hipoteses, distribuicoes e calcular p-valores)
-
 beta (erro tipo 2)
 testes
 	Wilcoxon
-  Spearman
   Mann-Whitney
   Kruskal-Wallis
   McNemar
 	teste do sinal
 	Kolmogorov-Smirnov
-	pearson
-regressões (correlação de Pearson e covariancia)
+regressões
 transformações (padronização z-score, normalização mini-max, transformações logaritmicas (existe mais de 1??) e raiz quadrada e cubica)
 series temporais
 Ajustamento de uma função real a uma série temporal

@@ -2,7 +2,7 @@
 
 Mede o **quanto a variância de uma var é definida por outra variável**. Com ela medimos a força do coeficiente (seu valor absoluto) e damos a porcentagem do quanto as variáveis se interferem.
 
-Apesar de parecer que o coeficiente já dá uma porcentagem de quanto as vars são relacionadas por ir de 0 a 1, seu valor é distorcido, não representando uma porcentagem fielmente. Assim, o coeficiente de determinação é calculado em cima do coeficiente de correlação para dar **quantos % da variância é definida (igual) nas 2 vars**. 
+Apesar de parecer que o coeficiente já dá uma porcentagem de quanto as vars são relacionadas por ir de 0 a 1, seu valor é distorcido, não representando a força da relação fielmente. Assim, o coeficiente de determinação é calculado em cima do coeficiente de correlação para dar **quantos % da variância é definida (igual) nas 2 vars**. 
 
 `Um valor alto significa que elas variam mais próximo. Por isso também é chamado de variância compartilhada`.
 

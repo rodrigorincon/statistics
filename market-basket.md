@@ -135,7 +135,4 @@ L(máquina | sabão) = 0,008
 
 # REFERÊNCIAS
 
-[Um ótimo vídeo explicando o algoritmo é esse](https://www.youtube.com/watch?v=YGEYty0xYc0). [Aqui ele mostra como implementar](https://www.youtube.com/watch?v=Mq5HPAFXrOI).
-
-
-https://medium.com/@igorprado49/algoritmo-de-market-basket-analysis-para-campanhas-de-tr%C3%A1fego-pago-em-e-commerce-bcedb161336b
+[Um ótimo vídeo explicando o algoritmo é esse](https://www.youtube.com/watch?v=YGEYty0xYc0).
