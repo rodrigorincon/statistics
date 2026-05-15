@@ -2,18 +2,10 @@
 	02-dicionario
 		CONCEITO: OUTLIER
 			OQ SÃO ESSAS TRANSFORMAÇÕES E COMO ELAS REMOVEM A INFLUENCIA???
-		CONCEITO: CORRELAÇÃO
-			estudar método Market Basket usado para venda casada????
 2-centro-e-dispersao
 	03-media-movel
 		escrever ainda
-		fazer exercicios de python
-	05-coeficiente-de-correlacao
-		escrever ainda
-		no python, fazer coef. de correlação discreto e continuo e plotar os graficos
-		fazer exemplo do modulo 1 onde plota grafico de dispersão de todos as vars com todas
-		ver como ele elimina a unidade??? -> pra permitir comparar 2 valores quaisquer
-		combina com regressão logística???
+		fazer exercicios de python	
 5-inferencia
 	05-tamanho-amostral
 		TAMANHO MÁXIMO

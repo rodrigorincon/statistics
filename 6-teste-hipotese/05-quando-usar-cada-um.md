@@ -6,18 +6,21 @@ Existem vários, mas aqui listarei os mais comuns:
 - Teste Z
 - Teste F / Levene (prefira usar o de Levene)
 - Anova
-- Qui-Quadrado
-- Fisher
+- Qui-Quadrado / Fisher
 - Shapiro-Wilk / Kolmogorov-Smirnov
 - HSD de Tukey / Games-Howell / Bonferroni
-- Pearson
-- Correlação
+- Correlação (Pearson, Spearman, Kendall, Bisserial)
+
 - Análise de Regressão
+
 - Wilcoxon
-- Spearman
+- McNemar
+- Mann-Whitney
+- Kruskal-Wallis
+- Teste do Sinal
+
 - Binomial
 - Poisson
-- McNemar
 
 # QUANDO USAR
 

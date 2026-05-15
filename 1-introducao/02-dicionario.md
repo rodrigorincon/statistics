@@ -229,8 +229,6 @@ Muito usado para:
 - Encontrar produtos vendidos juntos frequentemente da amazon 
 - Decidir quais produtos deixar juntos no mercado
 
-OBS: estudar método Market Basket usado para venda casada????
-
 ## CONCEITO: REGRESSÃO
 
 - Fórmulas e técnicas para prever o valor de uma variável a partir da outra

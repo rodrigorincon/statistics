@@ -27,11 +27,13 @@ Caso seus **dados não sejam normais, sempre tente transformar eles em normal** 
 ## TESTES MAIS CONHECIDOS
 
 - Qui Quadrado
+- Fisher
 - Wilcoxon
 - Spearman
 - Mann-Whitney
 - Kruskal-Wallis
 - McNemar
 - Kolmogorov-Smirnov
+- Teste do Sinal
 
 ![](images/versoes-testes.png)

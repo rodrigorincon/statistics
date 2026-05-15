@@ -92,3 +92,7 @@ A soma desses valores para ter P(X>k) são nosso p tabelado.
 Com isso sei que a chance de encontrar essa combinação é de 30% e de encontrar valores iguais ou mais extremos ( P(x>k) ) é de 33,3%. 
 
 Com um alfa de 5%, vejo que 0,33 > 0,05, portanto rejeito H0.
+
+## TAMANHO DO EFEITO
+
+O tamanho do efeito no teste exato de Fisher é calculado com o **Coeficiente phi**.

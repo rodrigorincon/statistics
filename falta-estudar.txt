@@ -1,3 +1,5 @@
+como fazer um teste a partir das correlações (fazer hipoteses, distribuicoes e calcular p-valores)
+
 beta (erro tipo 2)
 testes
 	Wilcoxon
@@ -21,12 +23,6 @@ tamano do efeito
 - R de Cohen
 - V de Cramér 
 - Coeficiente phi
-
-ver como calcula correlção de pearson
-ver quando usar as outras correlações e como calcula cada uma
-
-ver exercicios de correlação e de covariancia (fazer os mesmos exercicios mudando as unidades)
-ver exercicios de correlação de diversos tipos
 
 
 ------------------ EXERCICIOS
