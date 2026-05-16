@@ -35,3 +35,7 @@ Em suma, o teste de correlação é uma variação do teste T.
 ### TESTES NÃO PARAMÉTRICOS
 
 Mesmo quando se faz um teste de correlação não paramétrico (Spearman, Kendall, Bisserial) usa-se o teste T. O teste não muda independente de ser paramétrico ou não nem com o tipo de correlação usada.
+
+### TESTES PARAMÉTRICOS COM OUTLIERS
+
+O único coeficiente de correlação paramétrico é o de Pearson, porém ele é muito sensível a outliers. Caso você possua muitos outliers deve-se transformar os dados (geralmente usando log) para deixá-los mais próximos e eliminar os outliers. Só então fazer a correlação e o teste. 

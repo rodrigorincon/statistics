@@ -25,7 +25,15 @@
 - A partir daí, tudo deve ser transformado igual (as outras amostras, os valores de comparação...)
 
 
-# Equação para 1 média
+# PARA 1 MÉDIA
+
+## HIPÓTESES
+
+$Ho: media > valorComparacao$
+
+$H1: media \le valorComparacao$
+
+## EQUAÇÃO
 
 $$t = \frac{mediaAmostra - valorComparacao}{ \frac{desvioAmostra}{\sqrt{n}} }$$
 
@@ -70,6 +78,13 @@ Podemos reescrever as equações como:
 $Ho: media_1 - media_2 \le 0$ E $Ha: media_1 - media_2 > 0$
 
 Assim fica mais fácil de calcular, pois na normal padrão 0 é a média da distribuição.
+
+Podemos definir ainda como 
+
+$Ho: T calculado > T crítico$
+
+$H1: T calculado \le T crítico$
+
 
 ---
 
