@@ -1,11 +1,9 @@
 beta (erro tipo 2)
 testes
-	Wilcoxon
-  Mann-Whitney
-  Kruskal-Wallis
-  McNemar
+  Kolmogorov-Smirnov
+
+	McNemar
 	teste do sinal
-	Kolmogorov-Smirnov
 regressões
 transformações (padronização z-score, normalização mini-max, transformações logaritmicas (existe mais de 1??) e raiz quadrada e cubica)
 series temporais

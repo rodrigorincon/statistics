@@ -10,11 +10,12 @@ Existem vários, mas aqui listarei os mais comuns:
 - Shapiro-Wilk / Kolmogorov-Smirnov
 - HSD de Tukey / Games-Howell / Bonferroni
 - Correlação (Pearson, Spearman, Kendall, Bisserial)
-
 - Wilcoxon
-- McNemar
 - Mann-Whitney
 - Kruskal-Wallis
+- Dunn
+
+- McNemar
 - Teste do Sinal
 
 - Binomial
@@ -28,6 +29,10 @@ Existem vários, mas aqui listarei os mais comuns:
 - Comparar proporção:
 	- até 2: **Teste Z**
 	- 3 ou mais: **Qui-Quadrado**
+- Comparar medianas/dispersão:
+	- 2 amostras dependentes (antes/depois): **Wilcoxon**
+	- 2 amostras independentes: **Mann-Whitney**
+	- 3 ou mais: **Kruskal-Wallis**
 - Comparar variâncias: **Levene**
 - Comparar vars categórias (ex: antes e depois): **McNemar**
 - Relação entre vars categóricas: 
@@ -49,3 +54,4 @@ Existem vários, mas aqui listarei os mais comuns:
 	- Poucos grupos: **Bonferroni**
 	- Muitos grupos: **HSD de Tukey**
 	- Grupos não tem variâncias homogêneas: **Games-Howell**
+	- Não paramétrico: **Dunn**

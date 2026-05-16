@@ -18,11 +18,11 @@ Usa a `mediana das diferenças` entre as amostras, não a mediana das amostras.
 
 ### Para 1 Amostra
 
-$H0: $mediana \le valorComparacao$
+$H0: mediana \le valorComparacao$
 
 Ou simplemente H0 = a amostra é estatísticamente menor ou igual ao valor de comparação.
 
-$H1: $mediana > valorComparacao$
+$H1: mediana > valorComparacao$
 
 ### Para 2 Amostras
 
@@ -117,16 +117,18 @@ OBS: enquanto W calculado tem de ser menor que o tabelado, Z tem de ser maior pa
 
 Caso haja empates nos rankings o cálculo de Z muda um pouco. Em caso de empates z é
 
-$z = \frac{(W+) - \frac{n_t (n_t + 1) }{4} }{ \sqrt{ \frac{n_t(n_t+1)(2n_t+1)}{24} - \frac{t^3 - t}{48} } }$
+$z = \frac{(W+) - \frac{n_t (n_t + 1) }{4} }{ \sqrt{ \frac{n_t(n_t+1)(2n_t+1)}{24} - \sum{\frac{t^3 - t}{48}} } }$
 
-Aonde t é a quantidade de empates que teve.
+Aonde t é a quantidade de valores empatados que teve. O somatório é para caso haja vários empates. 
+
+Exemplo: 2 valores 123 e 4 valores 140. O somatório repetirá 2 vezes, a primeira com t=2 e a segunda com t=4.
 
 ## EXEMPLO
 
 Dado a lista x = [-7.34, 18.33, 33.35, 59.45, 8.09, 43.79, 34.3, 36.13, -56.02, 76.45], compare o teste com valor de comparação 5 com alfa de 5%.
 
 | x     | dif (x-5) | abs(dif) | rank | ranks positivos | ranks negativos |
-| -:-   |  -:-      |   -:-    |  -:- |  -:-            |  -:-            |
+| :--   |  :--      |   :--    |  :-- |  :--            |  :--            |
 | -7.34 |  -12.34   |   12.34  |  2   |   -             |       2         |
 | 18.33 |  13.33    |   13.33  |  3   |   3             |       -         |
 | 33.35 |  28.35    |   28.35  |  4   |   4             |       -         |
