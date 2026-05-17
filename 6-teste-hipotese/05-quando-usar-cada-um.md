@@ -14,44 +14,58 @@ Existem vários, mas aqui listarei os mais comuns:
 - Mann-Whitney
 - Kruskal-Wallis
 - Dunn
-
-- McNemar
 - Teste do Sinal
+- Friedman
+- McNemar
 
 - Binomial
 - Poisson
+- exponencial
 
 # QUANDO USAR
 
-- Comparar média: 
+1. Comparar valores:
+
+- Média:
 	- até 2: **Teste T**
 	- 3 ou mais: **Anova**
-- Comparar proporção:
+- Proporção:
 	- até 2: **Teste Z**
 	- 3 ou mais: **Qui-Quadrado**
-- Comparar medianas/dispersão:
-	- 2 amostras dependentes (antes/depois): **Wilcoxon**
-	- 2 amostras independentes: **Mann-Whitney**
-	- 3 ou mais: **Kruskal-Wallis**
-- Comparar variâncias: **Levene**
-- Comparar vars categórias (ex: antes e depois): **McNemar**
-- Relação entre vars categóricas: 
+	- 2 dependentes (antes/depois): **McNemar**
+- Mediana/dispersão:
+	- 2 dependentes (antes/depois): **Wilcoxon**
+	- 2 independentes: **Mann-Whitney**
+	- 3 ou mais dependentes (mesma coisa agiu em todas as categorias): **Friedman**
+	- 3 ou mais independentes: **Kruskal-Wallis**
+- Variâncias: **Levene**
+- Vars Ordinais: 
+	- Dependentes (antes/depois): **Teste do sinal** 
+
+2. Relação entre grupos:
+
+- Se uma afeta o valor da outra: **Correlação**
+- Se são independentes: 
 	- Amostras grandes: **Qui-Quadrado** 
 	- Amostras pequenas ou não cumpre as premissas: **Fisher**
-- Correlação entre vars (independente do tipo): **Correlação**
-- Checar se uma amostra tem distribuição normal
+
+3. Checar se uma amostra segue uma distribuição
+
+- Distribuição normal
 	- Amostra pequena: **Shapiro-Wilk**
 	- Amostras grandes: **Kolmogorov-Smirnov**
 	- Dados categóricos: 
 		- Amostras grandes: **Qui-Quadrado** 
 		- Amostras pequenas ou não cumpre as premissas: **Fisher**
-- Checar se uma amostra tem alguma distribuição diferente da normal: 
+- Outra distribuição: 
 	- Dados numéricos: **Kolmogorov-Smirnov** 
 	- Dados categóricos:
 		- Amostras grandes: **Qui-Quadrado** 
 		- Amostras pequenas ou não cumpre as premissas: **Fisher**
-- Encontrar amostra que se difere das outras
-	- Poucos grupos: **Bonferroni**
-	- Muitos grupos: **HSD de Tukey**
-	- Grupos não tem variâncias homogêneas: **Games-Howell**
-	- Não paramétrico: **Dunn**
+
+4. Encontrar amostra que se difere das outras
+
+- Poucos grupos: **Bonferroni**
+- Muitos grupos: **HSD de Tukey**
+- Grupos não tem variâncias homogêneas: **Games-Howell**
+- Não paramétrico: **Dunn**

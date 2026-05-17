@@ -1,4 +1,4 @@
-# TESTE DE MANN-Whitney
+# TESTE DE MANN-WHITNEY
 
 Muito semelhante ao teste de Wilcoxon, calcula se tem **diferenças entre as medianas de 2 amostras independentes**. Assim como seus conceitos são próximos, seus cálculos também são. Ele também se baseia em rankings, mas ao invés de rankear as diferenças entre cada par, as amostras são combinadas em uma única amostra e então rakeadas.
 

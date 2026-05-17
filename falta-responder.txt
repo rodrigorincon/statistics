@@ -9,9 +9,6 @@
 5-inferencia
 	05-tamanho-amostral
 		TAMANHO MÁXIMO
-6-teste-hipotese
-	05-quando-usar-cada-um
-		QUANDO USAR
 7-outros-testes	
 	04-Shapiro
 		como funciona e exemplo do teste Kolmogorov

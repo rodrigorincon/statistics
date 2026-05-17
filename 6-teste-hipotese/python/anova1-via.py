@@ -2,6 +2,7 @@ import numpy as np
 from scipy.stats import f_oneway
 from statsmodels.stats.multicomp import pairwise_tukeyhsd
 
+# test number of people in the store at 4 different days of the week
 segunda = [276,323,298,256,277,309,312,265,311]
 terca = [243,279,301,285,274,243,228,298,255]
 quarta = [288,292,310,267,243,293,255,273]

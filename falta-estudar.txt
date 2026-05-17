@@ -1,10 +1,4 @@
 beta (erro tipo 2)
-testes
-  Kolmogorov-Smirnov
-
-	McNemar
-	teste do sinal
-regressões
 transformações (padronização z-score, normalização mini-max, transformações logaritmicas (existe mais de 1??) e raiz quadrada e cubica)
 series temporais
 Ajustamento de uma função real a uma série temporal

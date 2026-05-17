@@ -106,9 +106,9 @@ Ou seja, os dados são normais.
 
 Executamos o teste com os dados juntamente com uma amostra perfeitamente encaixada na sua distribuição. Assim sabemos se os dados seguem aquela distribuição. Assim também podemos mudar qual distribuição queremos verificar facilmente, só trocando a amostra controle. 
 
-Seguindo a mesma lógica podemos comparar 2 grupos de dados independentes e ver se eles tem a mesma distribuição (embora não saberemos qual).
 
-Definição: **Compara os dados com uma amostra da distribuição que queremos testar**.
+
+![](images/KS_Example.png)
 
 ## HIPÓTESES
 
@@ -134,12 +134,3 @@ Queremos encontrar um p-valor menor que alfa, confirmando que segue a distribui�
 #### LIMITAÇÕES
 
 O teste não detecta bem diferenças nas caudas da distribuição. Se a única diferença for o peso das caudas ele pode não detectar.
-
-## COMO FUNCIONA
-
-https://pt.wikipedia.org/wiki/Teste_Kolmogorov-Smirnov
-https://www.uel.br/projetos/experimental/pages/arquivos/Kolmogorov-Smirnov.html
-https://pellisistemas.com/teste-de-kolmogorov-smirnov-ks/?srsltid=AfmBOoo6Zzda8pvLBy9Kau0VZgOn5eO6X4wxt5frFzfDVdzuUuvHg9vU
-https://support.minitab.com/pt-br/minitab/help-and-how-to/statistics/basic-statistics/how-to/normality-test/methods-and-formulas/methods-and-formulas/
-
-## EXEMPLO
