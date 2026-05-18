@@ -17,7 +17,6 @@ Existem vários, mas aqui listarei os mais comuns:
 - Teste do Sinal
 - Friedman
 - McNemar
-
 - Binomial
 - Poisson
 - exponencial
@@ -30,6 +29,7 @@ Existem vários, mas aqui listarei os mais comuns:
 	- até 2: **Teste T**
 	- 3 ou mais: **Anova**
 - Proporção:
+	- 1 com valor determinado e se for categórica binária: **Binomial**
 	- até 2: **Teste Z**
 	- 3 ou mais: **Qui-Quadrado**
 	- 2 dependentes (antes/depois): **McNemar**
@@ -69,3 +69,8 @@ Existem vários, mas aqui listarei os mais comuns:
 - Muitos grupos: **HSD de Tukey**
 - Grupos não tem variâncias homogêneas: **Games-Howell**
 - Não paramétrico: **Dunn**
+
+5. Acontecimentos por tempo
+
+- Frequência no período tá dentro do esperado: **Poisson**
+- Tempo entre os acontecimentos tá dentro do esperado: **Exponencial**
