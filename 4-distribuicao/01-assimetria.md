@@ -39,7 +39,7 @@ Exemplo: quantidade de pessoas que recebem um determinado salário. A maioria re
 - Boxplot com a **maior cauda para cima** ou à direita = assimetra a **direita** (positiva)
 - Boxplot com a **maior cauda para baixo** ou à esquerda = assimetra a **esquerda** (negativa)
 
-![](images/assimetria/boxplot-assimetria.jpeg.png)
+![](images/assimetria/boxplot-assimetria.jpeg)
 
 ### QQ Plot
 

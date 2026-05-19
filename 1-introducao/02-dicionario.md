@@ -123,9 +123,7 @@ Algumas análises não são afetadas por outliers, podendo ser usadas sem retir�
 - Regressão
 - Bootstrap 
 
-É possível passar os dados por uma transformação (ex: transformação logaritmica) para remover a influência dos outliers
-
-OQ SÃO ESSAS TRANSFORMAÇÕES E COMO ELAS REMOVEM A INFLUENCIA???
+É possível converter os dados para log para remover a influência dos outliers.
 
 ## CONCEITO: POPULAÇÃO
 - É todo o grupo/objeto estudado

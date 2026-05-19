@@ -106,8 +106,6 @@ Ou seja, os dados são normais.
 
 Executamos o teste com os dados juntamente com uma amostra perfeitamente encaixada na sua distribuição. Assim sabemos se os dados seguem aquela distribuição. Assim também podemos mudar qual distribuição queremos verificar facilmente, só trocando a amostra controle. 
 
-
-
 ![](images/KS_Example.png)
 
 ## HIPÓTESES

@@ -1,8 +1,15 @@
+teste Kolmogorov
+
 beta (erro tipo 2)
-transformações (padronização z-score, normalização mini-max, transformações logaritmicas (existe mais de 1??) e raiz quadrada e cubica)
 series temporais
 Ajustamento de uma função real a uma série temporal
 estimação população matriz. Censo e amostragem Amostra aleatória. 
+
+regressão segmentada
+  https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
+ver oq é e como calcular o slope of regression
+
+minimos quadrados no polinomial e matriz de confusão
 
 tamano do efeito
 - D de Cohen

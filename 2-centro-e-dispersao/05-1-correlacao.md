@@ -9,7 +9,7 @@ Para informar isso, **todo cálculo de correlação dá uma resposta entre -1 e 
 - É um tipo de associação (toda correlação é uma associação)
 - Correlação é a base para regressão
 - Pode ser uma relação **linear ou polinomial**
-	- No caso da polinomial, precisamos executar um log para transformar em linear e então analisar (daí que vem o nome regressão logística)
+	- No caso da **regressão logística**, ele usa a linear como entrada para a função sigmoide e **não tem relação com log ou polinomial**
 - Comparar vars AxB é a mesma coisa de comparar BxA. O resultado é o mesmo independente da ordem
 - Não diz quem influencia quem, se A influencia B ou o contrário
 

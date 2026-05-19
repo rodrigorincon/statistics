@@ -15,7 +15,7 @@
 	- O uso duma proporção já conhecida é quando já foi feita uma pesquisa anterior ou se tem algum conhecimento empírico sobre os dados (**pode incluir viés**)
 	- Usar p = 0,5 é bom quando não se conhece a variabilidade ou se quer um resultado mais conservador
 
-$$n = (\frac{IC}{2ME})^2$$ 
+$$n = (\frac{IC}{2ME})^2$$
 
 - Caso o tamanho da população seja conhecida ou pequena, adiciona um último passo
 
@@ -25,13 +25,13 @@ Onde n é a resposta do cálculo anterior e N é o tamanho da população.
 
 ### Prova
 
-Equação da margem de err da proporção:
+Equação da margem de erro da proporção:
 
 $margemErro = z * \sqrt{ \frac{p * (1-p)}{n} }$
 
 Chamando margemErro de ME, z de IC e p = 0,5
 
-$ME = IC * \sqrt{ \frac{0,5 * (1-0,5)}{n} } = IC * \sqrt{ \frac{0,25)}{n} }$
+$ME = IC * \sqrt{ \frac{0,5 * (1-0,5)}{n} } = IC * \sqrt{ \frac{0,25}{n} }$
 
 Passando ME e IC para o mesmo lado e retirando a raiz
 

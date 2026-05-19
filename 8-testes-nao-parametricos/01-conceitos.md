@@ -12,7 +12,7 @@ São testes que **não assumem que os dados sigam a distribuição normal**. Os 
 
 Algumas forma de coleta de dados e contextos não permitem usar teste paramétrico por dar poucas amostras (ex: estudo clínico ou pesquisa abordando pessoas na rua ou que tem pedir favor pras pessoas participarem).
 
-Caso seus **dados não sejam normais, sempre tente transformar eles em normal** (ex: convertendo pra log) e teste novamente a normalidade. Veremos esses métodos de transformação no módulo 10.
+Caso seus **dados não sejam normais, sempre tente transformar eles em normal** (ex: convertendo pra log ou normalização mini-max) e teste novamente a normalidade.
 
 ## CARACTERÍSTICAS
 

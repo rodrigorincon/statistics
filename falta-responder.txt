@@ -1,7 +1,3 @@
-1-introdução
-	02-dicionario
-		CONCEITO: OUTLIER
-			OQ SÃO ESSAS TRANSFORMAÇÕES E COMO ELAS REMOVEM A INFLUENCIA???
 2-centro-e-dispersao
 	03-media-movel
 		escrever ainda
@@ -12,6 +8,8 @@
 7-outros-testes	
 	04-Shapiro
 		como funciona e exemplo do teste Kolmogorov
+9-tamanho-Efeito
+	fazer tudo
 
 
 estudar oq é tamanho do efeito e como ele se mistura com p-valor
