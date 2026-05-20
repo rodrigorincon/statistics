@@ -185,7 +185,7 @@ Uma forma gráfica de entender os erros é mostrada abaixo. Roxo representa o er
 
 Repare que se arrastamos a linha vermelha pro lado, a área roxa cresce/diminui juntamente com a área amarela diminui/cresce. O que mostra que se um erro aumenta, o outro diminui.
 
-![](images/erros-grafico1.png)
+![](images/erros-grafico1-.png)
 
 Aqui podemos ver nitidamente os erros no gráfico e as áreas que informam cada sucesso.
 

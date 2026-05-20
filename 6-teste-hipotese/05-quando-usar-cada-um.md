@@ -20,6 +20,9 @@ Existem vários, mas aqui listarei os mais comuns:
 - Binomial
 - Poisson
 - exponencial
+- Breusch-Pagan
+- White
+- Durbin-Watson
 
 # QUANDO USAR
 
@@ -74,3 +77,13 @@ Existem vários, mas aqui listarei os mais comuns:
 
 - Frequência no período tá dentro do esperado: **Poisson**
 - Tempo entre os acontecimentos tá dentro do esperado: **Exponencial**
+
+6. Testar homocedasticidade
+
+- Entre grupos: **levene**
+- Quando suspeitar de variância linear: **Breusch-Pagan**
+- Quando suspeitar de variância não linear: **White**
+
+7. Testar autocorrelação
+
+- **Durbin-Watson**

@@ -1,15 +1,21 @@
-teste Kolmogorov
+MÉTODOS DE CALCULAR
+  (tem algum outro alem dos minimos quadrados??)
 
-beta (erro tipo 2)
-series temporais
-Ajustamento de uma função real a uma série temporal
-estimação população matriz. Censo e amostragem Amostra aleatória. 
+mínimos quadrados ponderados
+mínimos quadrados ordinários
+  quando usa cada um e qual a diferença
 
 regressão segmentada
   https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
 ver oq é e como calcular o slope of regression
 
 minimos quadrados no polinomial e matriz de confusão
+
+beta (erro tipo 2)
+series temporais
+Ajustamento de uma função real a uma série temporal
+estimação população matriz. Censo e amostragem Amostra aleatória. 
+
 
 tamano do efeito
 - D de Cohen

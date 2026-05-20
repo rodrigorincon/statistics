@@ -169,7 +169,7 @@ Use mediana quandos os dados forem **assimétricos** ou tiver **muitos outliers*
 - Valor que mais se repete na amostra
 - Pode ter várias modas (vários picos no histograma, vários valores que se sobressaem aos outros)
 - Se os dados forem todos mais ou menos na mesma frequencia a moda é uniforme
-![](images/imagem1.png)
+![](images/imagem1.jpeg)
 
 
 - Faz mais sentido usar moda em dados **qualitativos** ao invés de quantitativos.

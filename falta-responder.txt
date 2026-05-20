@@ -5,13 +5,25 @@
 5-inferencia
 	05-tamanho-amostral
 		TAMANHO MÁXIMO
-7-outros-testes	
-	04-Shapiro
-		como funciona e exemplo do teste Kolmogorov
 9-tamanho-Efeito
 	fazer tudo
 
+-------
 
+na analise de regressão queremos medir o ERRO
+erro é a medida mais importante da regressão
+acurácia = 1 - erro
+
+erro = original - esperado
+	esperado = previsão, resposta da regressão
+	original = dado verdadeiro usado no treino
+
+mae (media dos erros absolutos) = media dos erros ignorando o sinal (pra ñ se anularem). Tira o sinal, soma os erros e divide por N
+mape (media da porcentagem dos erros absolutos) = msm coisa, mas com porcentagem. pra ter a % faça erro/original
+lse (erro minimo quadrado) = média do quadrado dos erros. Eleva os erros ao quadrado, soma e divide por N
+rmse (raiz do erro quadrado medio) = a raiz do LSE. Eleva os erros ao quadrado, soma, divide por N e tira a raiz pra trazer de volta a mais perto dos valores reais
+
+-------
 estudar oq é tamanho do efeito e como ele se mistura com p-valor
 	Se N é baixo: O teu foco está no P-valor. Precisas de saber se a diferença que vês é real ou apenas sorte. (Exemplo dos 80 visitantes). 
 	Se N é alto: O teu foco muda para o Tamanho do Efeito (delta) e o Intervalo de Confiança. O P-valor será quase sempre baixo. A tua pergunta passa a ser: "Esta diferença real é grande o suficiente para importar?"

@@ -129,6 +129,6 @@ Queremos encontrar um p-valor menor que alfa, confirmando que segue a distribui�
 - Os dados devem ser contínuos (não funciona com dados discretos)
 - Quando compara 2 dados para ver se tem a mesma distribuição, os dados precisam ser independentes
 
-#### LIMITAÇÕES
+## LIMITAÇÕES
 
 O teste não detecta bem diferenças nas caudas da distribuição. Se a única diferença for o peso das caudas ele pode não detectar.

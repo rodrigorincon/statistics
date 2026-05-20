@@ -36,7 +36,7 @@ O normal é usar ou log na **base 10 ou ln** (na base e). Para análises de **co
 
 - Tiver dados exponenciais 
   - Quanto mais x aumenta, mais y cresce
-- Variância dos resíduos varia muito, usa então para termos variância constante
+- Variância dos resíduos/erros varia muito, usa então para termos variância constante
 - Tiver assimetria positiva (maiores valores a esquerda)
 
 Isso significa que se x aumentar 1 y aumenta A%.

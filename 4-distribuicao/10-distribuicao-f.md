@@ -9,7 +9,7 @@
 
 O valores usados nessa divisão não são valores quaisquer, são a variância de 2 amostras/populações.
 
-![](distribuicao-f1.png)
+![](images/distribuicao-f1.png)
 
 ## PARA QUE SERVE
 
@@ -21,7 +21,7 @@ Podemos também plotar o boxplot dos 2 grupos e alinhar as medianas para ver vis
 
 OBS: o comportamento dela não muda muito caso inverta o numerador e o denominador, afinal comparar A com B ou B com A tem de dar o mesmo resultado.
 
-![](distribuicao-f-nao-muda.png)
+![](images/distribuicao-f-nao-muda.png)
 
 ## QUANDO USAR
 
@@ -62,7 +62,7 @@ Ao ter a tabela correta em mãos, basta usar o numerador como coluna e o denomin
 
 Ao definir um alfa numa distribuição assimétrica temos de ter em mente que a área dos 2 lados do alfa é a mesma, apesar de visualmente não parecer. Na cauda da esquerda o valor será bem menor devido ao gráfico crescer raṕido e na direita o alfa é maior pela distribuição descer lentamente. 
 
-![](distribuicao-f-alfa.png)
+![](images/distribuicao-f-alfa.png)
 
 Para encontrar o valor de X aonde a área até lá (ou a partir de lá) dá alfa é diferente para os 2 lados. Para o lado direito basta procurar na tabela F, usando o grau de liberdade do **numerador como a coluna** e o graude liberdade do **denominador como a linha**.
 
@@ -100,7 +100,7 @@ $moda = \frac{9 - 2}{9} * \frac{5}{5 + 2} = \frac{7}{9} * \frac{5}{7} = \frac{7*
 
 Os valores críticos para 5% são aonde o gráfico cobre 5% de cada lado. Para calcular o lado direito com alfa=5% devemos usar a tabela F para alfa=0.05.
 
-![](distribuicao-f-alfa2.png)
+![](images/distribuicao-f-alfa2.png)
 
 Como o numerador é 9 e denominador é 5, procuramos o valor da coluna 9 e linha 5, encontrando 4,77.
 

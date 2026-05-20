@@ -28,6 +28,12 @@ Além de **tudo que a correlação mede** (se são relacionadas, direção e for
 - Prever/estimar o valor final da variável para cada valor da outra
 - Quais vars formam o melhor modelo (quais descrevem melhor o comportamento de Y)
 
+## PONTOS DE ATENÇÃO
+
+- A regressão não indica relação causa x efeito (correlação não é causalidade)
+- A regressão não ajuda a encontrar variáveis ocultas 
+ - As vezes há outras vars influenciando além das usadas ou mesmo uma que define o comportamento das suas
+
 ### NOMENCLATURA
 
 - Var Independente (ou explicativa)

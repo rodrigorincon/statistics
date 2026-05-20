@@ -6,9 +6,15 @@ from scipy import stats
 # Duas amostras normais iguais
 amostra_norm1 = np.random.normal(loc=0, scale=1, size=5000)
 amostra_norm2 = np.random.normal(loc=0, scale=1, size=5000)
+
+# Uma amostra normal diferente
 amostra_norm_dif = np.random.normal(loc=0.5, scale=1, size=5000) # normal com outros parametros
+
+# Duas amostras uniformes iguais
 amostra_unif1 = np.random.uniform(low=0, high=1, size=5000)
 amostra_unif2 = np.random.uniform(low=0, high=1, size=5000)
+
+# Uma amostra uniforme diferente
 amostra_unif_dif = np.random.uniform(low=3, high=4, size=5000)
 
 # Amostras a serem comparadas

@@ -35,11 +35,13 @@ Possui um problema com relação as cores usadas:
     - No exemplo abaixo os dois gráficos são o mesmo, mas o primeiro por não começar no 0 faz parecer que a diferença é muito maior
 - Se as categorias não tiverem uma ordem específica (ex: cores de carro), ordene do maior pro menor ou vice versa
     - De acordo com oq é mais significativo, se é maior ou menor
+
 ![](images/graficos/grafico02.jpg)
 
 - Use barras horizontais quando tem muitos valores **OU** texto é muito grande. 
 - Para poucos valores **E** textos pequenos, vai no vertical
 - Pode ter a versão dupla, com 2 barras pra cada valor (ex: valor da inflação em cada mes de 2024 e 2025, mostrando os meses de cada ano lado a lado)
+
 ![](images/graficos/grafico03.jpg)
 
 - Nunca coloque os textos na diagonal, não é bom pra ler
@@ -69,12 +71,12 @@ Quando usar:
 - Quando quiser ressaltar um valor específico (mais fácil ver 25% ou 51% numa pizza que numa barra)
 - Quando quer mostrar a relevância (%) de um valor para o todo, use pizza
     - No exemplo abaixo é mais fácil reconhecer que o valor é 25% ou maior que 50% na pizza que na barra
-![](images/graficos/grafico06.jpg)
+![](images/graficos/grafico06.png)
 
 Quando não usar:
 - Se tiver 2 valores muito próximos e quer mostrar a diferença entre eles (use barras)
     - Ex: quando uma valor é 34 e outro 31, é mais perceptível a diferença numa barra que numa pizza
-![](images/graficos/grafico05.jpg)
+![](images/graficos/grafico5.jpg)
 
 **NUNCA USE PIZZA 3D**, ela só tira a atenção com design sem adicionar nada de informativo.
 
@@ -92,7 +94,7 @@ Quando não usar:
 - Mostra a frequência para valores **agrupados** (de 0 a 18, de 18 a 25, 25 a 34...)
 - no eixo Y pode mostrar tanto o valor em si quanto sua porcentagem
 - Não precisa começar o 0 (uma vez que os valores são agrupados)
-![](images/graficos/grafico07.jpg)
+![](images/graficos/grafico07.png)
 
 Útil para avaliar a distribuição
 - Bom pra visualizar a curtose e encontrar onde traçar limites de outliers
@@ -202,7 +204,7 @@ Como usar:
 
 - Cada linha deve ter uma cor
 - Nem todo ponto deve ter seu valor mostrado. Considere o contexto e mostre os principais
-![](images/graficos/linha2.png)
+![](images/graficos/linha2.jpg)
 
 - **Use no máximo 4 ou 5 linhas**, mais que isso fica poluído
 - Mude a cor ou a espessura das linhas caso precise usar mais ou queira enfatizar alguma
