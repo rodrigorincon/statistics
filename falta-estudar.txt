@@ -1,10 +1,12 @@
-03-regressao-multipla
-05-gradiente-descendente
-06-outros-metodos-regressao
+03-regressao-simples
+  INTERVALO DE CONFIANÇA
+  INTERVALO DE PREDIÇÃO
+04-regressao-multipla
+06-gradiente-descendente
+07-outros-metodos-regressao
   ridge
   lasso
   elastic net
-07-intervalo-confianca
   como calcular intervalo de confiança/predição 
 08-comparando-regressoes
   https://rpubs.com/nayara_sandy/1256305 para entender AIC e BIC
