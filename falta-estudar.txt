@@ -11,6 +11,12 @@ regressão segmentada
   https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
 ver oq é e como calcular o slope of regression
 
+-------- transformações
+
+mini-max
+box-cox
+------------
+
 minimos quadrados no polinomial e matriz de confusão
 
 beta (erro tipo 2)
@@ -27,12 +33,6 @@ tamano do efeito
 - V de Cramér 
 - Coeficiente phi
 
--------- transformações
-
-log
-transformação Z
-proporção (prefira essa as outras pois alem de mais simples é mais facil de interpretar seus resultados)
-mini-max
 
 ------------------ EXERCICIOS
 https://projetomedicina.com.br/site/attachments/article/538/matematica_exercicios_resolucao_estatistica.pdf
