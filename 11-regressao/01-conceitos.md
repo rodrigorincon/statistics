@@ -28,13 +28,13 @@ Além de **tudo que a correlação mede** (se são relacionadas, direção e for
 - Prever/estimar o valor final da variável para cada valor da outra
 - Quais vars formam o melhor modelo (quais descrevem melhor o comportamento de Y)
 
-## PONTOS DE ATENÇÃO
+### PONTOS DE ATENÇÃO
 
 - A regressão não indica relação causa x efeito (correlação não é causalidade)
 - A regressão não ajuda a encontrar variáveis ocultas 
  - As vezes há outras vars influenciando além das usadas ou mesmo uma que define o comportamento das suas
 
-### NOMENCLATURA
+## NOMENCLATURA
 
 - Var Independente (ou explicativa)
   - São o que causa mudança na var estudada
@@ -108,6 +108,36 @@ Aonde
   - Na linear (y = ax + b) A é o coeficiente angular (grau de inclinação da reta)
   - Como na linear só temos 1 peso (a do expoente 1), ele tem o nome especial, pois sua influência é muito mais nítida e decisiva
 - B é o coeficiente linear (onde a reta corta o eixo Y ou o valor de Y quando x=0)
+
+### DIFERENÇA ENTRE POPULAÇÃO E AMOSTRA
+
+Equação para a população:
+
+$y = b + \sum_{i=1}^n a_i*x^i + erro$
+
+Ex: y = ax + b + erro
+
+---
+
+Equação para a amostra:
+
+$ŷ = b + \sum_{i=1}^n a_i*x^i$
+
+Ex: ŷ = ax + b
+
+---
+
+Quando falamos de população precisamos considerar o erro. Na amostra não precisa pois o y já é uma estimativa (ŷ significa y estimado).
+
+## ERRO
+
+`Erro (ou resíduo) é a diferença entre o valor real e o valor da reta/estimado (valor da regressão). Ele mede a distância de cada ponto verdadeiro da reta.`
+
+Já que a regressão define a melhor reta que descreve os pontos, a que melhor se aproxima, ela não é perfeita. Impossível passar em cima de todos os pontos sendo uma reta. Assim, alguns pontos podem passar exatamente em cima da reta, mas a maioria vai passar próximo. A distância do ponto (dado real usado para criar a reta) da reta para o mesmo X é o erro ou resíduo.
+
+**O objetivo da regressão é definir a reta com menor erro médio possível**. Ou seja, a **dispersão dos pontos em volta da reta** tem de ser a mínima possível. Isso significa ter a menor variância dos resíduos/erros.
+
+e = real - previsto = y - ŷ
 
 ## INFERÊNCIA COM REGRESSÃO
 

@@ -19,11 +19,15 @@ box-cox
 
 minimos quadrados no polinomial e matriz de confusão
 
+------------
+
 beta (erro tipo 2)
 series temporais
 Ajustamento de uma função real a uma série temporal
 estimação população matriz. Censo e amostragem Amostra aleatória. 
 
+
+------------
 
 tamano do efeito
 - D de Cohen
