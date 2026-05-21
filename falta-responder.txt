@@ -8,9 +8,7 @@
 9-tamanho-Efeito
 	fazer tudo
 11-regressão
-	01-conceitos
-		Com regressão polinomial testamos (??)
-	03-minimos-quadrados
+	04-minimos-quadrados
 		MÍNIMOS QUADRADOS PONDERADOS
 			escrever ainda
 		PARA REGRESSÃO LINEAR MÚLTIPLA (VÁRIAS VARS INDEPENDENTES)

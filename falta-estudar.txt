@@ -4,13 +4,11 @@
   ridge
   lasso
   elastic net
-07-teste-hipotese
-  como fazer teste de hipótese na regressão
-08-intervalo-confianca
+07-intervalo-confianca
   como calcular intervalo de confiança/predição 
-09-comparando-regressoes
+08-comparando-regressoes
   https://rpubs.com/nayara_sandy/1256305 para entender AIC e BIC
-10-regressao-segmentada
+09-regressao-segmentada
   regressão segmentada
     https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
 

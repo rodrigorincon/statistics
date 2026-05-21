@@ -43,28 +43,7 @@ Ex: Na regressão linear simples (1 X e 1 Y) os graus de liberdade são n-2.
 
 ## MÉTODOS DE CALCULAR
 
-Existem 2 principais métodos e alguns mais específicos para casos especiais. Todos com a mesma base: coeficiente de correlação. O método principal, as vezes até confundido com a própria regressão linear é os **mínimos quadrados**. Ele é usado em todos os exemplos de regressão linear sem distinção de onde termina a regressão em si e começa os mínimos quadrados. Os métodos principais são:
-
-- Minimos quadrados (OLS)
-  - Principal
-- Mínimos quadrados ponderados (WLS)
-  - Variação do original aonde cada ponto tem um peso
-  - Dá peso a outliers, diminuindo sua influência no cálculo
-  - Ótimo quando tem heteroscedasticidade (variância nos erros)
-- Gradiente descendente 
-  - Usado quando tem muitos dados e muitas variáveis
-  - Ideal para big data e treinamento em tempo real
-  - Variações:
-    - Em Lote (Batch)
-    - Estocástico (SGD) 
-    - Em Mini-Lotes
-- Regularização
-  - Usado quando as variáveis independentes são muito correlacionadas entre si 
-  - Evita overfitting
-  - Variações:
-    - Ridge (L2)
-    - Lasso (L1)
-    - Elastic Net (combinação dos 2)
+Para uma regressão simples os **Minimos quadrados** (OLS) funcionam perfeitamente. Os demais são para variáveis múltiplas.
 
 ## INFERÊNCIA
 
@@ -80,7 +59,9 @@ A seguir mostro como calcular os intervalos e fazer teste de hipótese para a re
 
 ### TESTE DE HIPÓTESE 
 
-???
+É feito o teste Anova para verificar se os coeficientes A (que multiplicam nossos Xs) são diferentes de 0. Caso sejam, é necessário rodar o teste post hoc (teste T) para saber quais são.
+
+Caso seja uma regressão linear simples (com apenas 1 X), basta rodar o teste T.
 
 ## ANÁLISE DE RESÍDUOS
 
