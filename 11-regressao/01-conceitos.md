@@ -108,3 +108,34 @@ Aonde
   - Na linear (y = ax + b) A é o coeficiente angular (grau de inclinação da reta)
   - Como na linear só temos 1 peso (a do expoente 1), ele tem o nome especial, pois sua influência é muito mais nítida e decisiva
 - B é o coeficiente linear (onde a reta corta o eixo Y ou o valor de Y quando x=0)
+
+## INFERÊNCIA COM REGRESSÃO
+
+Como estudamos, a inferência tem 2 técnicas, o intervalo de confiança e o teste de hipótese. Ambas funcionam como uma forma de testar se a correlação entre as variáveis é realmente significativa, mas medem coisas diferentes da correlação em si. Enquanto a correlação nos diz a força entre as variáveis, a inferência nos dá **uma faixa para essa relação e testa se essa relação é estatisticamente relevante**.
+
+### INTERVALO DE CONFIANÇA
+
+O intervalo nos diz quais os possíveis valores que o coeficiente A (que multiplica x) está. Também podemos medir se X é realmente significativo em Y ou não (se podemos desconsiderar a correlação entre eles). Para isso verificamos se o intervalo é todo positivo ou todo negativo. Caso seja então o valor de X é significativo na definição do valor de Y.
+
+Isso acontece pois, caso haja um 0 dentro desse intervalo (uma ponta do intervalo seja negativa e a outra positiva) então há a chance de multiplicarmos X por 0, portanto não haver relação nenhuma entre eles.
+
+### TESTE DE HIPÓTESE
+
+O teste de hipótese em cima da regressão testa de A (que multiplica x) é significativamente diferente de 0. Pois se A=0 então x é cortado da equação e não afeta Y de nenhum modo. Ele **faz mais sentido em regressão múltipla ou um polinomial**.
+
+Com regressão múltipla testamos (??)
+
+Com regressão polinomial testamos (??)
+
+
+### INTERVALO DE PREDIÇÃO
+
+Essa nova técnica de inferência nos diz o intervalo de valores que Y pode ter para um determinado valor de X. Ele é como um intervalo de confiança para cada valor de X, pois nos diz o intervalo que Y pode estar com um nível de confiança.
+
+Ex: em 95% das vezes Y vai estar nessa faixa para esse valor de X.
+
+`O intervalo de confiança dá o intervalo para o coeficiente A, o intervalo de predição dá o intervalo para Y dado X = alguma coisa.`
+
+Importante: Cada X terá um intervalo diferente, pois se X mudou o intervalo vai mudar junto. Porém o tamanho desse intervalo deve ser o mesmo (o intervalo não vai formar um cone, crescendo ou diminuindo). (???)
+
+O intervalo de predição só é preciso em caso de homocedasticidade.

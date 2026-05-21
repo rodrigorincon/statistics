@@ -200,7 +200,7 @@ Assim como a faixa coberta pelo desvio padrão da normal também vem do z-score,
 
 ### Forma correta de se referir
 
-Sendo bem puritano, **é errado dizer** `"A probabilidade que a média esteja nessa faixa é de 95%"`. Isso porque a média populacional é fixa e a frase dá a entender que ela varia de acordo com a amostra
+Sendo bem puritano, **é errado dizer** `"A probabilidade que a média esteja nessa faixa é de 95%"`. Isso porque a média populacional é fixa e a frase dá a entender que ela varia de acordo com a amostra.
 
 **É correto dizer** `"Tenho 95% de confiança que a média está nessa faixa"`. Apesar de parecer a mesma coisa, assim deixa claro que a média é fixa.
 

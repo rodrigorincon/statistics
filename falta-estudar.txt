@@ -1,5 +1,7 @@
 MÉTODOS DE CALCULAR
   (tem algum outro alem dos minimos quadrados??)
+como calcular intervalo de confiança/predição 
+como fazer teste de hipótese na regressão
 
 mínimos quadrados ponderados
 mínimos quadrados ordinários
@@ -25,6 +27,12 @@ tamano do efeito
 - V de Cramér 
 - Coeficiente phi
 
+-------- transformações
+
+log
+transformação Z
+proporção (prefira essa as outras pois alem de mais simples é mais facil de interpretar seus resultados)
+mini-max
 
 ------------------ EXERCICIOS
 https://projetomedicina.com.br/site/attachments/article/538/matematica_exercicios_resolucao_estatistica.pdf

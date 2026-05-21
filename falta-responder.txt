@@ -7,6 +7,13 @@
 		TAMANHO MÁXIMO
 9-tamanho-Efeito
 	fazer tudo
+11-regressão
+	01-conceitos
+		o tamanho desse intervalo deve ser o mesmo???
+		Com regressão múltipla testamos (??)
+		Com regressão polinomial testamos (??)
+
+
 
 -------
 

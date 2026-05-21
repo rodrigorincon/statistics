@@ -61,6 +61,22 @@ minimos quadrados
 
 tem algum outro??
 
+## INFERÊNCIA
+
+A seguir mostro como calcular os intervalos e fazer teste de hipótese para a regressão linear simples.
+
+### INTERVALO DE CONFIANÇA
+
+???
+
+### INTERVALO DE PREDIÇÃO
+
+???
+
+### TESTE DE HIPÓTESE 
+
+???
+
 ## ANÁLISE DE RESÍDUOS
 
 Precisamos verificar 3 coisas nos resíduos para dizer que a regressão é confiável
@@ -72,7 +88,7 @@ Como validar:
 - Teste de Shapiro-Wilk ou Kolmogorov-Smirnov
 - QQ-Plot e Histograma dos resíduos
 
-Caso não seja normal você pode fazer uma **transformação nos dados originais** (log), **recalcular a regressão e tentar novamente**
+Caso não seja normal você pode fazer uma **transformação nos dados originais** (ex: log), **recalcular a regressão e tentar novamente**
 
 **2. Variância constante** 
 

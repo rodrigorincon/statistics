@@ -152,7 +152,7 @@ $cv(peso) = \frac{10}{75} = 0,13$
 - Correlação forte: os pontos tão menos dispersos (mais próximos da reta média (regressão))
 ![](images/correlacao01.jpg)
 
-Tem 4 formas de calcular, que serão mostradas na sessão "correlação"
+Tem 4 formas de calcular, que serão mostradas no módulo 10 "correlação".
 
 ## Viés Estatístico
 

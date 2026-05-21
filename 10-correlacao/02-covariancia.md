@@ -42,4 +42,3 @@ Divida por N em caso de população e N-1 em caso de amostra.
 Subtraio disso a média de cada eixo.
 
 $$covariancia = mediaPontos - media_x * media_y$$
-ssss
