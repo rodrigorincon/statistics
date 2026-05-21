@@ -111,6 +111,10 @@ $$r = \frac{covarianca}{desvioX * desvioY}$$
 
 Aonde X e Y são minhas variáveis/dados (lista de valores).
 
+Com isso, a correlação é a **soma das variâncias de X e Y multiplicados dividido pelo desvio de cada um**. Podemos representá-lo como: 
+
+$$\frac{vari_{xy}}{desvio_x * desvio_y} = \frac{vari_{xy}}{\sqrt{vari_x*vari_y}}$$
+
 ### CORRELAÇÃO DE SPEARMAN
 
 É a ideal para dados categóricos, ordinais (1º, 2º, 3º...) e quando não se tem uma relação linear. Também é menos sensíveis a outliers, pois faz uma transformação nos dados, aonde as diferenças entre eles são reduzidas a 1, independente do valor original.

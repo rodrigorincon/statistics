@@ -9,10 +9,12 @@
 	fazer tudo
 11-regressão
 	01-conceitos
-		o tamanho desse intervalo deve ser o mesmo???
-		Com regressão múltipla testamos (??)
 		Com regressão polinomial testamos (??)
-
+	03-minimos-quadrados
+		MÍNIMOS QUADRADOS PONDERADOS
+			escrever ainda
+		PARA REGRESSÃO LINEAR MÚLTIPLA (VÁRIAS VARS INDEPENDENTES)
+			escrever ainda
 
 
 -------

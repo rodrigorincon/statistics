@@ -15,19 +15,21 @@ Positivo as duas vars crescem junto, negativo são inversamente propocionais e 0
 
 OBS: Ela só é importante em assuntos muito específicos, então só compensa estudar caso o projeto lhe exija.
 
+Podemos definir covariância como a **soma das variâncias de X e Y multiplicados** e representá-lo como $vari_{xy}$.
+
 ## EQUAÇÃO
 
 Pode ser calculada de 2 maneiras. Os dois dão o mesmo resultado
 
-### 1: Média do produto dos desvios
+### 1: Média do produto das variâncias
 
 Multiplico cada ponto com o ponto médio. Não é a distância, distância seria se somasse os eixos x e y.
 
-$desvio_i = (x_i - media_x) * (y_i - media_y)$ 
+$vari_i = (x_i - media_x) * (y_i - media_y)$ 
 
-Tiro a média de todos os desvios.
+Tiro a média de todos as variâncias.
 
-$$covariancia = \frac{ \sum_{i=1}^n desvio_i }{n-1}$$
+$$covariancia = \frac{ \sum_{i=1}^n variancia_i }{n-1}$$
 
 Divida por N em caso de população e N-1 em caso de amostra.
 

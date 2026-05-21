@@ -23,6 +23,7 @@ Existem vários, mas aqui listarei os mais comuns:
 - Breusch-Pagan
 - White
 - Durbin-Watson
+- Jarque-Bera
 
 # QUANDO USAR
 
@@ -56,7 +57,7 @@ Existem vários, mas aqui listarei os mais comuns:
 
 - Distribuição normal
 	- Amostra pequena: **Shapiro-Wilk**
-	- Amostras grandes: **Kolmogorov-Smirnov**
+	- Amostras grandes: **Kolmogorov-Smirnov** e **Jarque-Bera**
 	- Dados categóricos: 
 		- Amostras grandes: **Qui-Quadrado** 
 		- Amostras pequenas ou não cumpre as premissas: **Fisher**

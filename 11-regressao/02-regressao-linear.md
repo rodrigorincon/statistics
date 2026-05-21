@@ -33,11 +33,38 @@ Aonde
   - O custo base ou inical, que você sempre terá, independente de X
   - Seu ponto de partida, de onde os valores começam
 
+## GRAUS DE LIBERDADE
+
+Os graus de liberdade numa regressão linear é **n - k - 1**, onde k é o número de variáveis independentes (X). Isso porque você está tentando definir n coeficientes (os valores que multiplicam x1, x2, x3...), logo temos k coeficientes, portanto k-1 graus de liberdade.
+
+OBS: o intercepto (a0), coeficiente constante que não multiplica nada, é ignorado.
+
+Ex: Na regressão linear simples (1 X e 1 Y) os graus de liberdade são n-2.
+
 ## MÉTODOS DE CALCULAR
 
-minimos quadrados
+Existem 2 principais métodos e alguns mais específicos para casos especiais. Todos com a mesma base: coeficiente de correlação. O método principal, as vezes até confundido com a própria regressão linear é os **mínimos quadrados**. Ele é usado em todos os exemplos de regressão linear sem distinção de onde termina a regressão em si e começa os mínimos quadrados. Os métodos principais são:
 
-tem algum outro??
+- Minimos quadrados (OLS)
+  - Principal
+- Mínimos quadrados ponderados (WLS)
+  - Variação do original aonde cada ponto tem um peso
+  - Dá peso a outliers, diminuindo sua influência no cálculo
+  - Ótimo quando tem heteroscedasticidade (variância nos erros)
+- Gradiente descendente 
+  - Usado quando tem muitos dados e muitas variáveis
+  - Ideal para big data e treinamento em tempo real
+  - Variações:
+    - Em Lote (Batch)
+    - Estocástico (SGD) 
+    - Em Mini-Lotes
+- Regularização
+  - Usado quando as variáveis independentes são muito correlacionadas entre si 
+  - Evita overfitting
+  - Variações:
+    - Ridge (L2)
+    - Lasso (L1)
+    - Elastic Net (combinação dos 2)
 
 ## INFERÊNCIA
 
@@ -63,7 +90,7 @@ Precisamos verificar 3 coisas nos resíduos para dizer que a regressão é confi
 
 Como validar:
 
-- Teste de Shapiro-Wilk ou Kolmogorov-Smirnov
+- Teste de Shapiro-Wilk ou Jarque-Bera
 - QQ-Plot e Histograma dos resíduos
 
 Caso não seja normal você pode fazer uma **transformação nos dados originais** (ex: log), **recalcular a regressão e tentar novamente**

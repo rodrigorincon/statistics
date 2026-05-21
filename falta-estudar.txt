@@ -1,21 +1,39 @@
-MÉTODOS DE CALCULAR
-  (tem algum outro alem dos minimos quadrados??)
-como calcular intervalo de confiança/predição 
-como fazer teste de hipótese na regressão
+03-regressao-multipla
+05-gradiente-descendente
+06-outros-metodos-regressao
+  ridge
+  lasso
+  elastic net
+07-teste-hipotese
+  como fazer teste de hipótese na regressão
+08-intervalo-confianca
+  como calcular intervalo de confiança/predição 
+09-comparando-regressoes
+  https://rpubs.com/nayara_sandy/1256305 para entender AIC e BIC
+10-regressao-segmentada
+  regressão segmentada
+    https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
 
-mínimos quadrados ponderados
-mínimos quadrados ordinários
-  quando usa cada um e qual a diferença
-
-regressão segmentada
-  https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
+--------
 ver oq é e como calcular o slope of regression
+
+-------- correlacao
+
+oq é o Coeficiente de determinação ajustado e pra q ele é importante
 
 -------- transformações
 
 mini-max
 box-cox
 ------------
+
+tipos de covariancia e como isso afeta os metodos de regressao
+
+nonrobust
+HC0
+quais outros tem?
+
+-------------
 
 minimos quadrados no polinomial e matriz de confusão
 
@@ -40,3 +58,5 @@ tamano do efeito
 
 ------------------ EXERCICIOS
 https://projetomedicina.com.br/site/attachments/article/538/matematica_exercicios_resolucao_estatistica.pdf
+
+https://colab.research.google.com/drive/1tJ0imQZQyD6kycQXPqbpBo3EypHxllVO#scrollTo=r1i_jXyVuqaO
