@@ -52,6 +52,12 @@ ex: y = 3x + 5. Se x aumena 1 y aumenta 300% (3x).
 
 - Quer medir o impacto proporcional entre as variáveis
   - Quantos % Y muda para cada % de mudança em X
+- Usado para encontrar ponto ótimo de conversão (onde X mais influencia Y)
+- Ex: medir a mudança de vendas quando muda o preço testando em diversas faixas
+
+A imagem abaixo dá uma dica de em qual eixo usar o log de acordo com o formato dos seus dados.
+
+![](images/dica-log.png)
 
 ## QUANDO NÃO USAR LOGS
 
