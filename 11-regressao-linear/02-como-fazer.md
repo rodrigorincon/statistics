@@ -173,3 +173,7 @@ Importante: o intervalo cresce conforme se distancia da média de X, onde ele te
 ![](images/intervalo-precicao.jpg)
 
 O intervalo de predição só é preciso em caso de homocedasticidade.
+
+Abaixo vemos um exemplo do intervalo de confiança e de predição com seus dados.
+
+![](images/intervalos.png)
