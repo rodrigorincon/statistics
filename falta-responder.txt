@@ -8,11 +8,10 @@
 9-tamanho-Efeito
 	fazer tudo
 11-regressão
-	03-regressao-simples
-		INTERVALO DE CONFIANÇA
-		INTERVALO DE PREDIÇÃO
 	05-minimos-quadrados
 		MÍNIMOS QUADRADOS PONDERADOS
+			escrever ainda
+		MÍNIMOS QUADRADOS ROBUSTOS
 			escrever ainda
 		PARA REGRESSÃO LINEAR MÚLTIPLA (VÁRIAS VARS INDEPENDENTES)
 			escrever ainda

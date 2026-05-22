@@ -74,5 +74,7 @@ Exatamente igual a equação encontrada na internet para A. Com isso provamos qu
 
 ## MÍNIMOS QUADRADOS PONDERADOS
 
+## MÍNIMOS QUADRADOS ROBUSTOS
+
 ## PARA REGRESSÃO LINEAR MÚLTIPLA (VÁRIAS VARS INDEPENDENTES)
 

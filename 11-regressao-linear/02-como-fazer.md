@@ -9,7 +9,17 @@ Existem 1 método principal e alguns mais específicos para casos especiais. Tod
 - Mínimos quadrados ponderados (WLS)
   - Variação do original aonde cada ponto tem um peso
   - Dá peso a outliers, diminuindo sua influência no cálculo
-  - Ótimo quando tem heteroscedasticidade (variância nos erros)
+  - Cada ponto tem um peso associado
+  - Usado quando tem heteroscedasticidade (variância nos erros)
+  - **Uso ideal**: quando conhecemos previamente as incertezas dos dados
+    - Ex: medições feitas com instrumentos de diferentes precisões ou bases de dados com características diferentes, onde a incerteza de cada medição é previamente conhecida
+-Mínimos quadrados Robustas (RLS)
+  - Semelhante ao ponderado, também dá peso a outliers para diminuir sua influência
+  - Faz de forma iterativa, recalcula a reta toda vez que encontra um ponto muito discrepante
+  - Usado quando tem outliers muito fora da curva
+  - Usado quando não cumpre as premissas (erros normais e homocedasticidade)
+  - **Uso ideal**: quando não conhecemos previamente as incertezas dos dados
+    - Ex: dados possuem erros de medição, de digitação ou outros que distorçam gravemente
 - Gradiente descendente 
   - Usado quando tem muitos dados e muitas variáveis
   - Ideal para big data e treinamento em tempo real
@@ -118,7 +128,7 @@ Como estudamos, a inferência tem 2 técnicas, o intervalo de confiança e o tes
 
 ### INTERVALO DE CONFIANÇA
 
-O intervalo nos diz quais os possíveis valores que o coeficiente A (que multiplica x) está. Também podemos medir se X é realmente significativo em Y ou não (se podemos desconsiderar a correlação entre eles). Para isso verificamos se o intervalo é todo positivo ou todo negativo. Caso seja então o valor de X é significativo na definição do valor de Y.
+O intervalo nos diz quais os possíveis valores que o coeficiente A (que multiplica x) e B estão. Também podemos medir se X é realmente significativo em Y ou não (se podemos desconsiderar a correlação entre eles). Para isso verificamos se o intervalo é todo positivo ou todo negativo. Caso seja então o valor de X é significativo na definição do valor de Y.
 
 Isso acontece pois, caso haja um 0 dentro desse intervalo (uma ponta do intervalo seja negativa e a outra positiva) então há a chance de multiplicarmos X por 0, portanto não haver relação nenhuma entre eles.
 
@@ -152,12 +162,14 @@ Juntando os testes das premissas com o da própria regressão, esta é a lista d
 
 ### INTERVALO DE PREDIÇÃO
 
-Essa nova técnica de inferência nos diz o intervalo de valores que Y pode ter para um determinado valor de X. Ele é como um intervalo de confiança para cada valor de X, pois nos diz o intervalo que Y pode estar com um nível de confiança.
+Essa nova técnica de inferência nos diz o intervalo de valores que Y pode ter para um determinado valor de X. Ele é como um intervalo de confiança para cada valor de X, pois nos diz o intervalo que Y pode estar com um nível de confiança. 
 
 Ex: em 95% das vezes Y vai estar nessa faixa para esse valor de X.
 
 `O intervalo de confiança dá o intervalo para o coeficiente A, o intervalo de predição dá o intervalo para Y dado X = alguma coisa.`
 
-Importante: Cada X terá um intervalo diferente, pois se X mudou o intervalo vai mudar junto. Porém o tamanho desse intervalo deve ser o mesmo (o intervalo não vai formar um cone, crescendo ou diminuindo).
+Importante: o intervalo cresce conforme se distancia da média de X, onde ele tem variância mínima. Ele tem formato de ampulheta, sendo cada vez menos preciso conforme distanciamos do centro dos dados de treino.
+
+![](images/intervalo-precicao.jpg)
 
 O intervalo de predição só é preciso em caso de homocedasticidade.

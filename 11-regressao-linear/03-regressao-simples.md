@@ -47,6 +47,14 @@ Para uma regressão simples o teste T é o usado. É preciso testar as premissas
 - Durbin-Watson (p-valor < alfa)
   - Apenas para séries temporais
 
+O cálculo do nosso T calculado é:
+
+$$T = \frac{A}{ \frac{desvio_e}{ \sqrt{\sum{(x_i - media_x)^2}} } }$$
+
+Ou seja, divide o coeficiente da angular da reta pelo desvio padrão dos erros e pela soma dos quadrados de X. É quase a divisão pelo desvio e pela variância, mas não temo a divisão por N-1 para configurar a variância. Importante ressaltar que o desvio e a soma dos quadrados são de objetos diferentes.
+
+O cálculo do T tabelado usa n-2 graus de liberdade e nosso alfa e deve ser **bicaudal**.
+
 ## GRAUS DE LIBERDADE
 
 Os graus de liberdade numa regressão linear é **n - k - 1**, onde k é o número de variáveis independentes (X). Isso porque você está tentando definir n coeficientes (os valores que multiplicam x1, x2, x3...), logo temos k coeficientes, portanto k-1 graus de liberdade.
@@ -55,15 +63,26 @@ OBS: o intercepto (a0), coeficiente constante que não multiplica nada, é ignor
 
 Ex: Na regressão linear simples (1 X e 1 Y) os graus de liberdade são n-2.
 
-## INFERÊNCIA
+## INTERVALO DE CONFIANÇA
 
-A seguir mostro como calcular os intervalos de confiança e predição para a regressão linear simples.
+O intervalo de confiança é a o valor calculado $\pm$ margem de erro. A margem de erro por sua vez é o erro padrão * T (distância até o desvio padrão). T é dado pelo teste T por ser o teste que usamos (ele também define o nível de confiança da margem). O cálculo do erro padrão é feito a partir de X. 
 
-### INTERVALO DE CONFIANÇA
+Simplificando o cálculo do erro padrão, chegamos nas seguintes equações da margem de erro para os coeficientes.
 
-???
+Para o coeficiente linear (B) é:
 
-### INTERVALO DE PREDIÇÃO
+$$ME = T(n-2, \alpha/2) * desvio_e * \sqrt{ media_x * \frac{1}{\sum{(x_i-media_x)^2} } }$$
 
-???
+Para o coeficiente algular (A) é:
+
+$$ME = T(n-2, \alpha/2) * \frac{desvio_e}{\sqrt{\sum{(x_i-media_x)^2}}}$$
+
+Aonde
+
+- T é calculado a partir da curva T para os parâmetros informados
+- $desvio_e$ é o desvio padrão dos erros
+
+## INTERVALO DE PREDIÇÃO
+
+$$MP = T(n-2, \alpha/2) * desvio_e * \sqrt{ 1 + \frac{1}{N} + \frac{(x - media_x)^2}{\sum{(x_i-media_x)^2}} }$$
 

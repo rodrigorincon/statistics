@@ -1,6 +1,3 @@
-03-regressao-simples
-  INTERVALO DE CONFIANÇA
-  INTERVALO DE PREDIÇÃO
 04-regressao-multipla
 06-gradiente-descendente
 07-outros-metodos-regressao
@@ -13,6 +10,9 @@
 09-regressao-segmentada
   regressão segmentada
     https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
+
+
+F tabelado usa como params: 1, n-2, alfa unicaudal a direita
 
 --------
 ver oq é e como calcular o slope of regression

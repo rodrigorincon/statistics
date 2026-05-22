@@ -26,15 +26,15 @@ for coluna in df:
   limite_superior = q3 + 1.5 * iqr
   num_outliers = len(df[(df[coluna] < limite_inferior) | (df[coluna] > limite_superior)])
   print(f'-------{coluna} -------') 
-  print(f'Média: {round(resume[coluna]["mean"])}, Mediana: {round(resume[coluna]["50%"])}, Desvio Padrão: {round(resume[coluna]["std"])}')
-  print(f'Mínimo: {round(resume[coluna]["min"])}, Máximo: {round(resume[coluna]["max"])}, Q1: {round(q1)}, Q3: {round(q3)}')
+  print(f'Média: {round(resume[coluna]['mean'])}, Mediana: {round(resume[coluna]['50%'])}, Desvio Padrão: {round(resume[coluna]['std'])}')
+  print(f'Mínimo: {round(resume[coluna]['min'])}, Máximo: {round(resume[coluna]['max'])}, Q1: {round(q1)}, Q3: {round(q3)}')
   print(f'Limite Inferior: {round(limite_inferior)}, Limite Superior: {round(limite_superior)}')
   print(f'Número de Outliers: {num_outliers}')
 
 ######################################################
 # Visualizando os dados com boxplots para identificar possíveis outliers e tamanho da variação. 
 # Ambos mostram uma variação significativa, especialmente no preço, mas sem outliers.
-""" sns.boxplot(y=df['preco'])
+sns.boxplot(y=df['preco'])
 plt.title('Boxplot dos Preços')
 plt.ylabel('Preço (R$)')
 plt.show()
@@ -43,16 +43,16 @@ sns.boxplot(y=df['m2'])
 plt.title('Boxplot do M²')
 plt.ylabel('Área (m²)')
 plt.show()
- """
+
 ######################################################
 # Visualizando a relação entre preço e área com um gráfico de dispersão. 
 # Vemos uma tendência positiva, mostrando que imóveis maiores tendem a ser mais caros
 # Vemos que parece ter uma relação linear
-""" sns.scatterplot(x=df['m2'], y=df['preco'])
+sns.scatterplot(x=df['m2'], y=df['preco'])
 plt.title('Dispersão entre M² e Preço')
 plt.xlabel('Área (m²)')
 plt.ylabel('Preço (R$)')
-plt.show() """
+plt.show()
 
 ######################################################
 # Correlação entre preço e área
@@ -90,26 +90,26 @@ print(regressao.summary())
 # plot dos resiuduos
 residuos = regressao.resid
 
-""" sns.histplot(residuos, kde=True)
+sns.histplot(residuos, kde=True)
 plt.xlabel('Resíduos')
 plt.ylabel('Frequência')
 plt.title('Histograma dos Resíduos')
-plt.show() """
+plt.show()
 # parece mostrar uma leve assimetria a direita, melhor ver pelo grafico de dispersao
 
-""" sns.scatterplot(x=df['m2'], y=residuos)
+sns.scatterplot(x=df['m2'], y=residuos)
 plt.axhline(y=0, color='red', linestyle='--')
 plt.xlabel('Area do Imovel')
 plt.ylabel('Resíduos')
 plt.title('Relação entre Area e Resíduos')
-plt.show() """
+plt.show()
 # resíduos formam um cone, variância dos resíduos aumenta com o aumento da área
 
-""" sm.qqplot(residuos, line='45', fit=True)
+sm.qqplot(residuos, line='45', fit=True)
 plt.xlabel('Quantiles da Distribuição Amostral dos Resíduos')
 plt.ylabel('Quantiles da Distribuição Normal')
 plt.title('Gráfico QQ Plot dos Resíduos')
-plt.show() """
+plt.show()
 # resíduos não seguem a normal
 
 ######################################################
@@ -128,18 +128,18 @@ print(regressao2.summary())
 # plot dos resiuduos transformados
 
 residuos2 = regressao2.resid
-""" sns.scatterplot(x=df['m2'], y=residuos2)
+sns.scatterplot(x=df['m2'], y=residuos2)
 plt.axhline(y=0, color='red', linestyle='--')
 plt.xlabel('Area do Imovel')
 plt.ylabel('Resíduos')
 plt.title('Relação entre Area do Imovel e Resíduos')
-plt.show() """
+plt.show()
 
-""" sm.qqplot(residuos2, line='45', fit=True)
+sm.qqplot(residuos2, line='45', fit=True)
 plt.xlabel('Quantiles da Distribuição Amostral dos Resíduos')
 plt.ylabel('Quantiles da Distribuição Normal')
 plt.title('Gráfico QQ Plot dos Resíduos')
-plt.show() """
+plt.show()
 
 ######################################################
 # PREVER O VALOR PARA UM IMÓVEL DE 200 M²
