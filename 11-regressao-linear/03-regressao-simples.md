@@ -57,9 +57,9 @@ O cálculo do T tabelado usa n-2 graus de liberdade e nosso alfa e deve ser **bi
 
 ## GRAUS DE LIBERDADE
 
-Os graus de liberdade numa regressão linear é **n - k - 1**, onde k é o número de variáveis independentes (X). Isso porque você está tentando definir n coeficientes (os valores que multiplicam x1, x2, x3...), logo temos k coeficientes, portanto k-1 graus de liberdade.
+Os graus de liberdade numa regressão linear é **n - k - 1**, onde k é o número de variáveis independentes (X). Isso porque você está tentando definir k coeficientes (os valores que multiplicam x1, x2, x3...), logo temos k coeficientes, portanto k-1 graus de liberdade.
 
-OBS: o intercepto (a0), coeficiente constante que não multiplica nada, é ignorado.
+OBS: o intercepto (B), coeficiente constante que não multiplica nada, é ignorado.
 
 Ex: Na regressão linear simples (1 X e 1 Y) os graus de liberdade são n-2.
 

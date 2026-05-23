@@ -2,7 +2,51 @@
 
 Usa a correlação como base, pois calcula a correlação entre as vars independentes com a dependentes e das vars independentes com elas mesmas (variância). Ou seja, calcula a variância de todas as vars independentes e delas com a dependente.
 
-## PARA REGRESSÃO LINEAR SIMPLES (1 VAR INDEPENDENTE)
+## TERMOS COMUNS
+
+Alguns trechos do cálculo recebem nomes para limpar a equação e facilitar o entendimento. A maioria deles está dentro da fórmula da correlação.
+
+$S_{xx} = \sum{ (x_i - media_x)^2 }$ mede a variância de alguma var X (porém sem a divisão por N-1). Também chamado de soma dos quadrados de X.
+
+$S_{yy} = \sum{ (y_i - media_y)^2 }$ mede a variância da var dependente Y (porém sem a divisão por N-1). Também chamado de soma dos quadrados de Y.
+
+$S_{xy} = \sum{ (x_i - media_y)(y_i - media_y) }$ mede a variância entre as vars X e Y. Mede a dispersão dos pontos no gráfico. Também chamado de soma dos quadrados de X e Y.
+
+## VARIAÇÕES
+
+Existem deviersas variações desse algoritmo para quando não cumpre as premissas de normalidade ou homocedasticidade ou para muitas variáveis.
+
+- Mínimos quadrados ordinais (OLS)
+  - Padrão
+- Mínimos quadrados ponderados (WLS)
+  - Cada ponto tem um peso
+  - Outliers tem peso próximo de 0, diminuindo sua influência no cálculo
+  - Usado quando tem **heteroscedasticidade** (variância nos erros)
+  - Uso ideal: quando **conhecemos previamente as incertezas** dos dados
+  - Ex: medições feitas com instrumentos de diferentes precisões ou bases de dados com características diferentes, onde a incerteza de cada medição é previamente conhecida
+- Mínimos quadrados Robustas (RLS)
+  - Semelhante ao ponderado, porém dá os pesos dos pontos de forma iterativa
+  - Iterativo: recalcula a reta toda vez que encontra um ponto muito discrepante
+  - Usado quando tem outliers muito fora da curva
+  - Usado quando não cumpre as premissas (**erros não normais ou heteroscedasticidade**)
+  - Uso ideal: quando **não conhecemos previamente as incertezas** dos dados
+  - Ex: dados possuem erros de medição, de digitação ou outros que distorçam gravemente
+- Mínimos quadrados generalizados (GLS)
+  - Usa uma matriz de covariância no lugar dos pesos
+  - Generalização do ponderado, trocando pesos por uma matriz das covariâncias
+  - Usado quando há **multicolinearidade ou heterocedasticidade** (variáveis X correlacionadas)
+- Mínimos quadrados não lineares (NLS)
+  - Quando os dados são **polinomiais**
+  - Usa métodos numéricos iterativos (outros algoritmos) para convergir ao menor erro
+  - Não será analisado aqui por fugir do escopo
+- Mínimos quadrados parciais (PLS)
+  - Quando tenho **mais variáveis do que dados** ou tenho **multicolinearidade**
+  - Todos os outros exigem que a amostra seja maior que o número de variáveis, esse não
+  - Reduz as vars, eliminando as correlacionadas, até ter um número aceitável
+
+Importante: **não confundir o peso do ponto com o coeficiente A**. O peso multiplica o ponto, o coeficiente multiplica a variável X como um todo (e é definida considerando os pesos dos pontos).
+
+## MÍNIMOS QUADRADOS ORDINAIS (BASE)
 
 Para a equação y = ax + b, temos de definir A (coeficiente angular) e B (coeficiente linear).
 
@@ -13,6 +57,14 @@ Aonde r é o coeficiente de correlação.
 $$B = media_y - A * media_x$$
 
 Para calcular o coeficiente linear temos de calcular o angular.
+
+Usando os termos comuns, podemos reescrever a fórmula de A como:
+
+$A = r * \frac{ \sqrt{N * S_{yy}} }{ \sqrt{N * S_{yy}} } = r * \frac{ \sqrt{N} \sqrt{S_{yy}} }{ \sqrt{N} \sqrt{S_{yy}} } = r * \frac{ \sqrt{S_{yy}} }{ \sqrt{S_{yy}} }$
+
+Como $r = \frac{ S_{xy} }{ \sqrt{ S_{xx} * S_{yy} }}$ podemos juntar tudo:
+
+$A = \frac{ S_{xy} }{ \sqrt{S_{xx}} * \sqrt{S_{yy}} }$
 
 ### PROVA
 
@@ -76,5 +128,109 @@ Exatamente igual a equação encontrada na internet para A. Com isso provamos qu
 
 ## MÍNIMOS QUADRADOS ROBUSTOS
 
-## PARA REGRESSÃO LINEAR MÚLTIPLA (VÁRIAS VARS INDEPENDENTES)
+## MÍNIMOS QUADRADOS GENERALIZADOS
 
+## ORDINAIS (BASE) COM REGRESSÃO MÚLTIPLA
+
+### De onde vem as matrizes
+
+Lembrando que a equação para 1 variável é
+
+$y = A_0 + A_1X + erro$
+
+Quando se tem mais de 1 variável precisamos calcular A1, A2, A3... $A_k$. Como temos K variáveis (e coeficientes a serem descobertos) e N medidas em cada variável teremos k equações semelhante a debaixo:
+
+$Y_1 = A_0 + A_1X_{1,1} + A_2X_{2,1} ... + A_nX{n,1} + erro_1 = A_0 + \sum{A_iX_{1,i}} + erro_1$
+
+Aonde o somatório soma todos os dados da variável $X_1$. 
+
+Repare que **para encontrar cada Y eu preciso usar todos os coeficientes**. Isso também acontece na versão simples, aonde $y_1 = a_0 + a_1x$. Por ser o único y que tínhamos essa relação não era tão óbvia.
+
+Essa equação não define o coeficiente, mas define como Y (que nós conhecemos) é definido por eles. Como temos k variáveis dessa, podemos organizar todas em uma única matriz.
+
+$\begin{bmatrix} 
+y_1 \\
+y_2 \\
+y_3 \\
+... \\
+y_k
+\end{bmatrix} = \begin{bmatrix}
+1 & x_{1,1} & x_{2,1} & ... & x_{n,1} \\
+1 & x_{1,2} & x_{2,2} & ... & x_{n,2} \\
+1 & x_{1,3} & x_{2,3} & ... & x_{n,3} \\
+... & ... & ... & ... & ... \\
+1 & x_{1,k} & x_{2,k} & ... & x_{k,k}
+\end{bmatrix} * \begin{bmatrix}
+A_0 \\
+A_1 \\
+A_2 \\
+... \\
+A_k
+\end{bmatrix} + \begin{bmatrix}
+erro_0 \\
+erro_1 \\
+erro_2 \\
+... \\
+erro_k \\
+\end{bmatrix}
+$
+
+A matriz acima pode ser resumida na equação abaixo
+
+$$Y = X * A + E$$
+
+Aonde
+
+- Y é a lista de todos os valores de y
+- X é a matriz com todos os dados de todos os X
+- A são os coeficientes que queremos definir (a1, a2, a3...)
+- E são os nossos erros (resíduos)
+
+O motivo da primeira coluna da matriz ser toda 1 é porque ela multiplica o coeficiente linear (A0). Como esse coeficiente não tem relação com nenhuma variável (e a matriz é a lista de todos os dados de todas as variáveis) então colocamos 1 para ela ficar sempre sozinha na equação.
+
+A matriz é só uma forma mais organizada de resumir o sistema linear que temos, de k equações com k variáveis. Poderíamos fazer também no seguinte formato:
+
+$Y_1 = A_0 + A_1X_{1,1} + A_2X_{2,1} ... + A_nX{n,1} + erro_1$
+
+$Y_2 = A_0 + A_1X_{1,2} + A_2X_{2,2} ... + A_nX{n,2} + erro_2$
+
+$Y_k = A_0 + A_1X_{1,k} + A_2X_{2,k} ... + A_nX{n,k} + erro_k$
+
+Lembrando que as únicas variáveis que não sabemos os valores os os coeficientes A.
+
+### Conceito dos mínimos quadrados
+
+Em todas as vertentes dos mínimos quadrados o que buscamos é encontrar os coeficientes aonde o quadrado dos erros é o menor possível (por isso o nome). Em todas suas versões queremos elevar cada erro ao quadrado (variância) e somar todos eles.
+
+Lembrando que isso nada mais é que a variância sem a divisão pelos graus de liberdade, pois o erro é a diferença entre o valor real e a média (ou valor esperado pela regressão). **A soma dos quadrados sempre pode ser entendido como a variância ou a dispersão dos dados**, seja a dispersão em volta da média ou em volta do valor esperado (reta da regressão).
+
+Pensando nisso podemos isolar os k erros, elevar ao quadrado e somá-los conforme mostra abaixo.
+
+$\sum{erro^2} = \sum_{i=1}^k {(Y_i - A_0 - \sum_{j=1}^n {A_j X_{i,j}})^2}$
+
+É aqui que a versão matriz mostra seu valor, pois podemos trocar os somatórios pela matriz, pois a multiplicação de matrizes já é um somatório. Isolando o erro temos
+
+$E = Y - X * A$
+
+Elevando ao quadrado fica
+
+$E * E^T = (Y - X * A) * (Y - X * A)^T$
+
+Lembrando que em matrizes para elevar algo ao quadrado precisamos multiplicar a matriz pela sua versão transversal. Assim $E^2$ vira $E * E^T$. O mesmo vale para o outro lado da equação.
+
+Fazendo a multiplicação fica
+
+$E * E^T = YY^T - 2X^TYA + XX^TAA^T$
+
+
+### Derivada para encontrar o mínimo
+
+Até então temos a soma dos quadrados dos erros, mas não encontramos o valor mínimo deles. Falta o mínimo do mínimos quadrados. **Para encontrar o menor valor fazemos a derivada e igualamos a 0**. Como queremos encontrar os coeficientes A derivamos em relação a eles.
+
+$\frac{\partial{E}}{\partial{A}} = -2X^TY + 2XX^TA = 0$
+
+Isolando A temos
+
+$$A = (XX^T)^{-1} * YX^T$$
+
+Com essa equação conseguimos calcular todos os coeficientes da regressão.

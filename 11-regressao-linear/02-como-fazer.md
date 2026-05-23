@@ -4,22 +4,9 @@
 
 Existem 1 método principal e alguns mais específicos para casos especiais. Todos com a mesma base: coeficiente de correlação. O método principal, as vezes até confundido com a própria regressão linear é os **mínimos quadrados**. Ele é usado em todos os exemplos de regressão linear sem distinção de onde termina a regressão em si e começa os mínimos quadrados. Os métodos mais comuns são:
 
-- Minimos quadrados (OLS)
+- Minimos quadrados
   - Principal
-- Mínimos quadrados ponderados (WLS)
-  - Variação do original aonde cada ponto tem um peso
-  - Dá peso a outliers, diminuindo sua influência no cálculo
-  - Cada ponto tem um peso associado
-  - Usado quando tem heteroscedasticidade (variância nos erros)
-  - **Uso ideal**: quando conhecemos previamente as incertezas dos dados
-    - Ex: medições feitas com instrumentos de diferentes precisões ou bases de dados com características diferentes, onde a incerteza de cada medição é previamente conhecida
--Mínimos quadrados Robustas (RLS)
-  - Semelhante ao ponderado, também dá peso a outliers para diminuir sua influência
-  - Faz de forma iterativa, recalcula a reta toda vez que encontra um ponto muito discrepante
-  - Usado quando tem outliers muito fora da curva
-  - Usado quando não cumpre as premissas (erros normais e homocedasticidade)
-  - **Uso ideal**: quando não conhecemos previamente as incertezas dos dados
-    - Ex: dados possuem erros de medição, de digitação ou outros que distorçam gravemente
+  - Tem diversas variações para quando suas premissas não são cumpridas ou casos especiais
 - Gradiente descendente 
   - Usado quando tem muitos dados e muitas variáveis
   - Ideal para big data e treinamento em tempo real
@@ -52,6 +39,7 @@ Para dizer que a regressão é confiável 3 condições tem de ser seguidas pelo
 - Erros serem normais
 - Variância dos erros constante
 - Erros independentes (para séries temporais)
+- Vars independentes não devem ser correlacionadas (multicolinariedade, para regressão múltipla)
 
 ### 1. Os resíduos devem seguir a distribuição normal
 
@@ -122,6 +110,20 @@ Caso encontre dependência você pode:
 - Usar transformação nos dados originais, recalcular a regressão e tentar novamente
 - Usar regressões específicas para séries temporais (ARIMA e regressão com erros defasados)
 
+### 4. As vars independentes não devem ser correlacionadas
+
+As variáveis independentes (Xs) não podem ser correlacionadas. Ou seja, X1 não pode interferir no valor de X2. Isso é chamado **multicolinearidade**.
+
+Para identificar existem duas técnicas:
+
+- Matriz de correlação
+  - Testa pares de vars
+  - Limitação: se uma var independente for descrita pela união de outras 2 ou mais (ex: X1 = X2 * X3)
+  - O limiar que define alta correlação é relativo (entre 0,5 e 0,7 a depender da pessoa)
+- Fator de inflação de variância (VIF)
+  - Testa várias vars juntas, resolvendo a limitação da matriz
+  - Resultado > 5 indica correlação moderada. Resultado > 10 indica correlação forte
+
 ## INFERÊNCIA COM REGRESSÃO
 
 Como estudamos, a inferência tem 2 técnicas, o intervalo de confiança e o teste de hipótese. Ambas funcionam como uma forma de testar se a correlação entre as variáveis é realmente significativa, mas medem coisas diferentes da correlação em si. Enquanto a correlação nos diz a força entre as variáveis, a inferência nos dá **uma faixa para essa relação e testa se essa relação é estatisticamente relevante**.
@@ -177,3 +179,16 @@ O intervalo de predição só é preciso em caso de homocedasticidade.
 Abaixo vemos um exemplo do intervalo de confiança e de predição com seus dados.
 
 ![](images/intervalos.png)
+
+## MEDIDAS DE ADEQUAÇÃO
+
+Além dos testes de hipótese das premissas (que veem se os dados cumprem os requisitos do algoritmo) e do teste dos coeficientes (que testa se as variáveis afetam o resultado final de fato) podemos testar o **quão bem a reta se ajusta aos dados**. Usada tanto para validar a regressão como para **comparar diferentes regressões**.
+
+Importante perceber que uma reta bem ajustada aos dados **pode ser sinal de overfitting**! 
+
+Existem 4 medidas que nos informa se a reta está bem ajustada aos dados:
+
+- Desvio padrão dos erros (se)
+- Coeficiente de determinação (R²)
+- Coeficiente de determinação ajustado (R²)
+- AIC e BIC

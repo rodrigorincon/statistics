@@ -34,5 +34,8 @@ axes[0,0].scatter(x1, residuos1)
 axes[0,1].scatter(x2, residuos2)
 axes[1,0].scatter(x3, residuos3)
 axes[1,1].scatter(x4, residuos4)
+for i in range(2):
+  for j in range(2):
+    axes[i,j].set_title("Gráficos dos resíduos")
 plt.tight_layout()
 plt.show() 

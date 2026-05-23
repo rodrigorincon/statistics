@@ -1,25 +1,18 @@
-04-regressao-multipla
 06-gradiente-descendente
 07-outros-metodos-regressao
   ridge
   lasso
   elastic net
-  como calcular intervalo de confiança/predição 
-08-comparando-regressoes
-  https://rpubs.com/nayara_sandy/1256305 para entender AIC e BIC
-09-regressao-segmentada
+08-regressao-segmentada
   regressão segmentada
     https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
 
+------
 
 F tabelado usa como params: 1, n-2, alfa unicaudal a direita
 
 --------
 ver oq é e como calcular o slope of regression
-
--------- correlacao
-
-oq é o Coeficiente de determinação ajustado e pra q ele é importante
 
 -------- transformações
 
