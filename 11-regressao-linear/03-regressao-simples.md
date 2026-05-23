@@ -41,9 +41,9 @@ Para uma regressão simples os **Minimos quadrados** (OLS) funcionam perfeitamen
 
 Para uma regressão simples o teste T é o usado. É preciso testar as premissas, então os testes de cada premissa também devem ser usados.
 
-- Teste T (p-valor > alfa)
+- Teste T (p-valor < alfa)
 - Jarque-Bera (p-valor < alfa)
-- Breusch-Pagan (p-valor < alfa)
+- Breusch-Pagan (p-valor > alfa)
 - Durbin-Watson (p-valor < alfa)
   - Apenas para séries temporais
 

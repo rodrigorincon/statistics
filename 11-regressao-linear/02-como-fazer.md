@@ -146,7 +146,7 @@ $H1: pelo menos um A \ne 0$, com relação entre pelo menos 1 X e Y
 
 Portanto H1 diz que X (ou o modelo de regressão como um todo no caso da Anova) é significativo para prever Y.
 
-Portanto, queremos um **p-valor > alfa** para rejeitar H0 e validar o modelo. Usamos H0 como uma negação pois nossas opções são rejeitá-lo ou inconclusivo (não rejeitá-lo). Não rejeitar não prova o modelo, portanto não responde nossa pergunta.
+Portanto, queremos um **p-valor < alfa** para rejeitar H0 e validar o modelo. Usamos H0 como uma negação pois nossas opções são rejeitá-lo ou inconclusivo (não rejeitá-lo). Não rejeitar não prova o modelo, portanto não responde nossa pergunta.
 
 Os testes usados para validar é o teste T e a **Anova/teste F**. O teste T é usado na regressão simples para ver se $A \ne 0$ e a Anova na múltipla para ver se ao menos algum X afeta Y (se algum $A_i é \ne 0$). Caso a Anova encontre relação é rodado o teste T para cada X para encontrar quais são relacionados (**teste T é o post hoc da Anova**).
 
@@ -161,6 +161,7 @@ Juntando os testes das premissas com o da própria regressão, esta é a lista d
 - Jarque-Bera
 - Breusch-Pagan
 - Durbin-Watson (para séries temporais)
+- Matriz de correlação ou VIF (não são testes de hipóteses, mas tem de testar)
 
 ### INTERVALO DE PREDIÇÃO
 

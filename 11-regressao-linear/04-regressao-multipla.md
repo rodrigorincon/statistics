@@ -58,8 +58,6 @@ Caso queira calcular a multicolinearidade manualmente, as técnicas são:
   - Só verifica correlação se a mesma for linear
   - Resultado > 5 indica correlação moderada. Resultado > 10 indica correlação forte
 
-### MATRIZ DE CORRELAÇÃO
-
 ### FATOR DE INFLAÇÃO DE VARIÂNCIA
 
 Mede o quanto o erro padrão aumenta quando as variáveis independentes estão correlacionadas.
@@ -90,10 +88,10 @@ Por padrão usa-se os **Minimos quadrados ordinais** (OLS). A versão tradiciona
 Para uma regressão múltipla o teste Anova é o usado. Como teste post-hoc é usado o teste T entre cada X e a var dependente (Y). Junto com os testes das premissas, os testes que temos são:
 
 - Anova (p-valor < alfa)
-- Teste T (p-valor > alfa)
-- Jarque-Bera (p-valor < alfa)
-- Breusch-Pagan (p-valor < alfa)
-- Durbin-Watson (p-valor < alfa)
+- Teste T (p-valor < alfa)
+- Jarque-Bera (p-valor > alfa)
+- Breusch-Pagan (p-valor > alfa)
+- Durbin-Watson (p-valor > alfa)
   - Apenas para séries temporais
 
 Para nosso teste principal (Anova) nosso F calculado é:
@@ -127,3 +125,66 @@ Ex: Numa regressão com 3 vars independentes (k = 3) os graus de liberdade são 
 ## INTERVALO DE CONFIANÇA
 
 ## INTERVALO DE PREDIÇÃO
+
+# PASSO A PASSO
+
+1. Entenda o contexto. Esses dados fazem sentido para o que quer analisar?
+
+2. Verifique se cada X é linear ou sem nenhuma relação visível com Y
+
+- Gráfico de dispersão
+- Correlação (valor absoluto alto)
+- Caso não seja, faça uma transformação e repita o passo
+
+OBS: dados de teste também devem passar por esta etapa
+
+3. Faça a regressão múltipla
+
+- Método dos mínimos quadrados ordinais
+
+4. Pegue os resíduos, os coeficientes e os valores estimados para os mesmos Xs (ŷ)
+
+5. Valide homocedasticidade dos resíduos (não devem ter nenhuma relação visível)
+
+- Gráfico resíduos vs valores estimados (ŷ)
+- Gráfico resíduos vs cada var independente (X)
+- Teste Breusch-Pagan
+- Caso não passe, volte ao passo 3 com dados transformados ou usando uma variação dos mínimos quadrados
+
+6. Valide normalidade dos resíduos
+
+- QQ-plot dos resíduos vs valores estimados (ŷ)
+- Teste de Jarque-Bera
+- Caso não passe, volte ao passo 3 com dados transformados ou usando uma variação dos mínimos quadrados
+
+7. Valide dependência interna dos erros (séries temporais)
+
+- Gráfico de linha dos resíduos vs cada var independente (X)
+- Teste de Durbin-Watson
+- Caso não passe, volte ao passo 3 com dados transformados ou usando uma variação dos mínimos quadrados
+
+8. Valide multicolinearidade
+
+- VIF ou matriz de correlação
+- Decida o que fazer com as vars correlacionadas
+- Volte ao passo 3 após tratar as vars correlacionadas ou usando uma variação dos mínimos quadrados
+
+9. Teste Anova
+
+- Valide se a Anova passa
+- Caso não passe, descarte a regressão
+
+10. Teste T e intervalo de confiança dos coeficientes
+
+- Valide todas as var independentes (X)
+- Valide se todas os coeficientes tem intervalos de confiança que não passem pelo 0
+- Caso alguma não passe, volte ao passo 3 sem ela
+  - Verifique o desvio padrão dos erros, R² ajustado e AIC/BIC do antes e depois
+  - Fique com a regressão que der os melhores resultados
+- Caso tenha usado transformação ou alguma variação do mínimo quadrado por conta da var X não passar em algum teste e esse mesmo X nãp passou nos testes T e do intervalo, remova-o e volte ao passo 3 usando os mínimo quadrados ordinais
+
+11. Execute a regressão com dados de teste
+
+- Caso tenha feito transformação nos dados, faça a mesma transformação nos dados de teste
+- Caso o nº de resultados fora do intervalo de confiança seja maior que o nível de confiança alfa, jogue a regressão fora
+  - Troque os dados de teste e de treino e volte ao passo 3
