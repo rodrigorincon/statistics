@@ -96,15 +96,22 @@ Para uma regressão múltipla o teste Anova é o usado. Como teste post-hoc é u
 
 Para nosso teste principal (Anova) nosso F calculado é:
 
-$$F = \frac{S_{xy}}{ \frac{S_e}{n-k-1}  }$$ como calcular com varias vars???
+$$F = \frac{ \frac{S_{ŷ}}{k} }{ \frac{S_e}{n-k-1}  }$$
 
 Aonde
 
-- $S_{xy}$ é a soma dos quadrados ???
+- $S_{ŷ}$ é a soma dos quadrados da regressão (o quanto a variação de Y é explicado pelos X)
+- $S_e$ é a soma dos quadrados dos erros (o quanto a variação de Y não é explicado pelos X, já que são os erros, desvios da reta da regressão)
+- k é o número de variáveis independentes X
+- n é a quantidade de amostras em cada grupo (tamanho do grupo)
 
-$S_e$ = S_{yy} - b * S_{xy} ???
+É exatamente a mesma equação da Anova, aonde cada variável é um grupo. A soma dos quadrados da regressão é dada por
 
-O cálculo do F tabelado usa 1, n-2, alfa como parâmetros (1 como gl do numerador e n-2 como gl do denominador) e deve ser **bicaudal**.
+$S_{ŷ} = \sum_{i=1}^n {(ŷ_i -media_y)^2}$, ou seja, a variância entre a reta e a média dos valores reais.
+
+$S_e = \sum_{i=1}^n e_i^2 = \sum_{i=1}^n {(y - ŷ_i)^2}$
+
+O cálculo do F tabelado usa como parâmetros: k, n-k-1 e alfa (graus de liberdade do numerador e do denominador). Lembrando que k é o número de variáveis X que temos. O teste deve ser **unicaudal**.
 
 Para o teste post-hoc o cálculo do nosso T calculado é:
 
@@ -112,7 +119,7 @@ $$T = \frac{A}{ \frac{desvio_e}{ \sqrt{\sum{(x_i - media_x)^2}} } }$$
 
 Ou seja, divide o coeficiente da angular da reta pelo desvio padrão dos erros e pela soma dos quadrados de X. É quase a divisão pelo desvio e pela variância, mas não temo a divisão por N-1 para configurar a variância. Importante ressaltar que o desvio e a soma dos quadrados são de objetos diferentes.
 
-O cálculo do T tabelado usa n-2 graus de liberdade e nosso alfa e deve ser **bicaudal**.
+O cálculo do T tabelado usa n-k-1 graus de liberdade e nosso alfa e deve ser **bicaudal**.
 
 ## GRAUS DE LIBERDADE
 
@@ -124,7 +131,23 @@ Ex: Numa regressão com 3 vars independentes (k = 3) os graus de liberdade são 
 
 ## INTERVALO DE CONFIANÇA
 
+O cálculo é igual ao da regressão simples. Recapitulando, cada coeficiente terá sua margem de erro definida por:
+
+$$ME = T(n-k-1, \alpha/2) * desvio_e$$
+
+Aonde $desvio_e$ é o desvio padrão do erro (erro padrão) daquele coeficiente.
+
 ## INTERVALO DE PREDIÇÃO
+
+O intervalo de predição também segue o mesmo cálculo da versão simples, porém aonde ele faz somatórios da variável X aqui fazemos multiplicação de matrizes com todas as variáveis independentes.
+
+$$MP = T(n-2, \alpha/2) * desvio_e * \sqrt{ 1 + X(X_i X_i^T)^{-1} X^T }$$
+
+Aonde
+
+- X é a matriz com todos os valores de todas as variáveis independentes e a coluna dos 1s do intercepto
+- $X^T$ é a matriz transposta de X
+- $X_i$ é a matriz original com todos os valores de todas as variáveis independentes **sem a coluna dos 1s** do intercepto
 
 # PASSO A PASSO
 

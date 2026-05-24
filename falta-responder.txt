@@ -8,16 +8,12 @@
 9-tamanho-Efeito
 	fazer tudo
 11-regressão
-	04-regressão multipla
-		TESTE DE HIPÓTESE 
-			como calcular a anova com várias vars, tipo de cauda
-			como calcular intervalo de confiança e regressão para reg multipla
-		INTERVALO DE CONFIANÇA
-		INTERVALO DE PREDIÇÃO
 	05-minimos-quadrados
 		MÍNIMOS QUADRADOS PONDERADOS
 			escrever ainda
 		MÍNIMOS QUADRADOS ROBUSTOS
+			escrever ainda
+		MÍNIMOS QUADRADOS GENERALIZADOS
 			escrever ainda
 
 -------

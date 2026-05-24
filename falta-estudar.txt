@@ -7,11 +7,8 @@
   regressão segmentada
     https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
 
-------
-
-F tabelado usa como params: 1, n-2, alfa unicaudal a direita
-
 --------
+
 ver oq é e como calcular o slope of regression
 
 -------- transformações
@@ -48,8 +45,5 @@ tamano do efeito
 - V de Cramér 
 - Coeficiente phi
 
-
------------------- EXERCICIOS
-https://projetomedicina.com.br/site/attachments/article/538/matematica_exercicios_resolucao_estatistica.pdf
 
 https://drive.google.com/drive/u/0/folders/1jxHEwgDj4r-wjZ4QgSQY1fdeaDCmv7eA
