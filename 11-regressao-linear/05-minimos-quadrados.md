@@ -46,7 +46,7 @@ Existem deviersas variações desse algoritmo para quando não cumpre as premiss
 
 Importante: **não confundir o peso do ponto com o coeficiente A**. O peso multiplica o ponto, o coeficiente multiplica a variável X como um todo (e é definida considerando os pesos dos pontos).
 
-## MÍNIMOS QUADRADOS ORDINAIS (BASE)
+## MÍNIMOS QUADRADOS ORDINAIS (OLS)
 
 Para a equação y = ax + b, temos de definir A (coeficiente angular) e B (coeficiente linear).
 
@@ -124,11 +124,63 @@ $A = \frac{N*cov}{N\sum{x^2} - 2(\sum{x})^2 + (\sum{x})^2} = \frac{N*cov}{N\sum{
 
 Exatamente igual a equação encontrada na internet para A. Com isso provamos que A nada mais é que a correlação multiplicado pela divisão dos desvios de Y por X.
 
-## MÍNIMOS QUADRADOS PONDERADOS
+## MÍNIMOS QUADRADOS PONDERADOS (WLS)
 
-## MÍNIMOS QUADRADOS ROBUSTOS
+A diferença nos ponderados é que cada ponto tem um peso, em que pontos com maior variância recebem peso menor. Quanto mais longe o ponto está da média, menor seu peso e menos ele influencia.
 
-## MÍNIMOS QUADRADOS GENERALIZADOS
+$S_{yy} = \sum{ w_i(y_i - media_y)^2 }$
+
+Aonde
+
+- w é o peso daquele ponto
+
+O cálculo do ponto é feito a partir da matriz de covariância. O peso em si é o inverso do desvio padrão daquele ponto. Porém calcular o desvio padrão de um ponto que pega.
+
+$w_i = \frac{1}{desvio_i}$
+
+O desvio do ponto é calculado pela covariância na regressão simples e pela matriz de covariância na regressão múltipla.
+
+$desvio_i = \sqrt{MC}$
+
+Aonde MC é a matriz de covariância.
+
+$MC = \begin{bmatrix} 
+vari(x_1) & cov(x_1,x_2) & ... & cov(x_1,x_n) \\
+cov(x_2,x_1) & vari(x_2) & ... & cov(x_2,x_n) \\
+... & ... & ... & ... \\
+cov(x_n,x_1) & cov(x_n,x_2) & ... & vari(x_n) \\
+\end{bmatrix}$
+
+Na matriz de covariância cada linha é a covariância de $x_1$ com todas as outras variáveis independentes, na linha 2 o mesmo com $x_2$ e assim por diante. A diagonal é a variância daquela variável. Importante lembrar que a **variância nada mais é que a covariância da variável por ela mesma**. Ou seja, todas as posições são covariâncias da variável daquela linha pela variável daquela coluna.
+
+$vari(x) = \sum{(x_i - media_x)(x_i - media_x)}$
+
+$cov(x, y) = \sum{(x_i - media_x)(y_i - media_y)}$
+
+## MÍNIMOS QUADRADOS ROBUSTOS (RLS)
+
+Aqui os pesos são definidos após fazer o mínimo quadrado ordinário. Usa-se o método padrão inicialmente e depois calcula os pesos através de uma função de perda (quanto maior o erro, maior a perda e menor o peso). Então é feito o mínimo quadrado ponderado usando os pesos calculados pela função de perda e recalcula os pesos para ver se houve uma melhora significativa.
+
+Caso não haja uma melhora significativa, a função de perda é calculada novamente e recalculado os pesos. Esse ciclo é repetido até que os novos pesos e os antigos parem de mudar (encontre um platô).
+
+Esse ciclo de recálculo dos pesos é o que faz o método ser iterativo, ficando em um loop até encontrar um platô ou estourar um limite predefinido de loops. Os pesos começam todos com 1 e vão sendo recalculados com base nos erros e enquanto os pesos antigos e novos continuarem mudando significativamente, o loop continua.
+
+As funções de perda mais comuns são a função de Huber e a Bisquare de Tukey.
+
+## MÍNIMOS QUADRADOS GENERALIZADOS (GLS)
+
+Aqui, ao invés de calcularmos os pesos através dos erros, usamos uma matriz de covariância. Como a matriz de covariância usa o erro (distância do ponto à reta) acaba sendo parecido, mas o peso não é o inverso da raiz da matriz como no ponderado, mas a própria matriz de covariância. 
+
+O cálculo para regressão múltipla é dado por:
+
+$A_i = (XX^TC^T)^{-1} * X^TC^{-1}Y$
+
+Aonde
+
+- X é a matriz com todos os valores de todas as varáveis (adicionado a coluna 1 do intercepto)
+- $X^T$ é a matriz transposta
+- C é a matriz de covariância
+- Y é a matriz dos valores Y
 
 ## ORDINAIS (BASE) COM REGRESSÃO MÚLTIPLA
 

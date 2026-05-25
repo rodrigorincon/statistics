@@ -3,13 +3,10 @@
   ridge
   lasso
   elastic net
+  https://www.youtube.com/shorts/d2SrG0q_Z0U
 08-regressao-segmentada
   regressão segmentada
     https://estatisticafacil.org/glossario/o-que-e-regressao-segmentada-como-funciona-e-aplicacoes/
-
---------
-
-ver oq é e como calcular o slope of regression
 
 -------- transformações
 

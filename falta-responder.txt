@@ -8,14 +8,6 @@
 9-tamanho-Efeito
 	fazer tudo
 11-regressão
-	05-minimos-quadrados
-		MÍNIMOS QUADRADOS PONDERADOS
-			escrever ainda
-		MÍNIMOS QUADRADOS ROBUSTOS
-			escrever ainda
-		MÍNIMOS QUADRADOS GENERALIZADOS
-			escrever ainda
-
 -------
 medidas regressão
 
