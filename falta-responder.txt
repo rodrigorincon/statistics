@@ -7,7 +7,7 @@
 		TAMANHO MÁXIMO
 9-tamanho-Efeito
 	fazer tudo
-11-regressão
+
 -------
 medidas regressão
 

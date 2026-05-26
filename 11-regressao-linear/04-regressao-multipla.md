@@ -204,10 +204,96 @@ OBS: dados de teste também devem passar por esta etapa
 - Caso alguma não passe, volte ao passo 3 sem ela
   - Verifique o desvio padrão dos erros, R² ajustado e AIC/BIC do antes e depois
   - Fique com a regressão que der os melhores resultados
-- Caso tenha usado transformação ou alguma variação do mínimo quadrado por conta da var X não passar em algum teste e esse mesmo X nãp passou nos testes T e do intervalo, remova-o e volte ao passo 3 usando os mínimo quadrados ordinais
+- Caso tenha usado transformação ou alguma variação do mínimo quadrado por conta da var X não passar em algum teste e esse mesmo X não passou nos testes T e do intervalo, remova-o e volte ao passo 3 usando os mínimo quadrados ordinais
 
 11. Execute a regressão com dados de teste
 
 - Caso tenha feito transformação nos dados, faça a mesma transformação nos dados de teste
 - Caso o nº de resultados fora do intervalo de confiança seja maior que o nível de confiança alfa, jogue a regressão fora
   - Troque os dados de teste e de treino e volte ao passo 3
+
+# VARIÁVEIS CATEGÓRICAS
+
+Para usar vars categóricas na regressão, precisamos definir valores para cada categoria, visto que natualmente uma var categórica não possui um valor numérico que possa ser calculado. Por ex: a var sexo (masculino ou feminino) não tem como ser incluída numa equação. 
+
+Para variáveis binárias usamos 0 e 1. **O 0 é sua base comparativa**, sua interpretação deve seguir o raciocínio que está avaliando a categoria 1 com comparação com 0. Você pode entender também como o **grupo 0 sendo seu grupo controle**.
+
+```
+Ex: comparação de salário por sexo.
+
+1 = masculino e 0 = feminino: comparo se os homens ganham mais que mulheres
+
+1 = feminino e 0 = masculino: comparo se as mulheres ganham mais que homens
+```
+
+Assim masculino será sua variável independente x. **Não usaremos na regressão os dados da categoria 0**. A diferença média entre as 2 categorias é capturada pelo coeficiente de x (a categoria igual a 1).
+
+A forma de interpretar é: `a categoria usada em x é em média A unidades maior que a categoria 0`. 
+
+```
+Ex: a regressão deu 120 * x, ou seja, homens ganham 120 reais a mais que mulheres.
+```
+
+Essas variáveis categóricas convertidas para 0 e 1 é chamado de **one-hot encoding**.
+
+Caso o coeficiente seja negativo significa que a categoria 0 é maior que a primeira (no ex: mulheres ganham mais que homens).
+
+Caso tenhamos uma terceira variável independente das duas categóricas o coeficiente nos dirá que para quando as 2 categorias tem a mesma var independente, a diferença é o coeficiente retornado.
+
+```
+Ex: na regressão usamos tempo de experiência e a categoria masculino. Teremos uma regressão múltipla com 2 vars independentes, uma normal e uma categórica. 
+
+O coeficiente da categoria = 1 significa "Homens ganham em média 120 reais a mais que mulheres com o mesmo tempo de experiência".
+```
+
+Posso usar na mesma regressao várias vars binárias. O resultado nos dará a diferença entre suas categorias quando todas as outras são iguais.
+
+```
+Ex: na regressão compararemos salario por sexo e por idade. 
+
+x1 1 = masculino e 0 = feminino
+
+x2 1 = pessoa > 60 anos e 0 = pessoa <= 60 anos
+
+O A1 significa "Homens ganham em média A1 reais a mais que mulheres com a mesma idade".
+
+```
+
+O teste T nos diz se essa diferença é significativa ou não. As vezes tem diferença (coeficiente $\ne$ 0) mas essa diferença não é significativa. A diferença é significativa se o p-valor do teste T for menor que alfa (rejeitar H0).
+
+A regressão ainda nos diz o valor final para cada categoria, cumprindo sua função de dar uma equação que descreve os dados mesmo com suas conversões em 0 e 1.
+
+```
+Ex: Diferença de salário para homens e mulheres dado o mesmo tempo de experiência.
+
+x1: tempo de experiência
+x2: 1 = masculino e 0 = feminino
+
+A regressão deu y = 103x1 + 120x2 + 3286. 
+
+Para homens x2 = 1 sempre, então o salário dos homens são y = 103x1 + 120(1) + 3286 = 103x1 + 3406.
+
+Para mulheres x2 = 0 sempre, então o salário das mulheres são y = 103x1 + 120(0) + 3286 = 103x1 + 3286.
+```
+
+Ou seja, a diferença entre as categorias binárias é apenas no intercepto (A0). A inclinação é igual porém o ponto de partida é diferente.
+
+### VARIÁVEIS CATEGÓRICAS MÚLTIPLAS
+
+Para uma var categórica com muitas categorias, teremos k-1 variáveis ao invés de 1, aonde k é o número de categorias. Para escolher qual categoria será o grupo controle (grupo = 0) dependerá do contexto do estudo, mas costuma-se usar a maior categoria. As demais, cada categoria é uma var e elas podem ser colocadas de forma aleatória. O importante é que todas as variáveis sejam = 1.
+
+```
+Ex: queremos analisar as regiões do país, logo teremos 4 variáveis na regressão (1 será a var 0 ou controle, que fica de fora da regressão).
+
+Se estamos analisando salário (dinheiro), então a categoria 0 será a região mais rica (sudeste). Se estamos analisando mortes (pessoas), então a categoria 0 será a região mais populosa (sudeste). Se estamos analisando área desmatada (espaço), então a categoria 0 será a maior região (norte).
+
+Aleatoriamente definimos X1 como centro-oeste. Todas as vars centro-oeste são = 1 e todo o resto é 0.
+
+Aleatoriamente definimos X2 como nordeste. Todas as vars nordeste são = 1 e todo o resto é 0.
+
+Aleatoriamente definimos X3 como norte. Todas as vars norte são = 1 e todo o resto é 0.
+
+Aleatoriamente definimos X4 como sul. Todas as vars sul são = 1 e todo o resto é 0.
+```
+
+![](images/categoria.png)
