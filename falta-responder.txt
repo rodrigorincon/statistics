@@ -7,11 +7,6 @@
 		TAMANHO MÁXIMO
 9-tamanho-Efeito
 	fazer tudo
-10-correlacao
-	06-mini-max
-		escrever ainda
-	07-box-cox
-		escrever ainda
 
 ------------
 
