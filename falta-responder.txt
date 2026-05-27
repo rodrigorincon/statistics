@@ -2,9 +2,6 @@
 	03-media-movel
 		escrever ainda
 		fazer exercicios de python	
-5-inferencia
-	05-tamanho-amostral
-		TAMANHO MÁXIMO
 9-tamanho-Efeito
 	fazer tudo
 

@@ -12,7 +12,7 @@ Margem de erro da proporção:
 
 $margemErroProp =  z * ErroPadrao(prop)$
 
-Aonde $z = \frac{x - media}{desvio}$ e t = valor na tabela t-score
+Aonde $z = \frac{x - media}{desvio}$ e z = valor na tabela z-score
 
 - Porém não usaremos essa equação de Z. Ao invés disso usaremos a tabela z-score
 - A partir do nivel de confiança, fazemos o caminho contrário do habitual para chegar no valor de z
