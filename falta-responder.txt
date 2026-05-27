@@ -4,6 +4,15 @@
 		fazer exercicios de python	
 9-tamanho-Efeito
 	fazer tudo
+12-reg-logistica
+
+------------
+
+estudar máxima entropia na reg logistica multipla
+
+Box-Tidwell
+
+regressão logistica multinomial
 
 ------------
 
