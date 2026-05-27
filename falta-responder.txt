@@ -13,9 +13,6 @@
 	07-box-cox
 		escrever ainda
 
--------
-minimos quadrados no polinomial e matriz de confusão
-
 ------------
 
 beta (erro tipo 2)

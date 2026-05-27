@@ -283,6 +283,6 @@ $\frac{\partial{E}}{\partial{A}} = -2X^TY + 2XX^TA = 0$
 
 Isolando A temos
 
-$$A = (XX^T)^{-1} * YX^T$$
+$$A = (XX^T)^{-1} * X^TY$$
 
 Com essa equação conseguimos calcular todos os coeficientes da regressão.
