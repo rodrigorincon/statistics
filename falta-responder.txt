@@ -10,8 +10,6 @@
 
 estudar máxima entropia na reg logistica multipla
 
-Box-Tidwell
-
 regressão logistica multinomial
 
 ------------

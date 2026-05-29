@@ -22,7 +22,7 @@ $P(A U B) = 1/2 + 1/2 - 2/6 = 4/6$
 
 **PARA VARS INDEPENDENTES**
 
-$$P(A ∩ B) = P(A) * P (B)$$ 
+$$P(A ∩ B) = P(A) * P (B)$$
 
 ---
 
