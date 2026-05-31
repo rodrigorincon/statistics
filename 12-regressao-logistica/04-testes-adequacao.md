@@ -1,10 +1,12 @@
 # TESTES DA REGRESSÃO LOGÍSTICA
 
-quais os h0 e h1 de cada um? p-valor tem de ser menor ou maior q alfa?
+quais os h0 e h1 de cada um? p-valor tem de ser menor ou maior q alfa? não tem uma anova q teste o modelo todo?
 
-Box-Tidwell
+Box-Tidwell (testa linearidade do logit)
 
-teste de Wald 
+Likelihood Ratio (entra n lugar do F)
+
+teste de Wald (entra no lugar do teste T)
 
 z = a_i / erroPadrao(a_i)
 

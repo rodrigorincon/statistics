@@ -103,3 +103,27 @@ Como sabemos que o logit é o log de p/(1-p) e que ele é igual a equação da r
 $ln(L(\theta | dados)) = \sum_{i=1}^n {y_i * (logit(p_i)) + ln(1 - p_i) }$
 
 $ln(L(\theta | dados)) = \sum_{i=1}^n {y_i * (a_0 + \sum{a_ix_i}) + ln(1 - p_i) }$
+
+Trocando $p_i$ pelo valor medido na regressão $ŷ_i$
+
+$ln(L(\theta | dados)) = \sum_{i=1}^n {y_i * (a_0 + \sum{a_ix_i}) + ln(1 - ŷ) }$
+
+#### Fórmula Final
+
+Você pode encontrar a fórmula da máxima entropia nas 2 seguintes formas:
+
+$$ln(L(\theta | dados)) = \sum_{i=1}^n {y_i * (a_0 + \sum{a_ix_i}) + ln(1 - ŷ) }$$
+
+Ou
+
+$$ln(L(\theta | dados)) = \sum_{i=1}^n {y_i * ln(ŷ_i) + (1 - y_i) * ln(1 - ŷ_i) }$$
+
+### MÁXIMA VEROSSIMILHANÇA NA REGRESSÃO LOGÍSTICA
+
+Como dito, a verossimilhança é nossa função de custo. Porém ela não vem sozinha, para usá-la precisamos fazer a média de todo esse somatório. O somatório é nossas entradas, então podemos dizer que nossa função de custo é a média da regressão logística das entradas.
+
+$$fnCusto = \frac{ln(L(\theta | dados))}{n}$$
+
+Aonde
+
+- n é o tamanho da amostra (quantidade de entradas)
