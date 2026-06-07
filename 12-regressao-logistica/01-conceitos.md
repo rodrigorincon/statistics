@@ -25,7 +25,7 @@ Mas em poucas palavras isso significa dizer que `Y deve se distribuir no formato
 - Var dependente **Y categórica ordinal**
 - Linearidade das variáveis X com o log das chances de Y
   - Y deve ter formato de sigmoide
-  - Passar no teste Box-Tidwell
+  - Passar no teste Box-Tidwell (p-valor > alfa)
 - Ausência de multicolinearidade (VIF)
 - **Não ter outliers**
 - Amostra grande

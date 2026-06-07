@@ -43,7 +43,7 @@ Usa algum teste de hipótese para verificar se os dados transformados estão pr�
 
 $$x_i = \frac{ x_i^{\lambda} - 1 }{\lambda}$$
 
-Lambda pode assumir valore facionados como 0.5 e negativos. **Lambda só não pode ser 0**. Defina de quanto em quanto os testes devem se incrementar além do ponto inicial e final. Caso nenhuma tentativa passe nos testes de normalidade, tente outra tranformação.
+Lambda pode assumir valores fracionados como 0.5 e negativos. **Lambda só não pode ser 0**. Defina de quanto em quanto os testes devem se incrementar além do ponto inicial e final. Caso nenhuma tentativa passe nos testes de normalidade, tente outra tranformação.
 
 ### QUANDO USAR
 

@@ -4,6 +4,14 @@
 		fazer exercicios de python	
 9-tamanho-Efeito
 	fazer tudo
+12-reg-logistica
+	wald
+	MEDIDAS DE ADEQUAÇÃO
+		VARIAÇÕES
+			quais os prós e contras de cada variação do pseudo r2
+			quando usar cada uma
+		matriz de confusão
+		curva rocssssss
 
 ------------
 
