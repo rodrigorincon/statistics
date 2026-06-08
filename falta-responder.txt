@@ -5,13 +5,10 @@
 9-tamanho-Efeito
 	fazer tudo
 12-reg-logistica
-	wald
-	MEDIDAS DE ADEQUAÇÃO
-		VARIAÇÕES
-			quais os prós e contras de cada variação do pseudo r2
-			quando usar cada uma
-		matriz de confusão
-		curva rocssssss
+	matriz de confusão
+	curva roc
+fazer exemplo em python testando box-tidwell, vif e os testes embutidos
+fazer exemplo comparando matriz de confusão e curva roc
 
 ------------
 
@@ -28,7 +25,9 @@ tamano do efeito
 - V de Cramér 
 - Coeficiente phi
 
-https://drive.google.com/drive/u/0/folders/1jxHEwgDj4r-wjZ4QgSQY1fdeaDCmv7eA
+https://docs.google.com/spreadsheets/d/1WfvEphWERJy_Gpfk0-Bmt0fJlcdEOmbq/edit?gid=2026405057#gid=2026405057
+
+https://colab.research.google.com/drive/1ZC1fB4FhqjYQ6r4f7_Wg8fPbdvWnYxmi#scrollTo=_lSDgLy0L0IW
 
 estudar oq é tamanho do efeito e como ele se mistura com p-valor
 	Se N é baixo: O teu foco está no P-valor. Precisas de saber se a diferença que vês é real ou apenas sorte. (Exemplo dos 80 visitantes). 

@@ -65,15 +65,26 @@ Aonde $L_{H1}$ e $L_{H0}$ são a função de máxima verossimilhança com os pes
 
 ## WALD
 
+Verifica se o coeficiente da variável X é significativamente diferente de zero. Ele usa a distribuição **Qui-Quadrado** para fazer o teste.
+
 ### HIPÓTESES
 
-H0: 
+H0: O coeficiente é 0 (variável não tem efeito na regressão)
 
-H1:
+H1: O coeficiente é diferente de 0 (variável tem efeito na regressão)
 
 ### COMO CALCULAR
 
-z = a_i / erroPadrao(a_i)
+Ele calcula os erros da regressão (valor estimado - valor observado) como base. Ao pegar a soma dos erros e dividir pela variância definimos o valor do nosso teste calculado para comparar com o tabelado. O erro da regressão é a máxim verossimilhança com os pesos finais.
+
+Ele se assemelha ao cálculo do T e ao teste T, mas não é igual e não podemos trocar um pelo outro. No teste T dividimos tudo pela raiz de N, o que não tem aqui.
+
+$$T = \frac{(L - y)^2}{vari(L)}$$
+
+Aonde
+
+- L é a função de máxima verossimilhança
+- vari(L) é a variância da máxima verossimilhança
 
 # MEDIDAS DE ADEQUAÇÃO
 
@@ -89,7 +100,7 @@ Podemos também ter a log-verossimilhança da hipótese nula, aonde consideramos
 
 ## PSEUDO R²
 
-É uma variação do R² da regressão linear, mas como y é categórico a gente não pode usar correlação normalmente aqui. Mas também **informa quantos porcento da variância de Y é explicada pelo modelo**.
+É uma variação do R² da regressão linear, mas como y é categórico a gente não pode usar correlação normalmente aqui. Ele também **não informa** quantos porcento da variância de Y é explicada pelo modelo. Porém **quanto maior, melhor**.
 
 Existem diversas variações dele (McFadden, Cox-Snell, Nagelkerke), mas o mais comum é o McFadden.
 
@@ -108,6 +119,10 @@ Ou seja, é 1 menos a divisão das log-verossimilhanças. Por usar a log-verossi
 #### VARIAÇÕES
 
 Como dito antes, existem diversas variações como Cox-Snell e Nagelkerke. Cada um serve para um contexto diferente, por isso `use a versão padrão do seu contexto`.
+
+**Cox-Snell** é uma variação que leva o tamanho da amostra em consideração, sendo usado para **avaliar se adicionar mais variáveis X melhora a precisão**. Porém ele não consegue nunca chegar a 1, por isso foi criado uma variação dele que é a de Nagelkerke.
+
+**Nagelkerke** é calculado a partir do Cox-Snell e é o que o significado mais se aproxima do R² tradicional. Usado para **explicar quantos porcento da variância de Y é explicado pelo modelo**.
 
 ## AIC e BIC
 
