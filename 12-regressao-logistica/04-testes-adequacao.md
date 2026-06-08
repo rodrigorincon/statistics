@@ -142,6 +142,77 @@ Novamente, ambos usam a log-verossimilhança da regressão, porém não usam a d
 
 ## MATRIZ DE CONFUSÃO
 
-ver a aula 6
+Tabela que avalia o desempenho de um modelo de classificação (regressão, rede neural...). Tudo que for classificação pode usar matriz de confusão para avaliar. **Não serve para modelos de regressão e de séries temporais**.
+
+Ela revela exatamente onde o algoritmo acerta e erra, e nos dá métricas como acurácia, precisão e sensibilidade.
+
+![](images/matriz-confusao.png)
+
+A matriz nos mostra a quantiade de acertos, erros, falsos positivos e falsos negativos. Com isso podemos ver se os valores estão de fato dentro do nosso alfa e beta e em qual área nosso modelo é menos preciso.
+
+A partir dele podemos calcular 4 métricas, sendo a última a mais interessante.
+
+### Acurácia
+
+Nos dá a **porcentagem de previsões corretas**. É quantos acertos tivemos dividido pela amostra (quantidade de testes)
+
+acuracia = $\frac{TP + TN}{TP + TN + FP + FN} = \frac{TP + TN}{N}$
+
+### Precisão
+
+Nos dá a **proporção de positivos certos em relação ao total de previsões positivas** feitas pelo modelo. Em outras palavras é a **quantidade de positivos acertados pelo número de chutes no positivo**.
+
+Nos dá o `grau de precisão no positivo` (não diz nada sobre o negativo). O complemento é o nosso alfa (erro tipo I). Soma a coluna do positivo.
+
+precisao = $\frac{TP}{TP + FP}$
+
+### Sensibilidade
+
+Nos dá a **proporção de positivos certos em relação ao total de casos reais positivos**. É ligeiramente diferente da precisão. Enquanto a precisão nos diz quanto das previsões positivas tão certas, essa nos diz **quanto dos casos positivos foram detectados**.
+
+Nos dá o `grau de assertividade no positivo` (não diz nada sobre o negativo). O complemento é o nosso beta (erro tipo II). Soma a linha do positivo.
+
+sensibilidade = $\frac{TP}{TP + FN}$
+
+### F1 Score
+
+Mede o **equilíbrio entre a precisão e a sensibilidade**. É a média harmônica entre as 2 métricas, sendo 0 o pior desempenho possível (baixa precisão e baixa sensibilidade) e 1 o melhor desempenho possível (alta precisão e alta sensibilidade). 
+
+O valor não diz qual das 2 métricas é maior ou a alta e pode até mascarar uma pequena se a outra for grande. Por isso ela não substitui as duas. Deve-se usar todas juntas.
+
+F1 Score = $2 \frac{prec * sens}{prec + sens} = 2 \frac{TP}{2TP + FN + FP}$
+
+Aonde
+
+- prec = precisão
+- sens = sensibilidade
 
 ## CURVA ROC
+
+A curva ROC é um gráfico que avalia classificadores binários (e apenas binários) variando o limiar de decisão. Ela nos diz até quando podemos aumentar nossos acertos sem aumentar os erros.
+
+No eixo X temos a taxa de falsos positivos (FP). 
+
+No eixo Y temos a sensibilidade (todos os positivos reais, TP + FN).
+
+A linha diagonal mostra o desempenho dum modelo aleatório. Nosso modelo precisa estar sempre acima dele! Um modelo muito colado na diagonal significa ser muito próximo dum chute aleatório, portanto precisa ser consideravelmente acima da linha.
+
+![](images/roc1.png)
+
+A imagem abaixo mostra como um valor alto de falsos positivos aparecem nos gráficos.
+
+![](images/roc2.jpg)
+
+### AUC ROC
+
+É a área embaixo da curva ROC. É a integral da capacidade do nosos modelo diferenciar positivos reais dos falsos positivos. Ele vai de 0 a 1, nos dando quão separados estão as curvas de acertos e falsos positivos (H0 e H1).
+
+Em outras palavras, o AUC nos dá **quantos porcento as hipóteses estão separadas**. Valor 1 significa um modelo perfeito, sem nenhum falso positivo, enquanto 0,5 significa algo aleatório (péssimo modelo, igual a jogar uma moeda).
+
+`Usado para testar qual o melhor threshold (limiar) para separar aonde dizer que é uma cateogria e onde é outra.`
+
+Eixo X = $\frac{FP}{FP + TN}$
+
+Eixo Y = $\frac{TP}{TP + FN}$
+
+Ou seja, o a **curva ROC é a linha dos positivos x linha dos negativos da matriz de confusão**.

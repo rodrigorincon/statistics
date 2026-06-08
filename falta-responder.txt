@@ -5,8 +5,6 @@
 9-tamanho-Efeito
 	fazer tudo
 12-reg-logistica
-	matriz de confusão
-	curva roc
 fazer exemplo em python testando box-tidwell, vif e os testes embutidos
 fazer exemplo comparando matriz de confusão e curva roc
 
