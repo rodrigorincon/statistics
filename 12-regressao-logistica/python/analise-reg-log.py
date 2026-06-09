@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import statsmodels.api as sm
 
 idades = [45, 50, 30, 60, 55, 40, 35, 70, 65, 50, 42, 36, 53, 58, 62, 39, 48, 33, 66, 41, 57, 49, 34, 61, 47, 38, 54, 63, 32, 46]

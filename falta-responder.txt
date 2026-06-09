@@ -6,7 +6,8 @@
 	fazer tudo
 12-reg-logistica
 fazer exemplo em python testando box-tidwell, vif e os testes embutidos
-fazer exemplo comparando matriz de confusão e curva roc
+
+pergunta feita nos 2 videos de python da reg-logistica
 
 ------------
 
@@ -22,10 +23,6 @@ tamano do efeito
 - R de Cohen
 - V de Cramér 
 - Coeficiente phi
-
-https://docs.google.com/spreadsheets/d/1WfvEphWERJy_Gpfk0-Bmt0fJlcdEOmbq/edit?gid=2026405057#gid=2026405057
-
-https://colab.research.google.com/drive/1ZC1fB4FhqjYQ6r4f7_Wg8fPbdvWnYxmi#scrollTo=_lSDgLy0L0IW
 
 estudar oq é tamanho do efeito e como ele se mistura com p-valor
 	Se N é baixo: O teu foco está no P-valor. Precisas de saber se a diferença que vês é real ou apenas sorte. (Exemplo dos 80 visitantes). 
