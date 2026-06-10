@@ -90,8 +90,11 @@ Como não podemos modelar probabilidades diretamente usando uma função linear 
 
 - Probabilidade: possibilidade de um evento ocorrer entre todos os resultados possíveis
   - Quase uma análise combinatória das opções com pesos para as mais prováveis
+  - Varia de 0 a 1
 - Chance: compara a possibilidade de um evento ocorrer com a possibilidade de ele não ocorrer
   - É a comparação de uma probabilidade com seu complemento
+  - **Chance é a divisão de 2 probabilidades** (de algo acontecer dividido de algo não acontecer)
+  - Varia de 0 a infinito
 
 Resumindo: `Chance nos diz quantas vezes mais provável é esse evento acontecer do que ele não acontecer`.
 
@@ -103,7 +106,7 @@ Chance também é chamada de odd.
 Ex: Tenho 2 maçãs, 1 pera e 5 laranjas. A probabilidade de eu pegar uma laranja é 5/8 = 0,625. A chance de eu pegar uma laranja é 5/3 = 1,667. Ou seja, eu tenho 1,667 vezes mais chances de pegar uma laranja do que pegar alguma outra fruta.
 ```
 
-A chance pode variar de 0 ao infinito, com valores > 1 significando maior possibilidade e < 1 significando menor chance e 1 significa chances iguais. Nosso centro então é o número 1.
+A chance pode variar de 0 ao infinito, com valores > 1 significando maior possibilidade e < 1 significando menor possibilidade e 1 significa possibilidades iguais. Nosso centro então é o número 1.
 
 Porém a distribuição é muito assimétrica a direita (pico a esquerda). Algo 2x mais ou menos provável é 2 e 0.5, algo 4x mais ou menos provável é 4 e 0.25, os dados ficam muito concentrados entre 0 e 1 muito dispersos acima de 1. Algo 4x menos provável está muito mais perto de 1 (0,75 de distância) do que 4x mais provável (3 de distância).
 
