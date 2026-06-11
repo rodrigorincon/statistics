@@ -15,7 +15,15 @@ Ajustamento de uma função real a uma série temporal
 
 ------------
 
-https://www-sixsigma--institute-org.translate.goog/Six_Sigma_DMAIC_Process_Analyze_Phase_Hypothesis_Testing.php?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=sge
+o que são medias móveis
+
+como calcular médias móveis
+
+exemplo prático
+
+exercicio python
+
+pegar dados reais do bitcoin para medir a média diária por 21 dias e a semanal por 3 semanas do dia 1/1/26 até 21/1/26
 
 ------------
 ideias de projetos

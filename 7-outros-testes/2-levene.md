@@ -21,3 +21,7 @@ H1: Pelo menos uma variância é diferente.
 O cálculo é exatamente o mesmo da Anova de 1 via (até o passo 3). Porém aonde tem média dos grupos e média geral pode trocar por mediana caso esteja calculando a versão com mediana (versão para dados não normalizados).
 
 Ao final, Levene usa o teste F para chegar a conclusão de rejeitar ou não, fazendo-o idêntico ao teste F, porém podendo trocar as médias por medianas.
+
+## TAMANHO DO EFEITO
+
+Por ser muito similar a Anova, podemos fazer o mesmo cálculo de tamanho do efeito, usando o **eta-quadrado**.

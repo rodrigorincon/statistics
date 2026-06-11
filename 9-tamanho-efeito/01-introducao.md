@@ -34,6 +34,7 @@ A depender da família da equação usada, nos dá uma dessas duas informações
 - Teste T: D de Cohen (para amostras grandes) ou G de Hedges (para amostras pequenas)
 - Friedman: D de Cohen ou Correlação de Kendall 
 - Anova: eta-quadrado
+- Levene: eta-quadrado
 - Correlação e Regressão: Coeficiente de determinação R²
 - Teste Z, Mann-Whitney ou Wilcoxon: R de Cohen
 - Kruskal-Wallis: eta-quadrado

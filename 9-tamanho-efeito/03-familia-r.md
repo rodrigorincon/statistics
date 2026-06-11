@@ -95,7 +95,7 @@ Perceba que a única mudança é o mínimo no denominador. Isso porque no coefic
 
 # ETA-QUADRADO
 
-Mede quantos porcento da variância é definido pelas variáveis independentes. Por medir mudança na variância é muito usado na Anova. Pode ser entendido como uma variação do coeficiente de determinação R².
+Mede quantos porcento da variância é definido pelas variáveis independentes. Por medir mudança na variância é muito usado em todos os testes que usam o teste F por debaixo dos panos (como Anova e Levene). Pode ser entendido como uma variação do coeficiente de determinação R².
 
 $$\eta = \frac{SS_{efeito}}{SS_{total}}$$
 
