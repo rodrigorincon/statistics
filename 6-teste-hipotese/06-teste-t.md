@@ -308,6 +308,6 @@ Só porque um p-valor é menor que outro não significa que ele tem mais peso/re
 
 O p-valor maior não significa que aqueles grupos são mais similares, o p-valor não dá esse tipo de informação. Quem informa isso é o tamanho do efeito.
 
-O tamano do efeito usado paro T (tanto independente como o dependente) é o `D de Cohen`.
+O tamano do efeito usado paro T (tanto independente como o dependente) é o `D de Cohen para amostras grandes` e o `G de Hedges para amostras pequenas`.
 
 A forma de calcular o tamanho do efeito será definido no módulo 9.

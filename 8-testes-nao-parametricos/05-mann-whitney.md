@@ -66,3 +66,7 @@ As tabelas de Mann-Whitney só vão até o valor de 20, pois acima desse valor e
 $z = \frac{U - \frac{n1 * n2}{2} }{ \sqrt{ \frac{n1 * n2 * (n1 + n2 + 1)}{12}} }$
 
 Nesse caso z dará seu p-valor direto, que deve ser comparado com seu alfa.
+
+## TAMANHO DO EFEITO
+
+É calculado através do **R de Cohen**.

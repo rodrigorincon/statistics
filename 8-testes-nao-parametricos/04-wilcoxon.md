@@ -157,3 +157,7 @@ O cálculo do p-valor será
 $z = \frac{44 - \frac{10 (10 + 1) }{4} }{ \sqrt{ \frac{10(10+1)(2*10+1)}{24} } } = \frac{16,5}{ \sqrt{96,25} } = 1.68$
 
 Procurando o valor na tabela bicaudal para z = 1,68 (linha 1,6 e coluna 0,08) encontramos p-valor = 0,9535. Como p-valor > alfa, não rejeito H0.
+
+## TAMANHO DO EFEITO
+
+É calculado através do **R de Cohen**.

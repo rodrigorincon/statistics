@@ -86,6 +86,8 @@ Aonde
 - $media_i$ é a média do grupo
 - $media_t$ é a média total
 
+Também chamado de Soma do Efeito ou Soma Entre os grupos.
+
 ### Passo 3: calcular a variância dentro dos grupos
 
 - Calcula o quanto cada grupo varia internamente (variância)
@@ -106,6 +108,8 @@ Aonde
 - n é a quantidade de amostras em cada grupo (tamanho do grupo)
 - $vari_i$ é a variância do grupo
 - N é o tamanho da amostra total, somando todos os grupos
+
+Também chamado de Soma do Erro ou Soma Dentro dos grupos.
 
 ### Passo 4: Calcula F
 

@@ -148,3 +148,7 @@ Temos 4 grupos, logo nossos graus de liberdade são 3. Olhando na tabela qui-qua
 Como T calculado (11,4762) > T tabelado (7,815) então rejeito H0.
 
 Caso queira saber p-valor, olho na mesma linha da tabela e procuro pelo valor mais próximo de 11,4762. No caso Encontro 11,345 para alfa = 0,01. Logo o p-valor será um pouco menor que 0,01
+
+## TAMANHO DO EFEITO
+
+É calculado através do **eta-quadrado**.

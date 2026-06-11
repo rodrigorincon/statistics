@@ -107,3 +107,7 @@ P(Z < -2,52) = P(Z > 2,52) = 1 - P(Z < 2,52)
 O teste é bicaudal. Na tabela Z bicaudal P(Z < 2,52) = 0,9941
 
 p-valor = 2 * P(Z < -2,52) = 2 * (1 - 0,9941) = 0,0118
+
+## TAMANHO DO EFEITO
+
+É calculado através do **R de Cohen**.

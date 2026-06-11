@@ -2,10 +2,9 @@
 	03-media-movel
 		escrever ainda
 		fazer exercicios de python	
-9-tamanho-Efeito
-	fazer tudo
-12-reg-logistica
-fazer exemplo em python testando box-tidwell, vif e os testes embutidos
+5-inferencia
+	05-tamanho-da-amostra
+		Cálculo pelo tamanho do efeito
 
 pergunta feita nos 2 videos de python da reg-logistica
 
@@ -16,23 +15,11 @@ Ajustamento de uma função real a uma série temporal
 
 ------------
 
-tamano do efeito
-- D de Cohen
-- eta-quadrado
-- R de Pearson
-- R de Cohen
-- V de Cramér 
-- Coeficiente phi
-
-estudar oq é tamanho do efeito e como ele se mistura com p-valor
-	Se N é baixo: O teu foco está no P-valor. Precisas de saber se a diferença que vês é real ou apenas sorte. (Exemplo dos 80 visitantes). 
-	Se N é alto: O teu foco muda para o Tamanho do Efeito (delta) e o Intervalo de Confiança. O P-valor será quase sempre baixo. A tua pergunta passa a ser: "Esta diferença real é grande o suficiente para importar?"
-	Quando o N é pequeno, há muita incerteza e o foco não deve ser apenas no p-valor, pois ele pode falhar em detectar efeitos reais. Porém, podemos também observar o tamanho do efeito e o intervalo de confiança, que indicarão a magnitude e a precisão da estimativa. Já quando N é grande, mesmo diferenças pequenas podem gerar p-valores muito baixos, tornando a significância estatística quase garantida. Nesse caso, o foco deve mudar para a relevância prática dos resultados. Ou seja, o p-valor indica se há evidência de um efeito, mas o tamanho do efeito e o intervalo de confiança mostram se esse efeito é importante e confiável.
-
 https://www-sixsigma--institute-org.translate.goog/Six_Sigma_DMAIC_Process_Analyze_Phase_Hypothesis_Testing.php?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=sge
 
 ------------
 ideias de projetos
+- mega sena, qual a variância entre os números
 - analise exploratoria dos salarios dos servidores publicos do pais todo (quanto ganham, quanto ganha a maioria, tem estado aonde se ganha melhor, ganham mais que o mercado privado, comparar os 3 poderes e 3 niveis)
 - analise exploratoria dos salarios dos servidores publicos do DF (quantos servidores existem no df, quantos % são, quantos terceirizados existem, existe diff de salario entre esses 3 grupos? quanto ganham, quanto ganha a maioria, comparar os 3 poderes e 3 niveis)
 - analise das ligações ao 190 do df, comparar nº ao longo da semana, tipos de ligação, comparar por mes, separar por RA, tentar prever o volume de ligações do mes seguinte pra cada tipo de ligação em cada RA

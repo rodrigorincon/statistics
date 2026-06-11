@@ -61,3 +61,7 @@ Para encontrar o p-valor verifica-se na tabela qui-quadrado usando o valor de Q 
 O binomial calcula o p-valor unicaudal. Para saber o valor bicaudal multiplique o p-valor por 2.
 
 $$pValor = \sum_{i=b}^n \binom{n}{i} 0,5^n$$
+
+## TAMANHO DO EFEITO
+
+É calculado através do **Razão das chances**.

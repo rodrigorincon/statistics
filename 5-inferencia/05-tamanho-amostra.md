@@ -5,10 +5,12 @@
 - Usamos a equação da **margem de erro da proporção**
 - Há um tamanho máximo também, aonde aumentar além disso não agrega valor aos resultados
 
-### Como calcular
+## Cálculo pela margem de erro
 
-- Primeiro passo é definir o nível de confiança e a margem de erro que quero
-	- Chamando a de intervalo = IC
+- Primeiro passo é definir o **nível de confiança e a margem de erro** que quero
+	- Através do nível de confiança encontramos o intervalo de confiança
+		- Usamos as tabelas ou a equação da distribuição relacionada
+		- Chamando a de intervalo = IC
 	- Chamando margem de erro = ME
 - Definimos a maior proporção possível (p = 0,5)
 	- Caso você tenha uma ideia da proporção de algum dos objetos estudados, troque p pela proporção que se tem
@@ -49,9 +51,9 @@ Juntando as frações
 
 $n = (\frac{IC}{2ME})^2$
 
----
+### Exemplos
 
-**Ex: Para uma população de 2mil pessoas, com uma confiança de 95% e 5% de margem de erro, qual o tamanho da amostra?**
+**1: Para uma população de 2mil pessoas, com uma confiança de 95% e 5% de margem de erro, qual o tamanho da amostra?**
 
 IC=1,96 (valor de z para 0,95) ME=0,05 N=2000
 
@@ -61,11 +63,15 @@ $nFinal = \frac{2000 * 384.16}{2000 + 384.16} = \frac{768320}{2384,16} = 322$
 
 ---
 
-**Ex: Qual a quantidade de pessoas que devo entrevistar para uma pesquisa eleitoral com 95% de confiança e 2% de margem de erro?**
+**2: Qual a quantidade de pessoas que devo entrevistar para uma pesquisa eleitoral com 95% de confiança e 2% de margem de erro?**
 
 IC=1,96 (valor de z para 0,95) ME=0,02
 
 $n = (\frac{1,96}{2 * 0,02})^2 = (\frac{1,96}{0,04})^2 = 49^2 = 2401$
+
+## Cálculo pelo tamanho do efeito
+
+https://www.est.ufmg.br/~enricoc/pdf/EstatisticaII/aula7-8.pdf
 
 ## TAMANHO NÃO MUDA CONFORME A POPULAÇÃO
 

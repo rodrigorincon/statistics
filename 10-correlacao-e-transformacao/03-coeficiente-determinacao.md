@@ -14,7 +14,7 @@ OBS: quanto maior a correlação, maior o coeficiente de determinação. Porém 
 
 Também é importante ter noção que ela tem um gráfico exponencial. Isso significa que, ao comparar 2 correlações, quanto maior o valor dessas correlações maior a diferença entre as determinações.
 
-Exemplo: uma correlação de 0,1 e outra de 0,2 tem 0,1 de diferença e suas determinações tem 3% de diferença. Uma correlação 0,8 e outra de 0,9 tem os mesmos o,1 de diferença, porém suas determinações tem 17% de diferença.
+Exemplo: uma correlação de 0,1 e outra de 0,2 tem 0,1 de diferença e suas determinações tem 3% de diferença. Uma correlação 0,8 e outra de 0,9 tem os mesmos 0,1 de diferença, porém suas determinações tem 17% de diferença.
 
 Isso significa que **para correlações altas, cada pequena mudança faz toda diferença na determinação**. `Um pequeno crescimento na correlação melhora muito seu modelo` (se os valores já forem altos), porém **se as correlações forem baixas essa pequena mudança é irrisória**. Por isso que para valores baixos nem merece gastar tempo analisando e tentando entender.
 

@@ -1,6 +1,8 @@
 # TESTE DE FRIEDMAN
 
-É a versão não paramétrica do teste **Anova de 1 via pareada** (dados dependentes). Fazemos quando **N coisas interagem com 3 ou mais categorias/amostras/variáveis**. Geralmente para esse teste temos uma tabela como a de baixo:
+É a versão não paramétrica do teste **Anova de 1 via pareada** (dados dependentes). Fazemos quando **N coisas interagem com 3 ou mais categorias/amostras/variáveis**. O caso mais comum é comparar um antes, durante e depois.
+
+Geralmente para esse teste temos uma tabela como a de baixo:
 
 | Pessoa | Categoria 1 | Categoria 2 | Categoria 3 |
 | :--:   | :--:        | :--:        | :--:        |
@@ -79,3 +81,7 @@ Se F calculado > F tabelado, então rejeito H0. Lembrando que a comparação mud
 Para encontrar o p-valor, procuramos na tabela qui-quadrado nosso F calculado na linha do nosso grau de liberdade. O valor de alfa para essa linha será nosso p-valor.
 
 Caso p-valor < alfa, rejeito H0.
+
+## TAMANHO DO EFEITO
+
+É calculado através da **correlação de Kendall**.

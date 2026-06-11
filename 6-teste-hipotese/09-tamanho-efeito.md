@@ -16,9 +16,13 @@ Cada tipo de teste exige um cálculo diferente do seu tamanho do efeito.
 
 ## Qual Calculo Usar
 
-- Comparação entre 2 grupos (teste T): D de Cohen
-- Comparação entre 3 ou + grupos (Anova): eta-quadrado
-- Correlação e Regressão: R de Pearson
-- Mann-Whitney ou Wilcoxon: R de Cohen
+- Teste T: D de Cohen (para amostras grandes) ou G de Hedges (para amostras pequenas)
+- Friedman: D de Cohen ou Correlação de Kendall 
+- Anova: eta-quadrado
+- Correlação e Regressão: Coeficiente de determinação R²
+- Teste Z, Mann-Whitney ou Wilcoxon: R de Cohen
 - Kruskal-Wallis: eta-quadrado
-- Qui-Quadrado: V de Cramér ou Coeficiente phi
+- Qui-Quadrado: V de Cramér (mais comum) ou Coeficiente phi (somente para tabelas 2x2)
+- Fisher: Coeficiente phi
+- Shapiro: O próprio valor do teste
+- McNemar: Razão de chances

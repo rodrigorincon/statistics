@@ -165,3 +165,7 @@ Como C calculado (0,0117) é < que alfa (0,05), rejeito H0.
 Calculando p+
 
 $p+ = \frac{4}{18} = 0,222$. Como H0 é p $\ge$ 0,5 a hipótese não foi cumprida, portanto rejeitada.
+
+## TAMANHO DO EFEITO
+
+É calculado através do **R de Cohen**.
