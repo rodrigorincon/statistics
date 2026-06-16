@@ -31,7 +31,7 @@ def plot_wheight():
 	plt.ylabel('Frequency')
 	plt.show()
 
-#plot_wheight()
+plot_wheight()
 
 ####### Read all Mega Sena results until 2026-02-28 ----------------------------------------------------------------
 file_path = '../images/Mega-Sena.xlsx'
@@ -48,7 +48,7 @@ def plot_lotery_with_decimal_y_axis():
 	plt.ylabel('Frequency')
 	plt.show()
 
-#plot_lotery_with_decimal_y_axis()
+plot_lotery_with_decimal_y_axis()
 
 # The same graphic, but with Y-axis in percentage ----------------------------------------------------------------
 def plot_lotery_with_percent_y_axis():
@@ -59,7 +59,7 @@ def plot_lotery_with_percent_y_axis():
 	plt.ylabel('Frequency')
 	plt.show()
 
-#plot_lotery_with_percent_y_axis()
+plot_lotery_with_percent_y_axis()
 
 # get the 6 most drawn numbers ----------------------------------------------------------------
 print("----------------- printing lotery percents")

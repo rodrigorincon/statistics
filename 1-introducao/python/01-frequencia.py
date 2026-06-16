@@ -58,10 +58,10 @@ for index in range(number_groups):
 print(frequency)
 
 print("----------------- ploting using sturges")
-#df = pd.DataFrame(lista, columns=['value'])
-#plt.hist(df['value'], bins='sturges')
-#plt.title("Histogram with Sturges' Rule")
-#plt.show()
+df = pd.DataFrame(lista, columns=['value'])
+plt.hist(df['value'], bins='sturges')
+plt.title("Histogram with Sturges' Rule")
+plt.show()
 
 print("----------------- ploting using square")
 df = pd.DataFrame(lista, columns=['value'])

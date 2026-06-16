@@ -33,17 +33,16 @@ cm = skl.confusion_matrix(real, previsto)
 print('Matriz de Confusão: \n', cm) 
 # [18, 1]
 # [3,  8]
-# Isso significa que a maioria dos dados eram positivos (19 em 30) e quase todos foram corretamente previstos (só 1 falso negativo)
-# Nossa amostra de testes não tava bem balanceada, com poucos negativos pra usar de treino em comparação com positivos
-# 5,2% dos positivos foram previstos errado, enquanto 27% dos negativos foram previstos errado. 
+# Isso significa que a maioria dos dados eram negativos (19 em 30) e quase todos foram corretamente previstos (só 1 falso positivo)
+# Nossa amostra de testes não tava bem balanceada, com poucos positivos pra usar de treino em comparação com negativos
+# Tivemos baixíssimos falsos negativos (3) e falsos positivos (1). Os corretos foram muito maiores (18 e 8). Mas foram altos os suficiente?
+# falso negativo = FN/(FN+TP) = 0,27 (27%) então na verdade é o falso negativo que é o problema, não o positivo
+# falso positivo = FP/(FP+TN) = 0,052 (5,2%)
 # O que nos diz que nosso modelo prevê bem positivos mas muito mal negativos. Tem uma deficiência nesse lado
-
-# Tivemos baixíssimos falsos positivos (3) e falsos negativos (1). Os corretos foram muito maiores (18 e 8). Mas foram altos os suficiente?
-# falso negativo = 0,033 (3,3%) abaixo do beta. ÓTIMO
-# falso positivo = 0,1 (10%) acima do alfa. RUIM. Precisa ser menor
+# podemos usar a base de TREINO 50% positivo e 50% negativo pra melhorar o cenário, mas na base de TESTES DEVE-SE SEMPRE SEGUIR A PROPORÇÃO REAL DA POPULAÇÃO
 
 # visualizando a matriz de confusão de forma mais bonita, com heatmap
-sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=["Positivo", "Negativo"], yticklabels=["Positivo", "Negativo"])
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=["Negativo", "Positivo"], yticklabels=["Negativo", "Positivo"])
 plt.xlabel('Previsto')
 plt.ylabel('Real')
 plt.title('Matriz de Confusão')

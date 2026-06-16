@@ -1,7 +1,3 @@
-2-centro-e-dispersao
-	03-media-movel
-		escrever ainda
-		fazer exercicios de python	
 5-inferencia
 	05-tamanho-da-amostra
 		Cálculo pelo tamanho do efeito

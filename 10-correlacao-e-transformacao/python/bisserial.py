@@ -9,8 +9,8 @@ x = [0, 0, 0, 1, 1, 1, 1]
 y = [10, 12, 9, 25, 30, 28, 22]
 
 # regular bisserial, when the continuous var follows a normal distribution and the category is artificial
-#res = pg.biserial(x, y)
-#print(res)
+res = pg.biserial(x, y)
+print(res)
 
 # doing it manually
 

@@ -67,6 +67,8 @@ Aonde $L_{H1}$ e $L_{H0}$ são a função de máxima verossimilhança com os pes
 
 Verifica se o coeficiente da variável X é significativamente diferente de zero. Ele usa a distribuição **Qui-Quadrado** para fazer o teste.
 
+Importante ressaltar que ela diz se a variável X **sozinha** impacta na probabilidade de Y cair na categoria 1. `Se todas as outras variáveis forem constantes, essa variável influencia sozinha influencia o suficiente no valor de Y?` Essa é a pergunta respondida pelo p-valor de cada variável. Portanto podemos ter um modelo bom mesmo que todas as variáveis tenham p-valor abaixo de alfa, pois isso diz que nenhuma sozinha impacta significativamente na probabilidade de Y, mas em conjunto podem sim ser definitivas. Por isso o teste mais importante na regressão é o teste de razão de verossimilhança, que testa o modelo como um todo.
+
 ### HIPÓTESES
 
 H0: O coeficiente é 0 (variável não tem efeito na regressão)
@@ -186,6 +188,12 @@ Aonde
 
 - prec = precisão
 - sens = sensibilidade
+
+### Falsos Positivos e Negativos
+
+A matriz já dá quantos falsos positivos e negatvos temos, mas a taxa  costuma gerar confusão. O cálculo da taxa de falsos positivos é FP/todos os casos negativos (FP+TN). Ou seja, a taxa de falso positivo é calculado pela quantidade de casos **reais negativos** (pois um falso positivo é um caso negativo na verdade). O mesmo vale para o falso negativo.
+
+Ou seja, **sempre usamos a linha dos valores reais para calcular a taxa**, nunca a coluna dos previstos ou o total de casos.
 
 ## CURVA ROC
 

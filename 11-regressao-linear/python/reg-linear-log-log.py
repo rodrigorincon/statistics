@@ -17,11 +17,11 @@ preco = [1.000, 0.976, 0.944, 0.927, 0.988, 0.969, 0.984, 1.012, 1.018, 1.036, 1
 1.210, 1.222, 1.264, 1.309, 1.329, 1.317, 0.696, 0.799, 0.915, 1.009]
 
 #### REGPLOT FAZ O GRAFICO DE DISPERSÃO JÁ COM A REGRESSÃO LINEAR E INTERVALO DE CONFIANÇA. ÓTIMO QUANDO SÓ QUER VISUALIZAR
-# sns.regplot(x=preco, y=qtt_vendas, line_kws={'color':'red'})
-# plt.xlabel('Preço Médio')
-# plt.ylabel('Volume de Vendas')
-# plt.title('Relação entre Volume de Vendas e Preço Médio')
-# plt.show() # maioria dos dados fora da reta e do intervalo de confiança. Visivelmente os dados não são lineares
+sns.regplot(x=preco, y=qtt_vendas, line_kws={'color':'red'})
+plt.xlabel('Preço Médio')
+plt.ylabel('Volume de Vendas')
+plt.title('Relação entre Volume de Vendas e Preço Médio')
+plt.show() # maioria dos dados fora da reta e do intervalo de confiança. Visivelmente os dados não são lineares
 
 
 ### Regressão linear nos dados não-lineares para pegar os resíduos
