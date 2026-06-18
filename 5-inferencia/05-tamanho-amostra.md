@@ -69,10 +69,6 @@ IC=1,96 (valor de z para 0,95) ME=0,02
 
 $n = (\frac{1,96}{2 * 0,02})^2 = (\frac{1,96}{0,04})^2 = 49^2 = 2401$
 
-## Cálculo pelo tamanho do efeito
-
-https://www.est.ufmg.br/~enricoc/pdf/EstatisticaII/aula7-8.pdf
-
 ## TAMANHO NÃO MUDA CONFORME A POPULAÇÃO
 
 Perceba pelo exemplo anterior que a quantidade de pessoas entrevistadas não muda se a população cresce. Isso acontece porque a `precisão estatística depende da variância` dos dados, e não da quantidade total de indivíduos. Por isso a única variável que afeta é o desvio padrão (que está implícito no z-score do intervalo de confiança). 

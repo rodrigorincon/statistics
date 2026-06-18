@@ -1,29 +1,8 @@
-5-inferencia
-	05-tamanho-da-amostra
-		Cálculo pelo tamanho do efeito
-
-pergunta feita nos 2 videos de python da reg-logistica
-
-------------
-
 series temporais
 Ajustamento de uma função real a uma série temporal
 
 ------------
-
-o que são medias móveis
-
-como calcular médias móveis
-
-exemplo prático
-
-exercicio python
-
-pegar dados reais do bitcoin para medir a média diária por 21 dias e a semanal por 3 semanas do dia 1/1/26 até 21/1/26
-
-------------
 ideias de projetos
-- mega sena, qual a variância entre os números
 - analise exploratoria dos salarios dos servidores publicos do pais todo (quanto ganham, quanto ganha a maioria, tem estado aonde se ganha melhor, ganham mais que o mercado privado, comparar os 3 poderes e 3 niveis)
 - analise exploratoria dos salarios dos servidores publicos do DF (quantos servidores existem no df, quantos % são, quantos terceirizados existem, existe diff de salario entre esses 3 grupos? quanto ganham, quanto ganha a maioria, comparar os 3 poderes e 3 niveis)
 - analise das ligações ao 190 do df, comparar nº ao longo da semana, tipos de ligação, comparar por mes, separar por RA, tentar prever o volume de ligações do mes seguinte pra cada tipo de ligação em cada RA
