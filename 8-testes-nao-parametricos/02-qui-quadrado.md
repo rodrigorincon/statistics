@@ -304,9 +304,11 @@ No caso do teste de aderência, como não tem linhas e colunas, ficamos com o c�
 
 ## TAMANHO DO EFEITO
 
-O teste qui-quadrado tem 2 formas de calcular o tamanho do efeito: V de Cramér ou Coeficiente phi, sendo o **V de Cramér** o mais comum.
+O teste qui-quadrado de independência tem 2 formas de calcular o tamanho do efeito: V de Cramér ou Coeficiente phi, sendo o **V de Cramér** o mais comum.
 
 Somente use o Coeficiente Phi para tabelas 2x2 e para o teste de Fisher.
+
+Para o teste de aderência é usado o tamanho do efeito Razão de chances (Odds Ratio). O V de Cramér também pode ser usado, mas não é a melhor opção.
 
 ## VARIAÇÕES DO TESTE
 

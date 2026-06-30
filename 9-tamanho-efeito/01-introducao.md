@@ -38,7 +38,7 @@ A depender da família da equação usada, nos dá uma dessas duas informações
 - Correlação e Regressão: Coeficiente de determinação R²
 - Teste Z, Mann-Whitney ou Wilcoxon: R de Cohen
 - Kruskal-Wallis: eta-quadrado
-- Qui-Quadrado: V de Cramér (mais comum) ou Coeficiente phi (somente para tabelas 2x2)
+- Qui-Quadrado: V de Cramér (para independência), Razão de chances (para aderência) ou Coeficiente phi (somente para tabelas 2x2)
 - Fisher: Coeficiente phi
 - Shapiro: O próprio valor do teste
 - McNemar: Razão de chances
