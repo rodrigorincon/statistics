@@ -83,6 +83,7 @@ Ambos costumam ser mostrados em gráficos!!
 
 - Ver quais variáveis são numéricas e quais são categóricas
 - Ver quais os valores das variáveis categóricas e sua distribuição
+- Ver quais os valores mínimo, máximo e ampliude
 - Medir e comparar média, mediana e moda
 - Medir desvio padrão, curtose e assimetria
 - Definir melhor média para o contexto
