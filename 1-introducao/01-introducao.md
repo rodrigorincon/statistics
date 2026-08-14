@@ -75,5 +75,26 @@ Ambos costumam ser mostrados em gráficos!!
 **Resumindo:** 
 - Forma mede com a régua meus dados
 - Centro diz quais suas médias
-- -Dispersão diz como os dados se espalham através da média.
+- Dispersão diz como os dados se espalham através da média.
 
+## Análise Exploratória de Dados
+
+É a análise feita com estatística descritiva aonde o objetivo é **entender os dados, encontrar problemas e descobrir padrões**. Resumidamente ela busca:
+
+- Ver quais variáveis são numéricas e quais são categóricas
+- Ver quais os valores das variáveis categóricas e sua distribuição
+- Medir e comparar média, mediana e moda
+- Medir desvio padrão, curtose e assimetria
+- Definir melhor média para o contexto
+- Descobrir a distribuição
+- Descobrir tendências e/ou ciclos
+- Detectar outliers e descobrir sua natureza (se são valores reais e válidos ou erros de medida)
+- Detectar e padronizar dados de entradas (ex: 'M' e 'masculino' são a mesma coisa)
+- Encontrar dados faltantes
+- Encontrar dados duplicados
+- Encontrar dados errados
+- Ver boxplot e histograma
+- Ver gráfico de dispersão e/ou de linha
+- Analisar resíduos (em caso de regressão)
+- Ver quantos dados estão além de 1, 2 ou 3 desvios padrões
+- Checar normalidade dos dados (se aplicável)
