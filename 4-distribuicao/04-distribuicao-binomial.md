@@ -167,3 +167,12 @@ $binomial(100, 10) = \frac{100!}{10!*90!} = \frac{100*99*98*97*96*95*94*93*92*91
 $binomial(100, 10) =10*11*12,5*13,857*16*19*23,5*31*46*91 = 17663398980000$
 
 $P(X=10) = 17663398980000 * 0,0000000000000009657 = 0,017$
+
+## QUANDO POSSO USAR
+
+Posso usar a distribuição binomail se:
+
+- Tiver nº fixo de experimentos
+- Cada experimento só tiver 2 resultados possíveis (ser binário)
+- **A probabilidade das 2 chances deve ser a mesma em cada experimento** (experimento sem reposição ñ pode ser binomial)
+- Os experimentos devem ser independentes
