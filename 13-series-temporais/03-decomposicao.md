@@ -1,6 +1,6 @@
 # DECOMPOSIÇÃO DA SÉRIE TEMPORAL
 
-Decompor a série temporal nos permite enxergar como cada componente da série se comporta separadamente. A decomposição é essencial na análise de série temporal. Os componentes que separamos para ver são a tendência (trend), a sazonalidade e o ruído/resíduo (noise/residual).
+Decompor a série temporal nos permite enxergar como cada componente da série se comporta separadamente. A decomposição é essencial na hora de analisar a série. Os componentes que separamos para ver são a tendência (trend), a sazonalidade e o ruído/resíduo (noise/residual).
 
 ## SÉRIE TEMPORAL É A UNIÃO DE SUAS PARTES
 

@@ -132,6 +132,6 @@ Ex: o Arima receber 3 parâmetros (p - autorregressão, d - grau de diferenciaç
 ### Previsão
 
 1. Aplicar métodos clássicos (Médias Móveis ou suavização exponencial - Holt-Winters)
-2. Aplicar modelos estatísticos avançados como ARIMA ou SARIMA
+2. Aplicar modelos estatísticos avançados como AR, ARIMA ou SARIMA
 3. Avaliar o erro do modelo utilizando métricas como o Erro Quadrático Médio (MSE) para garantir previsões confiáveis
 4. Testa diferentes janelas (lags) e escolhe a com melhor métrica (AIC e BIC)
