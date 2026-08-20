@@ -1,4 +1,3 @@
-# Importação das bibliotecas
 import pandas as pd
 import numpy as np
 import matplotlib.pylab as plt
@@ -75,7 +74,7 @@ plt.show()
 from statsmodels.tsa.seasonal import seasonal_decompose
 
 # Decomposição da série temporal, criando uma variável para cada formato
-decomposicao = seasonal_decompose(ts)
+decomposicao = seasonal_decompose(ts, model="additive") # modelo default é additive
 print(decomposicao) # retorna um objeto, só chamando seus atributos para visualizar algo
 
 ### TENDENCIA

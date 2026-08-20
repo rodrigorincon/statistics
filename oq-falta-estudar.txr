@@ -1,0 +1,6 @@
+1. entender autorregressão (conceito e como calcular)
+2. entender arima (conceito e como calcular)
+3. entender quando usar apenas media movel (quando não há autorregressão - ver algum cenario)
+  3.1 como ela funciona para previsão
+4. entender arma e sarima
+5. entender processos estocásticos

@@ -37,8 +37,11 @@ A análise de dados temporais possui 4 principais características, ligadas ao f
   - Variações imprevisíveis e irregulares que não seguem um padrão
   - Causadas por eventos aleatórios
   - É descartável, lixo que atrapalha na análise
+  - **Tudo que não entra nem na tendência nem na sazonalidade e ciclo**
 
-Em suma, ao analisar séries temporais queremos descobrir a tendência de algo, seus padrões fixos (sazonalidade) e esporádicos (ciclos) e o que é só variação aleatória descartável (ruído).
+Em suma, ao analisar séries temporais queremos descobrir a tendência de algo, seus padrões fixos (sazonalidade) e esporádicos (ciclos) e o que é só variação aleatória descartável (ruído). Em muito lugares sazonalidade e ciclos serão tratados como a mesma coisa.
+
+Ao começar a analisar uma série temporal a primeira coisa a se fazer é separar a série nesses 3 componentes (tendência, sazonalidade e ruído) e ver se elas existem e como são.
 
 ## TIPOS DE SÉRIES TEMPORAIS
 
@@ -58,7 +61,7 @@ No mundo real as séries temporais quase sempre são não-estacionárias, estoc�
 
 - Os dados devem ter a mesma distância no tempo um do outro (não pode 2 dados tere 1 dia de distância e outro 1 semana)
 - Estarem ordenados no tempo
-- Ser autocorrelato (
+- Ser autocorrelato
   - Teste de Durbin-Watson ou Ljung-Box
 - Ser estacionário (**em diversos cenários**)
   - Média, variância e a autocorrelação devem se manter constantes ao longo do tempo
@@ -108,3 +111,27 @@ Outro ponto importante é que quanto mais no futuro você analisa mais incerto �
 Podemos usar AIC e BIC para definir qual série representa melhor os dados e quais faz melhores previsões. `Devemos escolher o com menor AIC/BIC.`
 
 Ex: o Arima receber 3 parâmetros (p - autorregressão, d - grau de diferenciação, q - ordem da média móvel), podemos fazer diversos Arimas mudando esses valores e comparar o AIC e BIC deles.
+
+## PASSO A PASSO DA ANÁLISE DE SÉRIES TEMPORAIS
+
+### Pré-análise
+
+1. Organizar os dados em intervalos regulares
+2. Usar coluna de data/tempo como índice para facilitar pesquisa
+3. Verificar e tratar outliers
+4. Tratar valores ausentes
+
+### Análise da série
+
+1. Plotar gráfico de linha e ver o comportamento geral (identificar tendência e sazonalidade)
+2. Escolher entre o modelo aditivo (quando a variação sazonal é constante) ou multiplicativo (quando a sazonalidade cresce junto com a série)
+3. Decompõe a série de acordo com modelo escolhido e ver o comportamento de cada um
+4. Testes de hipótese (se é autocorrelato, estacionário, tem pontos de ruptura e sazonalidade considerável)
+5. Testa diferentes janelas (lags) e escolhe a com melhor métrica (AIC e BIC)
+
+### Previsão
+
+1. Aplicar métodos clássicos (Médias Móveis ou suavização exponencial - Holt-Winters)
+2. Aplicar modelos estatísticos avançados como ARIMA ou SARIMA
+3. Avaliar o erro do modelo utilizando métricas como o Erro Quadrático Médio (MSE) para garantir previsões confiáveis
+4. Testa diferentes janelas (lags) e escolhe a com melhor métrica (AIC e BIC)
