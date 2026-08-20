@@ -27,5 +27,5 @@ margem_m2_99 = np.round((intervalo_99.loc['m2'][1] - intervalo_99.loc['m2'][0])/
 
 a1 = np.round(regressao.params['m2'], 2)
 print(f'A1 com Intervalo de Confiança de 90%: {a1} +- {margem_m2_90}') # 452.88
-print(f'A1 com Intervalo de Confiança de 95%: {a1} +- {margem_m2_95}') # 452.88
+print(f'A1 com Intervalo de Confiança de 95%: {a1} +- {margem_m2_95}') # 544.30
 print(f'A1 com Intervalo de Confiança de 99%: {a1} +- {margem_m2_99}') # 730.75

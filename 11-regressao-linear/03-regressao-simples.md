@@ -51,7 +51,7 @@ O cálculo do nosso T calculado é:
 
 $$T = \frac{A}{ \frac{desvio_e}{ \sqrt{\sum{(x_i - media_x)^2}} } }$$
 
-Ou seja, divide o coeficiente da angular da reta pelo desvio padrão dos erros e pela soma dos quadrados de X. É quase a divisão pelo desvio e pela variância, mas não temo a divisão por N-1 para configurar a variância. Importante ressaltar que o desvio e a soma dos quadrados são de objetos diferentes.
+Ou seja, divide o coeficiente da angular da reta pelo desvio padrão dos erros e pela soma dos quadrados de X. É quase a divisão pelo desvio e pela variância, mas não temos a divisão por N-1 para configurar a variância. Importante ressaltar que o desvio e a soma dos quadrados são de objetos diferentes.
 
 O cálculo do T tabelado usa n-2 graus de liberdade e nosso alfa e deve ser **bicaudal**.
 
