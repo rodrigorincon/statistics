@@ -1,28 +1,6 @@
-1. entender autorregressão (conceito e como calcular)
-2. entender quando usar apenas media movel (quando não há autorregressão - ver algum cenario)
-  2.1 como ela funciona para previsão
-3. oq é suavização exponencial - Holt-Winters
-4. entender arima (conceito e como calcular)
-5. entender arma e sarima
-6. entender processos estocásticos
+1. entender quando usar apenas media movel (quando não há autorregressão - ver algum cenario)
+  1.1 como ela funciona para previsão
+2. oq é suavização exponencial - Holt-Winters
+3. entender arma e arima (conceito e como calcular)
+4. entender processos estocásticos
 
-sobre autorregressão AR(p)
-
-A autorregressão é um método estatístico de séries temporais que prevê valores futuros com base em seus próprios valores passados. 
-O modelo assume que o dado atual depende diretamente dos dados anteriores. 
-O valor p é o tamanho da janela, quantos valores antigos ele usa para prever o atual.
-
-Se ele depender só do último valor (p=1), então ele é chamado de ordem 1. Se depender dos 2 últimos de order 2 e assim por diante.
-
-No AR os valores devem depender UNICAMENTE dos valores imediatamente atrás deles, ou seja, não pode ter sazonalidade nem tendencia
-PERFEITO para dados Estacionários
-
-https://aws.amazon.com/pt/what-is/autoregressive-models/
-https://www.ibm.com/br-pt/think/topics/autoregressive-model
-
-https://www.youtube.com/watch?v=1hFI2IGFPec
-https://www.youtube.com/watch?v=NdcSbfFpTis
-
-https://www.youtube.com/watch?v=uDYrYyxrNhg&t=553s
-https://www.youtube.com/watch?v=KbEPNTrpZms
-https://www.youtube.com/watch?v=hIb485TrV-s

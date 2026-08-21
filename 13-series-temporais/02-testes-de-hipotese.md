@@ -6,10 +6,12 @@ Usamos testes de hipótese para garantir que os dados podem ser analisados via s
 
 ### Teste de Dickey Fuller Aumentado (ADF)
 
+Testa se uma série é estacionária, ou seja, não possui tendência.
+
 - H0: não é estacionário
 - H1: é estacionário
 
-O principal parâmetro do ADF é a defasagem (lag em inglês). A `defasagem (lag) é quantos dados anteriores serão considerados`, em resumo é o **tamanho do quadro da média móvel**. Um valor baixo faz com que tudo seja considerado ruído e não pega a correlação entre valores passados e futuros. Um valor grande consome os graus de liberdade do teste (gl = n-lags-1) e reduz poder do teste (maior chance de erro tipo 2 - aceitar H0 quando ela é falsa).
+O principal parâmetro do ADF é a defasagem (lag em inglês). A `defasagem (lag) é quantos dados anteriores serão considerados`, em resumo é o **tamanho da janela da média móvel**. Um valor baixo faz com que tudo seja considerado ruído e não pega a correlação entre valores passados e futuros. Um valor grande consome os graus de liberdade do teste (gl = n-lags-1) e reduz poder do teste (maior chance de erro tipo 2 - aceitar H0 quando ela é falsa).
 
 Em resumo um lag pequeno faz olhar poucos dados antigos e não capta a relação entre passado e futuro corretamente. Um lag grande faz perder precisão, podendo considerar tudo válido. Para encontrar o lag ideal é calculado diversas opções de lag e fica com aquele que as métricas de comparação de séries (AIC e BIC) derem o melhor valor.
 
