@@ -250,6 +250,19 @@ $epr = \sqrt{ \frac{ (-2,75)^2 + (-5,1875)^2  }{6-4} } = 4,1516$
 
 **Resposta: Nosso erro típico é de 4,1516.**
 
+## TESTANDO PRECISÃO DAS PREVISÕES
+
+Podemos medir se o modelo tem grandes outliers dividindo o RMSE pelo MAE. Essa razão nos dá a dispersão dos nossos erros e sempre irá de 1 a MAE * $\sqrt{n}$. Quanto menor menos outliers tem e menos disperso são os erros.
+
+$disp = \frac{RMSE}{MAE}$
+
+- Até 1.2 não existe outliers e a dispersão é pequena
+  - Algumas literaturas dizem até 1.25
+- De 1.2 até 1.5 há dispersão moderada, mas ainda tudo tranquilo
+- **Acima de 1.5 há grandes outliers e seu modelo erra gravemente os valores**
+
+Caso encontre um valor acima de 1.5 deve refazer seu modelo e procurar outra janela de tempo.
+
 # EXEMPLO - COVID
 
 Na pandemia de COVID os dados eram medidos com média móvel simples. A janela tinha 7 dias para analisar o crescimento de casos e de morte. Porém devido ao período de incubação do vírus a variação de casos e morte é comparada com o número de 14 dias atrás. Então a média móvel simples dos últimos 7 dias nos dava a tendência futura e a comparação da média móvel simples de hoje com a de 14 dias atrás nos dava a variação passada (se nessas últimas 2 semanas os casos estabilizaram, aumentaram ou diminuíram). 
