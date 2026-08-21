@@ -1,6 +1,3 @@
-1. entender quando usar apenas media movel (quando não há autorregressão - ver algum cenario)
-  1.1 como ela funciona para previsão
 2. oq é suavização exponencial - Holt-Winters
 3. entender arma e arima (conceito e como calcular)
 4. entender processos estocásticos
-
