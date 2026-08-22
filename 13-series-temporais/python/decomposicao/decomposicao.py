@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pylab as plt
 from statsmodels.tsa.seasonal import seasonal_decompose, STL
 
-df = pd.read_csv('all_stocks_5yr.csv')
+df = pd.read_csv('../all_stocks_5yr.csv')
 print(df.head(), '\n')
 print('Tipo da var data: ', df.date.dtypes)
 df.date = pd.to_datetime(df.date)

@@ -5,7 +5,7 @@ from statsmodels.tsa.ar_model import AutoReg
 from sklearn.metrics import mean_squared_error
 
 # IMPORTACAO E VISUALIZACAO DOS DADOS -----------------------------
-dados = pd.read_csv('AirPassengers.csv')
+dados = pd.read_csv('../AirPassengers.csv')
 print(dados.head())
 print(dados.tail()) # ver as ultimas datas
 

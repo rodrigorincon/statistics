@@ -7,7 +7,7 @@ from pandas.plotting import register_matplotlib_converters
 register_matplotlib_converters()
 
 # Carregamento da base de dados
-base = pd.read_csv('AirPassengers.csv')
+base = pd.read_csv('../AirPassengers.csv')
 print("Tamanho da base: ", base.shape)
 print('\n', base.head(20), '\n')
 print("Tipo de dados das colunas", base.dtypes) # Visualização do tipo de dados dos atributos

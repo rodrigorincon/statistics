@@ -40,7 +40,7 @@ from sklearn.metrics import mean_squared_error
 
 dados1 =  pd.Series([1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4])
 dados2 = pd.Series( np.sin(np.arange(100) * 0.1) + np.random.normal(0, 0.1, 100) )
-dados3 = pd.Series( pd.read_csv('AirPassengers.csv')['#Passengers'].values)
+dados3 = pd.Series( pd.read_csv('../AirPassengers.csv')['#Passengers'].values)
 
 def max_size_treino(size_data, lag):
     ponto_corte = round(size_data* 0.8)
