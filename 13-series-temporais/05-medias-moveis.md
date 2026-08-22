@@ -97,6 +97,10 @@ E o critério de parada
 
 $EMA_{1º} = V_{1º}$
 
+### Outros tipos de suavização exponencial
+
+A EMA usa a suavização como k = 2/(n+1), porém existem outras fórmulas de suavização exponencial. Uma dela é a de holt-winters e há mais outras. Tudo que elas fazem é mudar a fórmula de k, mas a equação da EMA se mantém a mesma.
+
 ---
 
 #### Exemplo
@@ -197,7 +201,7 @@ Isso significa que apesar do erro médio ser o mesmo, o modelo 2 tem erros muito
 
 Mede `em quantos porcento erramos`. Semelhante ao MAE, mas dá a porcentagem do erro ao invés de quantas unidades. Complementa a avaliação do MAE e do RMSE.
 
-$$MAPE = \frac{100}{n} \sum{ |\frac{e_i}{valorReal_i}| }$$
+$$MAPE = \frac{\sum{ |\frac{e_i}{valorReal_i}| }}{n} $$
 
 Aonde:
 

@@ -47,7 +47,9 @@ Ao começar a analisar uma série temporal a primeira coisa a se fazer é separa
 
 Uma série temporal pode ser:
 
-1. **Estacionário** ou não-estacionário: estacionário é quando a média, variância e covariância é constante e não possui tendência ou sazonalidade. Ela não tem autocorrelação. É muito fácil de prever o futuro pois os dados não mudam com o tempo. 
+1. **Estacionário** ou não-estacionário: estacionário é quando a média, variância e covariância é constante e ao longo do tempo. Mesmo que a tendência mude esses valores acompanham a tendência, subindo e descendo juntos. 
+
+Isso significa que os dados ficam variando em torno da média com uma amplitude fixa e, quando a tendência muda, eles continuam no mesmo comportamento em volta da nova média. Ou seja, a amplitude e dispersão nunca mudam. É muito fácil de prever o futuro pois o comportamento dos dados não mudam com o tempo. 
 
 Pode-se testar se é estacionário com o **teste de Dickey Fuller Aumentado (ADF)**. Nesse teste H0 = não estacionário, logo busca-se rejeitar H0 para provar que é estacionário.
 
