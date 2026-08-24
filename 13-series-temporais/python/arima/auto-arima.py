@@ -15,7 +15,7 @@ plt.show()
 # seasonal informa que existe sazonalidade e a função irá rodar SARIMA pra tratar a sazonalidade
 # m = qual o periodo de sazonalidade dos dados. Como cada dado é 1 mes e a sazonalidade é anual, m=12
 # trace é para imprimir cada combinação
-# stepwise se deve testar TODAS as combinações ou não (caso false ele vai dar saltos maiores pulando combinações que julga ñ dar um resultado melhor que os que ja tem)
+# stepwise se deve testar TODAS as combinações ou não (caso true ele vai dar saltos maiores pulando combinações que julga ñ dar um resultado melhor que os que ja tem)
 modelo = auto_arima(data, start_p=1,start_q=1,start_d=0, max_p=6, max_q=6, 
                     seasonal=True, m=12, trace=True, stepwise=True)
 
