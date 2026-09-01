@@ -182,7 +182,7 @@ Aonde
 - C é a matriz de covariância
 - Y é a matriz dos valores Y
 
-## ORDINAIS (BASE) COM REGRESSÃO MÚLTIPLA
+## ORDINARIOS (BASE) COM REGRESSÃO MÚLTIPLA
 
 ### De onde vem as matrizes
 
