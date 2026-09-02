@@ -14,7 +14,7 @@ $S_{xy} = \sum{ (x_i - media_y)(y_i - media_y) }$ mede a variância entre as var
 
 ## VARIAÇÕES
 
-Existem deviersas variações desse algoritmo para quando não cumpre as premissas de normalidade ou homocedasticidade ou para muitas variáveis.
+Existem diversas variações desse algoritmo para quando não cumpre as premissas de normalidade ou homocedasticidade ou para muitas variáveis.
 
 - Mínimos quadrados ordinais (OLS)
   - Padrão
