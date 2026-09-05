@@ -34,7 +34,7 @@ e = real - previsto = y - ŷ
 
 ## PREMISSAS
 
-Para dizer que a regressão é confiável 3 condições tem de ser seguidas pelos resíduos:
+Para dizer que a regressão é confiável 4 condições tem de ser seguidas pelos resíduos:
 
 - Erros serem normais
 - Variância dos erros constante
