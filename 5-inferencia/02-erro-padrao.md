@@ -150,3 +150,9 @@ Por isso é melhor uma amostra maior do que muitas amostras!
 - Enquanto mais amostras permitem (melhor somente em casos muito específicos):
 	- Estudar a variabilidade da estimativa
 	- Fazer simulação de Monte Carlo
+
+## Relação com a lei dos grandes números
+
+A lei dos grandes números diz que a média de um conjunto de amostras se aproxima da média real dessa população conforme o tamanho da amostra aumenta. Por exemplo, se eu peço para mil pessoas churarem o peso de um boi provavelmente ninguém vai acertar e alguns inclusive vão errar feio. Porém a tendência é que a média dos chutes aleatórios fique bem próxima do valor real. Um outro exemplo é um lance de dados. Se lançar um dado mil vezes a média dos valores será muito próxima da média (3,5). Outro exemplo foi no grupo do bolão da copa que um participante saiu no início e o admin usou a conta para colocar a média dos palpites para aquele jogo, levando a conta dos últimos lugares para o primeiro lugar com larga vantagem.
+
+A lei dos grandes números foca no valor central (média) quando a amostra tende ao infinito e te dá confiança para assumir essa média amostral como a populacional. O teorema do limite central foca no formato da distribuição quando a amostra tende ao infinito e te dá confiança para assumir certas verdades sobre a população mesmo com só uma amostra.
