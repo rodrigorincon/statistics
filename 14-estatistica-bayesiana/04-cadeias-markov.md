@@ -80,6 +80,15 @@ $$\begin{bmatrix}
 \text{Triste}     & 0.1          & 0.4               & 0.5
 \end{bmatrix}$$
 
+### Relação entre Matriz de Transição e Matriz de Adjacência
+
+Em teoria dos grafos, a matriz de transição P é formalmente a **Matriz de Adjacência Ponderada e Normalizada por Linha** do grafo de estados. Essa perspectiva topológica permite analisar propriedades da cadeia usando conceitos clássicos de grafos:
+
+- **Componentes Fortemente Conectados:** É possível chegar em qualquer nó saindo de qualquer outro.
+- **Estados Absorventes:** Um nó só tem aresta de saída para ele mesmo. Uma vez que entra nele nunca mais sai.
+- **Período e Ciclos:** O período de um estado é o máximo divisor comum (MDC) do comprimento de todos os caminhos fechados (ciclos) que retornam a ele. Se o MDC for 1, o estado é **Aperiódico**.
+- **Ergodicidade:** Quando é fortemente conectados e aperiódico o grafo garante a existência de uma única distribuição estacionária global, independentemente do estado inicial $p^{(0)}$.
+
 ## Evolução do Estado em N Passos
 
 Se conhecemos a distribuição de probabilidade inicial do sistema no instante 0, representada por um vetor linha $p^{(0)}$, a distribuição de probabilidade no instante $1$ é dada pelo produto vetorial-matricial:
@@ -100,3 +109,10 @@ $$p^{(n)} = p^{(0)} P^n$$
 
 > Ao elevar todos os valores da matriz por N temos na matriz a probabilidade de sairmos da linha i e chegarmos a coluna j após N passos.
 
+## O Problema da Distribuição Estacionária (p)
+
+Conforme o número de passos N vai para o infinito, muitas cadeias de markov se estabilizam. O sistema atinge um equilíbrio estatístico onde a distribuição de probabilidade entre os estados não muda mais ao aplicar a transição. Esse estado de equilíbrio é chamado de **Distribuição Estacionária** (p):
+
+$$p^P = p$$
+
+Significa que p é um **autovetor à esquerda** da matriz P associado ao autovalor $\lambda = 1$. Encontrar essa distribuição é fundamental para entender o comportamento de longo prazo do sistema.
