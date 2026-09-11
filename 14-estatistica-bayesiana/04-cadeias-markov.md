@@ -116,3 +116,175 @@ Conforme o número de passos N vai para o infinito, muitas cadeias de markov se 
 $$p^P = p$$
 
 Significa que p é um **autovetor à esquerda** da matriz P associado ao autovalor $\lambda = 1$. Encontrar essa distribuição é fundamental para entender o comportamento de longo prazo do sistema.
+
+## PREMISSAS
+
+Para que uma Cadeia de Markov padrão (de primeira ordem e homogênea no tempo) seja aplicada validamente, as seguintes premissas devem ser satisfeitas:
+
+1. **Perda de Memória:** O histórico passado não ajuda a prever o futuro além daquela já contida no estado presente.
+2. **Homogeneidade Temporal:** As probabilidades de transição $P_{ij}$ são constantes ao longo do tempo (não mudam do passo t para o passo $t+k$).
+3. **Espaço de Estados Discreto e Definido:** Todos os estados possíveis do sistema devem ser conhecidos e bem delimitados.
+
+Ou seja, suas premissas são as que tão ligadas a sua estrutura e como funcionam.
+
+## ENTRADAS E SAÍDAS
+
+Para configurar e executar uma Cadeia de Markov, define-se:
+
+O que ela recebe de entrada:
+
+- **Espaço de Estados (S):** O conjunto de estados discretos.
+- **Matriz de Transição (P):** Matriz NxN com as probabilidades condicionais $P_{ij}$.
+- **Vetor de Estado Inicial ($p^{(0)}$):** Distribuição de probabilidade de onde o sistema começa no tempo t=0.
+- **Número de Passos (t):** A quantidade de transições temporais a simular.
+
+O que ela dá como saída:
+
+- **Distribuição de Probabilidade Futura ($p^{(t)}$):** A chance do sistema estar em cada estado no instante t.
+- **Distribuição Estacionária (p):** As probabilidades de longo prazo (quando t = infinito).
+- **Sequência Simulada de Estados:** Uma trajetória estocástica gerada via amostragem monte carlo ao longo do grafo.
+
+Essa última ligada a Monte Carlo é só uma simulação de qual os movimentos mais prováveis a cada passo para dar uma resposta mais rica.
+
+## MATEMÁTICA
+
+### Probabilidade Condicional e Equação da Cadeia
+
+A definição formal da Propriedade de Markov (falta de memória) de Primeira Ordem em tempo discreto é expressa por:
+
+$$P(X_{t+1} = x_{t+1} \mid X_t = x_t, X_{t-1} = x_{t-1}, \dots, X_0 = x_0) = P(X_{t+1} = x_{t+1} \mid X_t = x_t)$$
+
+Pela regra da cadeia de probabilidade, a probabilidade conjunta de observar uma sequência específica de estados $x_0, x_1, \dots, x_T$ simplifica-se para:
+
+$$P(X_0 = x_0, X_1 = x_1, \dots, X_T = x_T) = P(X_0 = x_0) \prod_{t=1}^{T} P(X_t = x_t \mid X_{t-1} = x_{t-1})$$
+
+### Equações de Chapman-Kolmogorov
+
+Para calcular a probabilidade de transitar do estado $i$ para o estado $j$ em $m + n$ passos, somamos as probabilidades sobre todos os estados intermediários possíveis $k$:
+
+$$P_{ij}^{(m+n)} = \sum_{k \in S} P_{ik}^{(m)} P_{kj}^{(n)}$$
+
+Em notação matricial, isso equivale diretamente à multiplicação de matrizes: $P^{(m+n)} = P^{m} \cdot P^{n}$.
+
+### Cálculo da Distribuição Estacionária via Sistema Linear
+
+Para encontrar o vetor estacionário $p = [p_1, p_2, \dots, p_N]$, resolvemos o sistema linear derivado de $p^P = p$ com a restrição de normalização probabilística:
+
+$$\begin{cases} 
+p^(P - I) = \mathbf{0} \\
+\sum_{i=1}^{N} p_i = 1 
+\end{cases}$$
+
+Onde $I$ é a matriz identidade de ordem $N$. Pelo **Teorema de Perron-Frobenius**, para matrizes estocásticas irredutíveis e aperiódicas, o autovalor dominante é sempre $\lambda_1 = 1$, e seu autovetor associado (normalizado) é a distribuição estacionária única.
+
+## RELAÇÃO COM MODELOS DE IA: QUEM USA, COMO E POR QUE
+
+As Cadeias de Markov são um dos pilares da Inteligência Artificial moderna. Elas aparecem desde modelos clássicos até as arquiteturas generativas de ponta.
+
+### Modelos Ocultos de Markov (Hidden Markov Models - HMM)
+
+- **Quem usa:** Reconhecimento de voz clássico (Siri inicial, Kaldi, HTK), Processamento de Linguagem Natural (POS Tagging, Reconhecimento de Entidades Nomeadas), Bioinformática (alinhamento de sequências de DNA/Proteínas).
+- **Como usa:** Assume-se que o sistema possui uma Cadeia de Markov subjacente de estados **ocultos** (não observáveis diretamente), mas cada estado oculto emite um símbolo **observável** de acordo com uma distribuição de probabilidade de emissão. Usa-se o **Algoritmo de Viterbi** para encontrar a sequência de estados mais provável e o **Algoritmo de Baum-Welch (EM)** para treinar as transições.
+- **Por que usa:** Permite inferir dados a partir de dados temporais ruidosos ou indiretos (ex: inferir as palavras faladas a partir das ondas sonoras).
+
+### Aprendizado por Reforço (MDPs e POMDPs)
+
+- **Quem usa:** AlphaGo / AlphaZero (DeepMind), agentes de robótica, algoritmos de controle (PPO, SAC, Q-Learning), sistemas de direção autônoma.
+- **Como usa:** O ambiente de interação do agente é formalizado como um **Processo de Decisão de Markov (MDP)**. A dinâmica de transição de estados $P(S' \mid S, a)$ depende do estado atual S e da ação a tomada pelo agente, incorporando uma função de recompensa R(S, a).
+- **Por que usa:** Fornece a base matemática estrita para provar a convergência da **Equação de Bellman** e garantir que o agente consiga aprender uma política ótima de longo prazo sob incerteza.
+
+### Modelos Generativos Baseados em Difusão (Diffusion Models)
+
+- **Quem usa:** Stable Diffusion, Midjourney, DALL-E 3, Sora (OpenAI).
+- **Como usa:** A geração de imagens e vídeos é modelada como o processo inverso de uma Cadeia de Markov. No **Forward Process**, adiciona-se ruído gaussiano incrementalmente à imagem ao longo de T passos até que ela se torne ruído puro. A Rede Neural (U-Net/Transformer) é treinada para aprender o **Reverse Process** — estimar a transição de des-ruidificação $q(x_{t-1} \mid x_t)$ a cada passo da cadeia.
+- **Por que usa:** Quebrar a tarefa impossível de gerar uma imagem complexa de uma só vez em uma sequência de T pequenos passos simples, estáveis e matematicamente tratáveis.
+
+### Markov Chain Monte Carlo (MCMC)
+
+- **Quem usa:** IA Bayesiana, PyMC, Stan, Aprendizado Profundo Probabilístico, Física Computacional.
+- **Como usa:** Para dados com distribuições de probabilidade complexas e muitas variáveis X (onde fazer a integral de P(X) é inviável), constrói-se uma Cadeia de Markov cuja **distribuição estacionária** projetada seja exatamente a distribuição alvo desejada. Algoritmos como **Metropolis-Hastings** e **Gibbs Sampling** navegam nessa cadeia.
+- **Por que usa:** Permite usar modelos Bayesianos complexos substituindo o cálculo impossível da evidência.
+
+### Modelos de Linguagem N-grama e Autoregressivos Básicos
+
+- **Quem usa:** Teclados preditivos de celular (Gboard, SwiftKey), corretores ortográficos, tokenizadores, geradores de texto estatísticos baseline.
+- **Como usa:** Modelos de linguagem baseados em N-gramas assumem uma **Cadeia de Markov de Ordem $N-1$**. A probabilidade da próxima palavra depende apenas das $N-1$ palavras imediatamente anteriores no texto: $P(w_t \mid w_{t-1}, w_{t-2}, \dots, w_{t-N+1})$.
+- **Por que usa:** Extrema velocidade de inferência, baixíssimo consumo de memória e treinamento instantâneo através de simples contagem de frequências no corpus.
+
+### PageRank (Busca e Recomendação em Grafos)
+
+- **Quem usa:** Motor de busca do Google, recomendadores de conexões (LinkedIn, Twitter/X), algoritmos de centralidade em grafos de conhecimento.
+- **Como usa:** O comportamento de um "navegador aleatório" clicando em links na web é modelado como uma Cadeia de Markov Ergódica em um grafo gigante. O vetor de **distribuição estacionária** p resultante define a relevância/importância de cada página web.
+- **Por que usa:** Fornece uma medida global de autoridade imune a manipulações locais e altamente escalável via métodos de potência matricial.
+
+## COMO FUNCIONA
+
+A execução de uma Cadeia de Markov para inferência e previsão ocorre nas seguintes etapas:
+
+1. **Modelagem e Extração de Frequências:**
+   - Define-se o conjunto de estados S.
+   - A partir de dados calcula-se quantas transições de $S_i$ para $S_j$ teve e normaliza-se pelo total da linha para formar a matriz P.
+2. **Definição da Condição Inicial:**
+   - Define-se $p^{(0)}$ (ex: se sabemos que o sistema começou no estado 1, $p^{(0)} = [1, 0, ..., 0]$).
+3. **Propagação Temporal (Multiplicação Matricial):**
+   - Para prever o próximo passo: $p^{(1)} = p^{(0)} P$.
+   - Para prever N passos à frente: multiplica-se iterativamente por P ou calcula-se a potência $P^n$.
+4. **Análise de Convergência de Longo Prazo:**
+   - Calcula-se o autovetor dominante de P para determinar o comportamento do sistema em regime permanente.
+
+## VARIAÇÕES DAS CADEIAS DE MARKOV
+
+Para contornar as limitações da versão básica, a literatura desenvolveu diversas extensões sofisticadas:
+
+- **Cadeias de Markov de Ordem Superior**
+  - O próximo estado depende dos últimos k estados: $P(X_{t+1} \mid X_t, X_{t-1}, \dots, X_{t-k+1})$.
+  - **Quando usar:** Quando dependências de curto-médio prazo existem (ex: Modelos N-grama com $N > 2$).
+- **Cadeias de Markov Não-Homogêneas no Tempo**
+  - A matriz de transição P(t) varia com o tempo.
+  - **Quando usar:** Sistemas com sazonalidade ou degradação temporal (ex: probabilidade de falha de equipamento aumentando com a idade).
+- **Cadeias de Markov em Tempo Contínuo (CTMC)**
+  - As transições ocorrem em qualquer instante de tempo real contínuo $t \in R^+$, governadas por uma **Matriz de Taxas de Transição Q** (Gerador Infinitesimal) e distribuição exponencial de tempos de permanência.
+  - **Quando usar:** Teoria de Filas, Modelagem Epidêmica (SIR), Reações Químicas Estocásticas.
+- **Processos de Decisão de Markov Parcialmente Observáveis (POMDP)**
+  - O agente não conhece o estado exato S, mantendo apenas uma distribuição de crença sobre os estados com base em observações incompletas.
+  - **Quando usar:** Robótica autônoma com sensores ruidosos/limitados.
+- **Cadeias de Markov Monte Carlo (MCMC)**
+  - Métodos algoritmos de amostragem (Metropolis-Hastings, Gibbs) que constroem cadeias propositadamente para simular distribuições complexas.
+  - **Quando usar:** Inferência Bayesiana e estimativa de integrais multidimensionais.
+
+### Quando Usar Cada Uma (Resumo Prático)
+
+- Dependência Estritamente Local / 1 Passo: Cadeia de Markov de 1ª Ordem
+- Dependência de Janela Curta (ex: 3 palavras): Cadeia de Markov de 2ª ou 3ª Ordem (levando em conta o passo atual e os antigos)
+- Estados Não Visíveis Diretamente: Modelo Oculto de Markov (HMM)
+
+## Exemplo
+
+Imagine que observamos o clima por 15 dias seguidos e vimos que só teve 2 estados (C - chuva e S - sol). A sequência de dias foi: S -> S -> C -> C -> C -> S -> S -> S -> C -> S -> S -> C -> C -> S -> S.
+
+Com isso nosso grafo terá só 2 estados (S e C). A tabela é feita a partir das 14 transições que vemos nas medidas.
+
+- S -> S: 5 vezes
+- S -> C: 3 vezes
+- C -> C: 3 vezes
+- C -> S: 3 vezes
+
+Ignorando o primeiro dia (porque não temos o valor anterior a ele) tivemos a presença de 8 S e 6 C. O primeiro deve ser descartado pois só contabilizamos os casos que entram na tabela (que sabemos o estado anterior de onde veio). Com isso podemos medir a frequência que cada um apareceu e montar a tabela
+
+$$\begin{bmatrix}
+-      & \text{S} & \text{C} \\
+\text{S} & 5/8      & 3/8 \\
+\text{C} & 3/6      & 3/6
+\end{bmatrix}$$
+
+Se hoje é chuva (C), qual o clima para amanhã e depois de amanhã?
+
+hoje = C = $p_0$ = [0, 1] (segunda coluna é 1 pq Chuva é a 2ª coluna da matriz). Multiplicando o vetor hoje pela matriz
+
+$p_1 = [0*5/8 + 1*3/6, 0*3/8 + 1*3/6] = [3/6, 3/6]$
+
+Podemos apenas olhar para linha de C e dizer que ela é a resposta para amanhã.
+
+Para depois de amanhã usamos o vetor de $p_1$ para calcular $p_2$.
+
+$p_2 = [3/6, 3/6] P = [3/6*5/8 + 3/6*3/6, 3/6*3/8 + 3/6*3/6] = [0.5625, 0.4375]$
