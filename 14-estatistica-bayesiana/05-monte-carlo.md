@@ -8,6 +8,10 @@ Em inteligência artificial o Método de Monte Carlo **não é um modelo prediti
 
 Para se ter em mente, o método substitui o cálculo exato de uma integral contínua complexa sobre várias variáveis X pela **média aritmética de amostras geradas aleatoriamente a partir de uma distribuição de probabilidade**.
 
+## História do nome
+
+Pode ser chamado de Método ou Simulação de Monte Carlo. Foi criado durante a 2ª guerra mundial (durante o projeto Manhatan) por John Von Newmann e um outro cara para melhorar a tomada de decisões sob condições incertas. O nome é em homenagem a um famoso cassino na cidade de Mônaco. A associação se deve a aleatoriedade ser um pilar do método e lembrar jogo de roletas.
+
 ## Amostragem aleatória repetitiva
 
 "Amostragem aleatória repetitiva" significa que ele pega diversas amostras de dados, não tendo nenhum problema em repetir algum dado nessas repetições.
@@ -41,6 +45,10 @@ Em resumo, fazemos Bootstrap na amostra para reduzir ao máximo a margem de erro
 ### Amostragem Estocástica
 
 É a formalização da geração de sequências de números aleatórios (ou pseudo-aleatórios) $X_1, X_2, ..., X_N$ seguindo uma distribuição de  probabilidade p(x). É como números aleatórios são gerados garantindo que estão todos dentro do nosso espaço de configuração e seguindo a distribuição.
+
+### Simulação (Rollout)
+
+É cada iteração do algoritmo.
 
 ## Descrição Resumida
 
@@ -202,3 +210,69 @@ O que ele dá como saída:
 - **Intervalo de Confiança:** A margem de erro para um nível de confiança (ex: 95%).
 - **Histograma:** A representação discreta da densidade de probabilidade da variável de saída.
 
+## COMO FUNCIONA
+
+A execução clássica de um experimento de Monte Carlo segue um ciclo de 5 etapas:
+
+1. **Definição do Domínio e das Variáveis Aleatórias:**
+   - Mapeia-se o problema em termos de entradas estocásticas e suas respectivas distribuições de probabilidade p(x).
+2. **Geração de Amostras:**
+   - Sorteiam-se N pontos independentes $X_1, X_2, ..., X_N$ do domínio de entrada utilizando técnicas de amostragem (Transformação Inversa, Box-Muller, rejection sampling).
+3. **Avaliação Determinística:**
+   - Computa-se o valor da função ou executa-se o simulador determinístico $f(X_i)$ para cada amostra $X_i$ individualmente.
+4. **Média:**
+   - Calcula-se a média aritmética dos resultados $f(X_i)$ para obter a estimativa pontual $\hat{I}_N$.
+5. **Margem de Erro e Intervalo de Confiança:**
+   - Calcula-se a variância amostral $s_N^2$ e o erro padrão $e = s_N / \sqrt{N}$.
+
+## CRITÉRIOS DE CONVERGÊNCIA E ERRO
+
+A precisão do Método de Monte Carlo é definida pela relação entre a variância e o volume de amostras:
+
+- **Taxa Sub-linear de Redução do Erro:** Para reduzir o erro da estimativa por um fator de 10, é necessário multiplicar o número de amostras N por 100.
+- **Critério de Parada:** As simulações costumam ser executadas iterativamente até que o erro padrão $s_N / \sqrt{N}$ caia abaixo de um limiar de tolerância pré-definido.
+- **Efeito da Variância:** Se a função f(x) possui picos extremamente agudos ou eventos raros, a variância é enorme, exigindo o uso obrigatório de técnicas de redução de variância para obter convergência em tempo prático.
+
+## O que fazer quando não converge
+
+- Aumentar a quantidade de iterações (N). Porém precisa aumentar muito já que o erro é $\frac{1}{\sqrt{N}}$
+- Ajustar o tamanho do passo (para MCMC)
+- Revisar o gerador de números aleatórios
+- Checar a média $\hat{I}_N$ ao longo das iterações para ver se ela oscila muito ou vai estabilizando.
+
+
+## VARIAÇÕES DO MÉTODO DE MONTE CARLO
+
+- **Markov Chain Monte Carlo (MCMC)**
+  - Gera amostras correlacionadas onde o próximo ponto depende do estado atual através de uma Cadeia de Markov.
+  - **Quando usar:** Quando a distribuição alvo p(x) é complexa e de alta dimensão.
+- **Sequential Monte Carlo (SMC)**
+  - Aplica amostragem por importância sequencial com etapas de reamostragem para rastrear distribuições de probabilidade que evoluem no tempo.
+  - **Quando usar:** Rastreamento de alvos em tempo real, robótica (Slam) e filtragem de séries temporais não-lineares.
+- **Multilevel Monte Carlo (MLMC)**
+  - Combina simulações executadas em múltiplos níveis de resolução/discretização para balancear o custo computacional com a precisão.
+  - **Quando usar:** Equações Diferenciais Estocásticas (SDEs) e equações diferenciais parciais aleatórias.
+- **Quasi-Monte Carlo (QMC)**
+  - Utiliza sequências pseudo-aleatórias para preencher o espaço amostral sem aglomerações aleatórias.
+  - **Quando usar:** Finanças quantitativas e computação gráfica de média dimensão.
+
+### Quando Usar Cada Uma (Resumo Prático)
+
+- Integração de Alta Dimensão Padrão: Monte Carlo Clássico
+- Distribuição Complexa e Não-Normalizada: Markov Chain Monte Carlo (MCMC)
+- Séries Temporais e Sistemas Dinâmicos: Sequential Monte Carlo (SMC)
+- Aumento da Taxa de Convergência em Média Dimensão: Quasi-Monte Carlo (QMC)
+- Modelagem de Equações Diferenciais Estocásticas: Multilevel Monte Carlo (MLMC)
+- Busca Combinatória e Jogos com Espaço de Estados Gigante: Monte Carlo Tree Search (MCTS)
+
+## Exemplo
+
+Queremos saber a área da curva X² de 0 a 10. Pelo método de Monte Carlo eu sei se x=10, x²=100, então irei trabalhar com a área do quadrado 10x100. pego N pontos nesse quadrado e vejo quantos deles estão dentro da área de x². Isso me dará a área da curva.
+
+Peguei mil pontos, deles 400 pontos estavam dentro da árva e 600 fora. Portanto a área segundo Monte Carlo é de 400/1000 * área = 0.4 * 1000 = 400.
+
+A área real é de 333.33, logo a simulação não chegou  tão perto do resultado.
+
+Isso foi 1 simulação (N=1). Se fizemos essa simulação 500 vezes e tiramos a média dos resultados teremos algo próximo do valor real.
+
+Nossa taxa de erro (erro padrão) será o desvio padrão dividido por raiz de N ($\frac{\sigma}{\sqrt{N}}$). Pegamos todos os 500 resultados, tiramos o desvio padrão deles e calculamos o erro padrão.
