@@ -107,7 +107,9 @@ Portanto a distribuição de probabilidade após N passos é a distribuição in
 
 $$p^{(n)} = p^{(0)} P^n$$
 
-> Ao elevar todos os valores da matriz por N temos na matriz a probabilidade de sairmos da linha i e chegarmos a coluna j após N passos.
+Ao elevar a matriz por N temos a matriz de probabilidades de sairmos de qualquer posição e terminarmos em outra em N passos.
+
+> Elevar a matriz a N é diferente de elevar seus valores a N. Você tem realmente de fazer matriz * matriz N-1 vezes.
 
 ## O Problema da Distribuição Estacionária (p)
 
@@ -277,7 +279,7 @@ $$\begin{bmatrix}
 \text{C} & 3/6      & 3/6
 \end{bmatrix}$$
 
-Se hoje é chuva (C), qual o clima para amanhã e depois de amanhã?
+**Se hoje é chuva (C), qual o clima para amanhã e depois de amanhã?**
 
 hoje = C = $p_0$ = [0, 1] (segunda coluna é 1 pq Chuva é a 2ª coluna da matriz). Multiplicando o vetor hoje pela matriz
 
@@ -288,3 +290,35 @@ Podemos apenas olhar para linha de C e dizer que ela é a resposta para amanhã.
 Para depois de amanhã usamos o vetor de $p_1$ para calcular $p_2$.
 
 $p_2 = [3/6, 3/6] P = [3/6*5/8 + 3/6*3/6, 3/6*3/8 + 3/6*3/6] = [0.5625, 0.4375]$
+
+**Qual a chance de daqui 3 dias está chovendo se hoje está sol?**
+
+$$M^3 = \begin{bmatrix}
+-      & \text{S} & \text{C} \\
+\text{S} & 5/8      & 3/8 \\
+\text{C} & 3/6      & 3/6
+\end{bmatrix} * \begin{bmatrix}
+-      & \text{S} & \text{C} \\
+\text{S} & 5/8      & 3/8 \\
+\text{C} & 3/6      & 3/6
+\end{bmatrix} * \begin{bmatrix}
+-      & \text{S} & \text{C} \\
+\text{S} & 5/8      & 3/8 \\
+\text{C} & 3/6      & 3/6
+\end{bmatrix}$$
+
+Lembrando que $M^3$ é diferente de elevar seus valores ao cubo! $M^3 = M^2 * M$ e $M^2 = M*M$.
+
+$$M^2 = M*M = \begin{bmatrix}
+-      & \text{S} & \text{C} \\
+\text{S} & 0,578      & 0,422 \\
+\text{C} & 0,422      & 0,271
+\end{bmatrix}$$
+
+$$M^3 = M^2*M = \begin{bmatrix}
+-      & \text{S} & \text{C} \\
+\text{S} & 0,572      & 0,428 \\
+\text{C} & 0,399      & 0,294
+\end{bmatrix}$$
+
+Portanto a probabilidade de sair dum dia de sol (hoje) e ir para chuva daqui 3 dias é a linha sol e coluna chuva, 0,428.

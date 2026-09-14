@@ -58,7 +58,7 @@ Tabela outro nó:
 
 ## Quando Usar
 
-As Redes Bayesianas brilham quando temos **informações incompletas** e precisamos tomar decisões racionais. Diferente de um modelo tradicional que precisa de todas as entradas preenchidas, a Rede Bayesiana consegue prever coisas mesmo se faltar dado. Ela também é facilmente compreendida e explicável, sendo junto com as árvores de decisão métodos mais fáceis de entender o que está acontecendo.
+As Redes Bayesianas brilham quando temos **informações incompletas** e precisamos tomar decisões racionais. Diferente de um modelo tradicional que precisa de todas as entradas preenchidas, a Rede Bayesiana **consegue prever coisas mesmo se faltar dado**. Ela também é **facilmente compreendida e explicável**, sendo junto com as árvores de decisão métodos mais fáceis de entender o que está acontecendo.
 
 - **Diagnóstico Médico:** Variáveis para sintomas, doenças e resultados de exames. Dado que o paciente tosse (efeito), qual a probabilidade de ter pneumonia (causa)?
 - **Análise de Risco (Finanças):** Avaliar a chance de inadimplência baseada no contexto econômico e no histórico do cliente.
@@ -127,7 +127,7 @@ Aqui descobrimos quais variáveis se ligam a quais. Exitem 2 formas de se fazer 
 
 1. **Abordagem Baseada em Restrições**: O algoritmo que faz essa execução é o **Algoritmo PC**. Ele roda centenas de testes estatísticos, pois testa todas as variáveis com todas as outras, o que o torna lento. Cresce de forma exponencial.
   - Todas as variáveis (nós do grafo) começam ligadas com todos os outros. 
-  - Para cada variável testamos sua relação com todas as outras (via teste qui-quadrado de independência ou correlação) e removemos as ligações que não passarem. 
+  - Para cada variável testamos sua relação com todas as outras (via **teste qui-quadrado de independência ou correlação**) e removemos as ligações que não passarem. 
   - As arestas restantes fazem o teste de independência condicional e, caso seja, independentes ao adicionar uma 3ª variável, a aresta é removida. 
   - Busca-se ciclos e estruturas em V para remover ciclos e nós bidirecionais.
 
