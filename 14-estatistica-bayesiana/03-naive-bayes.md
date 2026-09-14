@@ -105,8 +105,8 @@ Ao contrário de algoritmos iterativos (como o Gradiente Descendente), o Naive B
    - Para cada variável $x_i$ e cada classe y, calcula a probabilidade condicional $P(x_i|y)$ (frequência de $x_i$ na classe y ou ajustando a curva definida).
    - Aplica a Suavização de Laplace para prevenir contagens zero.
 2. **Fase de Predição (Classificação):**
-   - Para um novo registro com características $X = (x_1, x_2, ..., x_n)$:
-   - Calcula a pontuação (log-probabilidade) de cada classe somando $\log(P(y)) + \sum \log(P(x_i|y))$.
+   - Calcula a probabilidade (log-probabilidade para ser mais exato) de X pertencer a cada classe somando $\log(P(y)) + \sum \log(P(x_i|y))$.
+    - Aonde P(y) é o prior e $P(x_i|y)$ o posterior.
    - Seleciona a classe com o maior valor resultante.
 
 ### CRITÉRIOS DE DECISÃO
