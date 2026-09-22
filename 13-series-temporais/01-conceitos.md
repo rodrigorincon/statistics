@@ -137,3 +137,10 @@ Ex: o Arima receber 3 parâmetros (p - autorregressão, d - grau de diferenciaç
 2. Aplicar modelos estatísticos avançados como AR, ARIMA ou SARIMA
 3. Avaliar o erro do modelo utilizando métricas como o Erro Quadrático Médio (MSE) para garantir previsões confiáveis
 4. Testa diferentes janelas (lags) e escolhe a com melhor métrica (AIC e BIC)
+
+## PRINCIPAIS ALGORITMOS
+
+- AR, MA (média móvel), ARMA e ARIMA
+- Redes Neurais (principalmente LSTM, long short term memory)
+- Cadeias de Markov
+- Processo de Poisson
